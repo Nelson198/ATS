@@ -1,0 +1,24 @@
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2019.11.24 13:57:57 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0/temp
+2019.11.24 13:57:57 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2019.11.24 13:57:57 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0/elasticsearch]: /mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2019.11.24 13:57:57 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2019.11.24 13:57:58 INFO  app[][o.e.p.PluginsService] no modules loaded
+2019.11.24 13:57:58 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2019.11.24 13:58:08 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2019.11.24 13:58:08 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0/temp/sq-process14300829458391167649properties
+2019.11.24 13:59:05 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2019.11.24 13:59:05 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0]: /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.ce.app.CeServer /mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0/temp/sq-process6574689034970915573properties
+2019.11.24 13:59:11 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2019.11.24 13:59:11 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+INT trapped.  Shutting down.
+2019.11.24 14:04:29 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [ce]: 130
+2019.11.24 14:04:29 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2019.11.24 14:04:30 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [web]: 130
+2019.11.24 14:04:30 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+<-- Wrapper Stopped
