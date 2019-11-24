@@ -1,0 +1,104 @@
+% Setup -------------------------------
+
+\documentclass[a4paper]{report}
+\usepackage[a4paper, total={6in, 10in}]{geometry}
+
+% Encoding
+%--------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%--------------------------------------
+
+% Portuguese-specific commands
+%--------------------------------------
+\usepackage[portuguese]{babel}
+%--------------------------------------
+
+% Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+%--------------------------------------
+
+% Capa do relatório
+
+\title{
+	Análise e Teste de Software
+	\\ \Large{\textbf{Trabalho Prático}}
+	\\ -
+	\\ \large{Universidade do Minho}
+	\\ Relatório
+}
+\author{
+	\begin{tabular}{ll}
+		\textbf{Grupo nº3}
+		\\\hline
+		PG41091 & Nelson José Dias Teixeira
+		\\
+		PG41081 & José Alberto Martins Boticas
+		\\
+		PG41094 & Pedro Rafael Paiva Moura
+		\\
+		A80499  & Moisés Manuel Borba Roriz Ramires
+	\end{tabular}
+}
+
+\date{\today}
+
+\begin{document}
+
+\begin{titlepage}
+    \maketitle
+\end{titlepage}
+
+% Resumo
+
+\begin{abstract}
+	No ano lectivo 2018/2019, no contexto da disciplina de Programação Orientada a Objectos
+	(POO) leccionada no Departamento de Informática da Universidade do Minho, os alunos
+	tiveram de desenvolver em grupo uma aplicação Java, denominada por  \textit{UmCarroJá}, para gerir um serviço de aluguer de
+	veículos particulares pela internet.\,\,No contexto da disciplina de Análise e Teste de Software (ATS) pretende-se que neste projeto se apliquem técnicas de análise e teste de software, estudadas nas aulas, de modo a analisar a qualidade de duas das soluções desenvolvidas pelos alunos de POO.
+\end{abstract}
+
+% Índice
+
+\tableofcontents
+
+% Introdução
+
+\chapter{Introdução} \label{intro}
+\large{
+    Neste projeto foi-nos proposto a realização de várias tarefas de forma a analisar a qualidade das duas soluções desenvolvidas pelos alunos de POO no ano lectivo de 2018/2019. Entre estas tarefas destacam-se as seguintes:
+    \begin{enumerate}
+        \item Analisar a qualidade do código fonte dos sistemas de \textit{software}. Nesta análise identificam-se \textit{bad smells} no código fonte e o seu \textit{technical debt};
+        \item Aplicar \textit{refactorings} de modo a eliminar os \textit{bad smells} encontrados e deste modo reduzir (se possível eliminar) o \textit{technical debt};
+        \item Testar o \textit{software} de modo a ter mais garantias que ele cumpre os requisitos do enunciado da aplicação \textit{UmCarroJá};
+        \item Gerar \textit{inputs} aleatórios para a aplicação \textit{UmCarroJá} que simulem execuções reais (tal como foi fornecido em POO);
+        \item Analisar a performance (tempo de execução e consumo de energia) das versões iniciais do \textit{software} (i.e., com \textit{smells}) e as obtidas depois de eliminados os \textit{smells}.
+    \end{enumerate}
+    Os cinco pontos mencionados acima foram agrupados em quatro tarefas finais, cada uma das quais com uma percentagem na avaliação final do trabalho prático. As abordagens tomadas pelo grupo sobre cada uma destas tarefas serão expostas nos capítulos seguintes deste relatório.
+    De salientar que também existem tarefas extras que complementam cada uma das tarefas referidas anteriormente.
+}
+
+\chapter{Análise e Especificação}
+\section{Tarefa 1 - Qualidade do código fonte}
+\subsection{Versão 1 - \textit{demo1}}
+\subsection{Versão 2 - \textit{demo2}}
+
+\section{Tarefa 2 - \textit{Refactoring}}
+\subsection{Versão 1 - \textit{demo1}}
+\subsection{Versão 2 - \textit{demo2}}
+
+\section{Tarefa 3 - Teste da aplicação}
+\subsection{Versão 1 - \textit{demo1}}
+\subsection{Versão 2 - \textit{demo2}}
+
+\section{Tarefa 4 - Análise de desempenho}
+\subsection{Versão 1 - \textit{demo1}}
+\subsection{Versão 2 - \textit{demo2}}
+
+\chapter{Conclusão}
+
+\appendix
+\chapter{Observações}
+
+\end{document}
