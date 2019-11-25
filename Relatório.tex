@@ -2,6 +2,8 @@
 
 \documentclass[a4paper]{report}
 \usepackage[a4paper, total={6in, 10in}]{geometry}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 
 % Encoding
 %--------------------------------------
@@ -25,6 +27,7 @@
 	Análise e Teste de Software
 	\\ \Large{\textbf{Trabalho Prático}}
 	\\ -
+	\\ Mestrado em Engenharia Informática
 	\\ \large{Universidade do Minho}
 	\\ Relatório
 }
@@ -81,8 +84,46 @@
 
 \chapter{Análise e Especificação}
 \section{Tarefa 1 - Qualidade do código fonte}
+Nesta etapa, tal como o nome indica, será feita a análise da qualidade do código fonte da aplicação \textit{UmCarroJá} desenvolvido pelos alunos de POO. Como tal, através da ferramenta \underline{\textit{Sonarqube}}, serão indicados o número de erros no código (\textit{bugs}), vulnerabilidades, \textit{code smells} e o respetivo \textit{technical debt}. Para além destas, existe uma \textbf{tarefa extra} que consiste em definir regras adicionais na ferramenta \textit{Sonarqube} para encontrar \textit{red smells} (ou qualquer outro \textit{smell} não suportado pelo mesmo) na aplicação desenvolvida.
+
 \subsection{Versão 1 - \textit{demo1}}
+Na primeira versão desenvolvida pelos alunos de POO, \textit{demo1}, foi possível observar alguns erros no código fonte e bastantes \textit{code smells}. Apresenta-se de seguida, por categorias, a análise qualitativa desta mesma implementação.
+
+\subsubsection{Fiabilidade}
+Nesta secção da análise qualitativa da aplicação desenvolvida observam-se e identificam-se unicamente os erros (\textit{bugs}) presentes no código fonte.
+Como tal, após verificar a informação existente na ferramenta \textit{Sonarqube}, os elementos deste grupo depararam-se, essencialmente, com quatro tipos de erros. Entre eles destacam-se:
+
+\begin{enumerate}
+    \item a implementação do método \textit{equals()} numa determinada classe sobrepõe a predefinida, pelo que também deve ser codificado o método \textit{hashCode()};
+    \item o método \textit{equals()} presente numa determinada classe necessita de ser sobreposto à implementação predefinida ou, simplesmente, renomeado;
+    \item o objeto \textit{Random} presente numa determinada classe deve ser reutilizado;
+    \item o objeto \textit{ObjectOutputStream} deve ser fechado através de uma clausula \textit{try-catch-finally}.
+\end{enumerate}
+
+Na totalidade existem cerca de catorze erros no código fonte. Quanto à severidade destes erros, existem dois de tipo \textit{blocker}, dois de tipo \textit{critical}, um de tipo \textit{major} e 9 de tipo \textit{minor}.
+\par De salientar que, apesar da existência de alguns erros presentes nesta implementação, estes são facilmente corrigíveis.
+
+\subsubsection{Segurança}
+Ao nível da segurança, esta implementação apresenta apenas uma vulnerabilidade cujo grau de severidade é do tipo \textit{minor}. A ferramenta \textit{Sonarqube}, por forma a eliminar esta mesma, sugere encapsular a amostragem de um determinado erro através de um objeto \textit{LOGGER}.
+
+\subsubsection{Manutenção}
+
+\subsubsection{Cobertura}
+
+\subsubsection{Duplicação de código}
+
 \subsection{Versão 2 - \textit{demo2}}
+
+\subsubsection{Fiabilidade}
+Nesta secção da análise qualitativa da aplicação desenvolvida observam-se os erros no código fonte.
+
+\subsubsection{Segurança}
+
+\subsubsection{Manutenção}
+
+\subsubsection{Cobertura}
+
+\subsubsection{Duplicação de código}
 
 \section{Tarefa 2 - \textit{Refactoring}}
 \subsection{Versão 1 - \textit{demo1}}
@@ -100,5 +141,16 @@
 
 \appendix
 \chapter{Observações}
+Durante a análise da primeira tarefa associada a este trabalho prático observaram-se, na ferramenta \textit{\textbf{Sonarqube}}, variados tipos de severidade de erros. Como tal, apresentam-se de seguida, de forma mais detalhada, os mesmos:
+\begin{itemize}
+    \item \textbf{\textit{blocker}}:
+    \\ Erro com alta probabilidade de afetar o comportamento da aplicação em produção. O código deve ser corrigido imediatamente.
+    \item \textbf{\textit{critical}}:
+    \\ Erro com baixa probabilidade de afetar o comportamento da aplicação em produção ou um problema que representa uma falha de segurança. O código deve ser examinado imediatamente.
+    \item \textbf{\textit{major}}:
+    \\ Falha que afeta a qualidade do código e que pode ter um impacto significativo na produtividade do programador: blocos duplicados, parâmetros não utilizados, entre outros.
+    \item \textbf{\textit{minor}}:
+    \\ Falha que afeta a qualidade do código e que pode ter um impacto minorativo na produtividade do programador: linhas de código longas, entre outros.
+\end{itemize}
 
 \end{document}
