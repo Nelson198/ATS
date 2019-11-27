@@ -1,10 +1,10 @@
---NovoProp: nome, nif, email,morada
+--NovoProp:nome,nif,email,morada
 --NovoCliente:nome,nif,email,morada,X,Y
-     -- X e Y : posicçao onde se encontra
---NovoCarro:tipo,marca,matricula,nif,velocidade media,preço por km, consumo por km, autonomia, X, Y
-     -- X e Y : posicçao onde se encontra
---Aluguer: nif cliente, X destino, Y destino, tipoCombustivel , preferencia
---Classificar: matricula ou nif (cliente ou prop) , nota (0-100)
+     -- X e Y : posição onde se encontra
+--NovoCarro:tipo,marca,matricula,nif,velocidade media,preço por km,consumo por km,autonomia,X,Y
+     -- X e Y : posiçao onde se encontra
+--Aluguer:nif cliente,X destino,Y destino,tipoCombustivel,preferencia
+--Classificar:matricula ou nif (cliente ou prop),nota (0-100)
 
 
 Logs
