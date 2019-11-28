@@ -1,6 +1,7 @@
 module Gerador_Logs where
 
 import Test.QuickCheck
+import Data.Char (isDigit)
 
 type Nome          = String
 type NIF           = String
@@ -470,36 +471,36 @@ genClassificar = do info          <- oneof [genMatricula, genNIF]
 
 {---------- Gerador de Logs ----------}
 
--- Falta parametrizar o gerador de logs !!!
--- Exemplo: genLogs 100 ---> Produz 20 logs de cada tipo, por exemplo.
--- Observação: Se calhar obrigar a que o input seja múltiplo de 5.
+fileName :: FilePath
+fileName = "logs.bak"
 
 genLogsIO :: IO ()
 genLogsIO = do putStr "\nBem-vindo ao gerador de logs.\n> Indique o número de logs que pretende gerar: "
                str <- getLine
-               let nLogs = (read str :: Int)
-
+               
                putStrLn "\nOutput:"
-               if (mod nLogs 5 == 0)
-                   then {- genLogs nLogs -}
-                        putStrLn "> Ficheiro de logs gravado com sucesso.\n"
+               if (null str)
+                   then putStrLn "> Erro: Não foi introduzido nenhum número.\n        Por favor indique um número positivo que seja múltiplo de 5.\n"
                else
-                   putStrLn "> Erro: Por favor indique um número que seja múltiplo de 5.\n"
+                   if (not (all isDigit str))
+                       then putStrLn "> Erro: Não foi introduzido um número válido.\n        Por favor indique um número positivo que seja múltiplo de 5.\n"
+                   else
+                       do let nLogs = (read str :: Int)
+                          if (nLogs > 0 && mod nLogs 5 == 0)
+                              then do let i = (div nLogs 5)
+                                      writeFile fileName "Ficheiro de logs:\n\n"
+                                      genLogs i genProprietario
+                                      genLogs i genCliente
+                                      genLogs i genCarro
+                                      genLogs i genAluguer
+                                      genLogs i genClassificar
+                                      putStrLn ("> Ficheiro de logs gravado com sucesso.\n> " ++ "\"" ++ fileName ++ "\"" ++ ": " ++ (show nLogs) ++ " logs adicionados.\n")
 
-{-                   
-genLogs :: (Show a) => Gen a -> IO ()
-genLogs nLogs = do logs_Proprietario <- vectorOf n $ genProprietario
-                   logs_Cliente      <- vectorOf n $ genCliente
-                   logs_Carro        <- vectorOf n $ genCarro
-                   logs_Aluguer      <- vectorOf n $ genAluguer
-                   logs_Classificar  <- vectorOf n $ genClassificar
+                          else
+                              putStrLn "> Erro: Não foi introduzido um número válido.\n        Por favor indique um número positivo que seja múltiplo de 5.\n"
 
-                   ...
-                
-                where n = div nLogs 5
--}
-
-{-
-    Função a ser utilizada: writeFile "log.bak" str
-        --> onde "str" corresponde ao conjunto de todos os logs produzidos.
--}
+genLogs :: (Show a) => Int -> Gen a -> IO ()
+genLogs 0 _   = return ()
+genLogs n gen = do s <- generate gen
+                   appendFile fileName (show s ++ "\n")
+                   genLogs (n-1) gen
