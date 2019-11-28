@@ -474,9 +474,32 @@ genClassificar = do info          <- oneof [genMatricula, genNIF]
 -- Exemplo: genLogs 100 ---> Produz 20 logs de cada tipo, por exemplo.
 -- Observação: Se calhar obrigar a que o input seja múltiplo de 5.
 
-{-
-genLogs :: Int -> Gen a
-genLogs i = 
+genLogsIO :: IO ()
+genLogsIO = do putStr "\nBem-vindo ao gerador de logs.\n> Indique o número de logs que pretende gerar: "
+               str <- getLine
+               let nLogs = (read str :: Int)
 
-    where n = i / 5
+               putStrLn "\nOutput:"
+               if (mod nLogs 5 == 0)
+                   then {- genLogs nLogs -}
+                        putStrLn "> Ficheiro de logs gravado com sucesso.\n"
+               else
+                   putStrLn "> Erro: Por favor indique um número que seja múltiplo de 5.\n"
+
+{-                   
+genLogs :: (Show a) => Gen a -> IO ()
+genLogs nLogs = do logs_Proprietario <- vectorOf n $ genProprietario
+                   logs_Cliente      <- vectorOf n $ genCliente
+                   logs_Carro        <- vectorOf n $ genCarro
+                   logs_Aluguer      <- vectorOf n $ genAluguer
+                   logs_Classificar  <- vectorOf n $ genClassificar
+
+                   ...
+                
+                where n = div nLogs 5
+-}
+
+{-
+    Função a ser utilizada: writeFile "log.bak" str
+        --> onde "str" corresponde ao conjunto de todos os logs produzidos.
 -}
