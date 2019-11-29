@@ -1,7 +1,11 @@
+-- ignorar erros de failure patter
+{-# LANGUAGE NoMonadFailDesugaring #-}
+
 module Gerador_Logs where
 
 import Test.QuickCheck
 import Data.Char (isDigit)
+import Data.List (nub)
 
 type Nome          = String
 type NIF           = String
@@ -335,9 +339,16 @@ genApelido = frequency[(999, return "Silva"),
 genCoordenadas :: Gen Coordenadas
 genCoordenadas = vectorOf 2 $ choose(-100, 100)
 
+-- auxiliares para os apelidos
+allDifferent :: Eq a => [a] -> Bool
+allDifferent = uncurry (==) . split id nub
+
+split :: (a -> b) -> (a -> c) -> a -> (b, c)
+split f g x = (f x, g x)
+
 genCliente :: Gen Cliente 
 genCliente = do pNome                          <- genNome
-                apelidos                       <- vectorOf 3 $ genApelido
+                apelidos                       <- suchThat (vectorOf 3 $ genApelido) allDifferent
                 [apelido1, apelido2, apelido3] <- shuffle apelidos
                 let nome = pNome ++ " " ++ apelido1 ++ " " ++ apelido2 ++ " " ++ apelido3
                 nif                            <- genNIF
