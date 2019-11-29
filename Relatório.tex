@@ -100,19 +100,35 @@ Como tal, após verificar a informação existente na ferramenta \textit{Sonarqu
     \item o objeto \textit{ObjectOutputStream} deve ser fechado através de uma clausula \textit{try-catch-finally}.
 \end{enumerate}
 
-Na totalidade existem cerca de catorze erros no código fonte. Quanto à severidade destes erros, existem dois de tipo \textit{blocker}, dois de tipo \textit{critical}, um de tipo \textit{major} e 9 de tipo \textit{minor}.
+Na totalidade existem cerca de 14 erros no código fonte. Quanto à severidade destes erros, existem 2 de tipo \textit{blocker}, 2 de tipo \textit{critical}, 1 de tipo \textit{major} e 9 de tipo \textit{minor}.
 \par De salientar que, apesar da existência de alguns erros presentes nesta implementação, estes são facilmente corrigíveis.
 
 \subsubsection{Segurança}
-Ao nível da segurança, esta implementação apresenta apenas uma vulnerabilidade cujo grau de severidade é do tipo \textit{minor}. A ferramenta \textit{Sonarqube}, por forma a eliminar esta mesma, sugere encapsular a amostragem de um determinado erro através de um objeto \textit{LOGGER}.
+Ao nível da segurança, esta implementação apresenta apenas uma vulnerabilidade cujo grau de severidade é do tipo \textit{minor}. A ferramenta \textit{Sonarqube}, por forma a eliminar esta mesma, sugere encapsular a amostragem de um determinado erro através de um objeto \textit{LOGGER}. De notar também que existem 22 casos no código fonte que precisam de ser revistos por forma a verificar se existem ou não ainda mais vulnerabilidades.
 
 \subsubsection{Manutenção}
+Neste segmento do relatório, observam-se e identidicam-se os \textit{code smells}. Estes inferem o grau de interpretabilidade do código fonte e, por isso, permitem avaliar se é ou não possível evoluir a versão atual do programa desenvolvido.
+
+Neste caso, foi possível verificar a existência de \textbf{131 \textit{code smells}}. Apresentam-se de seguida o grau de severidade de cada um destes:
+\begin{itemize}
+    \item \textbf{\textit{minor}}: 60 ocorrências;
+    \item \textbf{\textit{major}}: 24 ocorrências;
+    \item \textbf{\textit{critical}}: 41 ocorrências;
+    \item \textbf{\textit{blocker}}: 6 ocorrências.
+\end{itemize}
+
+Como se pode constatar, cerca de 54\% dos \textit{code smells} possuem uma gravidade considerável, pelo que se pode inferir que esta implementação levará, potencialmente, a uma interpretabilidade razoável por parte do programador.
+
+Segundo a ferramenta \textit{SonarQube}, demoraria cerca de 2 dias e 5 horas a corrigir todos estes "defeitos". Este facto traduz aquilo a que chamamos o \textit{technical debt}, isto é, a probabilidade de ocorrências de erros no futuro. Esta ferramenta atribui a nota \textit{A} no que diz respeito ao \textit{technical debt}.
 
 \subsubsection{Cobertura}
+Quanto à cobertura não foram testados nenhuns aspetos intrínsecos a esta implementação.
 
 \subsubsection{Duplicação de código}
+No que diz respeito à duplicação de código existem cerca de 2 blocos repetidos numa das classes implementadas, representando apenas 1\% do código total.
 
 \subsection{Versão 2 - \textit{demo2}}
+Na segunda versão desenvolvida pelos alunos de POO, \textit{demo2}, foi possível observar bastantes erros no código fonte e muitos \textit{code smells}. Apresenta-se de seguida, por categorias, a análise qualitativa desta mesma implementação.
 
 \subsubsection{Fiabilidade}
 Nesta secção da análise qualitativa da aplicação desenvolvida observam-se os erros no código fonte.
@@ -131,7 +147,16 @@ Nesta secção da análise qualitativa da aplicação desenvolvida observam-se o
 
 \section{Tarefa 3 - Teste da aplicação}
 \subsection{Versão 1 - \textit{demo1}}
+
+\subsubsection{Testes unitários}
+
+\subsubsection{Geração automática de testes - QuickCheck}
+
 \subsection{Versão 2 - \textit{demo2}}
+
+\subsubsection{Testes unitários}
+
+\subsubsection{Geração automática de testes - QuickCheck}
 
 \section{Tarefa 4 - Análise de desempenho}
 \subsection{Versão 1 - \textit{demo1}}
@@ -143,14 +168,14 @@ Nesta secção da análise qualitativa da aplicação desenvolvida observam-se o
 \chapter{Observações}
 Durante a análise da primeira tarefa associada a este trabalho prático observaram-se, na ferramenta \textit{\textbf{Sonarqube}}, variados tipos de severidade de erros. Como tal, apresentam-se de seguida, de forma mais detalhada, os mesmos:
 \begin{itemize}
-    \item \textbf{\textit{blocker}}:
-    \\ Erro com alta probabilidade de afetar o comportamento da aplicação em produção. O código deve ser corrigido imediatamente.
-    \item \textbf{\textit{critical}}:
-    \\ Erro com baixa probabilidade de afetar o comportamento da aplicação em produção ou um problema que representa uma falha de segurança. O código deve ser examinado imediatamente.
-    \item \textbf{\textit{major}}:
-    \\ Falha que afeta a qualidade do código e que pode ter um impacto significativo na produtividade do programador: blocos duplicados, parâmetros não utilizados, entre outros.
     \item \textbf{\textit{minor}}:
     \\ Falha que afeta a qualidade do código e que pode ter um impacto minorativo na produtividade do programador: linhas de código longas, entre outros.
+    \item \textbf{\textit{major}}:
+    \\ Falha que afeta a qualidade do código e que pode ter um impacto significativo na produtividade do programador: blocos duplicados, parâmetros não utilizados, entre outros.
+    \item \textbf{\textit{critical}}:
+    \\ Erro com baixa probabilidade de afetar o comportamento da aplicação em produção ou um problema que representa uma falha de segurança. O código deve ser examinado imediatamente.
+    \item \textbf{\textit{blocker}}:
+    \\ Erro com alta probabilidade de afetar o comportamento da aplicação em produção. O código deve ser corrigido imediatamente.
 \end{itemize}
 
 \end{document}
