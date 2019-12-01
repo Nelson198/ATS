@@ -68,7 +68,6 @@ public class Car implements Serializable {
                 default:
                     throw new UnknownCarTypeException();
             }
-
         }
     }
 

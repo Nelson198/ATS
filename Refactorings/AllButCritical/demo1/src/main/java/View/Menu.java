@@ -218,7 +218,7 @@ public class Menu{
         String matricula = scanner.nextLine();
         out.println("Marca:");
         String marca = scanner.nextLine();
-        out.println("Tipo do Carro: [electric, gas or hybrid]");
+        out.println(TIPO_DO_CARRO_ELECTRIC_GAS_HYBRID_OR_ANY);
         String carType = scanner.nextLine();
         try {
             out.println("Velocidade Média:");
@@ -466,9 +466,15 @@ public class Menu{
                 this.options.add(MenuInd.LOGIN);
                 this.options.add(MenuInd.REGISTER);
                 break;
+            case LOGIN:
+                break;
             case REGISTER:
                 this.options.add(MenuInd.REGISTER_CLIENT);
                 this.options.add(MenuInd.REGISTER_OWNER);
+                break;
+            case REGISTER_CLIENT:
+                break;
+            case REGISTER_OWNER:
                 break;
             case CLIENT:
                 this.options.add(MenuInd.HISTORY_CLIENT);
@@ -476,9 +482,29 @@ public class Menu{
                 this.options.add(MenuInd.RENTALS);
                 this.options.add(MenuInd.TOP_10_CLIENTS);
                 break;
+            case HISTORY_CLIENT:
+                break;
+            case CLOSEST:
+                break;
+            case CHEAPEST:
+                break;
+            case CHEAPEST_NEAR:
+                break;
+            case SPECIFIC:
+                break;
+            case AUTONOMY:
+                break;
             case TOP_10_CLIENTS:
                 this.options.add(MenuInd.N_USES);
                 this.options.add(MenuInd.DISTANCE);
+                break;
+            case HISTORY_OWNER:
+                break;
+            case REVIEW_RENTAL:
+                break;
+            case CAR_OVERVIEW:
+                break;
+            case ADD_CAR:
                 break;
             case RENTALS:
                 this.options.add(MenuInd.CLOSEST);
@@ -493,8 +519,11 @@ public class Menu{
                 this.options.add(MenuInd.REVIEW_RENTAL);
                 this.options.add(MenuInd.ADD_CAR);
                 break;
-
-            default:
+            case PENDING:
+                break;
+            case N_USES:
+                break;
+            case DISTANCE:
                 break;
         }
     }

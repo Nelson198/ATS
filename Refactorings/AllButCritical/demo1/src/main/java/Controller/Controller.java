@@ -83,47 +83,11 @@ public class Controller {
                     error = historyClient(error);
                     break;
 
-                default:
-                    this.menu.parser();
-                    break;
+                    default:
+                        this.menu.parser();
+                        break;
             }
         }
-    }
-
-    private String historyClient(String error) {
-        try{
-            TimeInterval ti = this.menu.getTimeInterval(error);
-
-            this.menu.rentalHistoryShow(ti,
-                    this.model.getRentalListClient((Client) this.user, ti.getInicio(), ti.getFim())
-                            .stream()
-                            .map(Rental::toParsableUserRentalString)
-                            .map(x -> Arrays.asList(x.split("\n")))
-                            .collect(Collectors.toList()));
-
-            this.menu.back();
-            error = "";
-        }
-        catch (InvalidTimeIntervalException e){error = "Intervalo Inválido";}
-        return error;
-    }
-
-    private String historyOwner(String error) {
-        try{
-            TimeInterval ti = this.menu.getTimeInterval(error);
-
-            this.menu.rentalHistoryShow(ti,
-                    this.model.getRentalListOwner((Owner) this.user, ti.getInicio(), ti.getFim())
-                            .stream()
-                            .map(Rental::toParsableOwnerRentalString)
-                            .map(x -> Arrays.asList(x.split("\n")))
-                            .collect(Collectors.toList()));
-
-            this.menu.back();
-            error = "";
-        }
-        catch (InvalidTimeIntervalException e){error = "Intervalo Inválido";}
-        return error;
     }
 
     private String pending(String error) {
@@ -143,6 +107,46 @@ public class Controller {
             error = "";
         }
         catch (InvalidRatingException e){error = "Parametros Invalidos";}
+        return error;
+    }
+
+    private String reviewRental(String error) {
+        Owner owner = (Owner)this.user;
+        ArrayList<Rental> lR = owner.getPending();
+        if (lR.size() == 0){
+            this.menu.back();
+            return error;
+        }
+        String v = menu.reviewRentShow(
+                error,
+                owner.getRates(),
+                lR.stream()
+                        .map(Rental::toParsableUserString)
+                        .map(x -> Arrays.asList(x.split("\n")))
+                        .collect(Collectors.toList()));
+
+        try {
+            switch (v.charAt(0)) {
+                case 'a':
+                    this.model.rent(lR.get(Integer.parseInt(v.substring(1)) - 1));
+                    this.model.rate(
+                            owner,
+                            lR.get(Integer.parseInt(v.substring(1)) - 1),
+                            this.menu.showRentalRate(
+                                    lR.get(Integer.parseInt(v.substring(1)) - 1).toFinalString()));
+                    break;
+                case 'r':
+                    this.model.refuse(owner, lR.get(Integer.parseInt(v.substring(1)) - 1));
+                    break;
+                case 'b':
+                    this.menu.back();
+                    break;
+                default:
+                    break;
+            }
+            error = "";
+        }
+        catch(NumberFormatException | IndexOutOfBoundsException e){error = "Input Inválido";}
         return error;
     }
 
@@ -189,6 +193,42 @@ public class Controller {
         catch (NumberFormatException e){ error = "Posição inválida"; }
         catch (InvalidNumberOfArgumentsException e) {error = "Invalid parameters";}
         catch (InvalidTimeIntervalException e ){error = "Formato Inválido de Data";}
+        return error;
+    }
+
+    private String historyClient(String error) {
+        try{
+            TimeInterval ti = this.menu.getTimeInterval(error);
+
+            this.menu.rentalHistoryShow(ti,
+                    this.model.getRentalListClient((Client) this.user, ti.getInicio(), ti.getFim())
+                            .stream()
+                            .map(Rental::toParsableUserRentalString)
+                            .map(x -> Arrays.asList(x.split("\n")))
+                            .collect(Collectors.toList()));
+
+            this.menu.back();
+            error = "";
+        }
+        catch (InvalidTimeIntervalException e){error = "Intervalo Inválido";}
+        return error;
+    }
+
+    private String historyOwner(String error) {
+        try{
+            TimeInterval ti = this.menu.getTimeInterval(error);
+
+            this.menu.rentalHistoryShow(ti,
+                    this.model.getRentalListOwner((Owner) this.user, ti.getInicio(), ti.getFim())
+                            .stream()
+                            .map(Rental::toParsableOwnerRentalString)
+                            .map(x -> Arrays.asList(x.split("\n")))
+                            .collect(Collectors.toList()));
+
+            this.menu.back();
+            error = "";
+        }
+        catch (InvalidTimeIntervalException e){error = "Intervalo Inválido";}
         return error;
     }
 
@@ -294,46 +334,6 @@ public class Controller {
         }
         catch (InvalidNewRentalException e){error = "New rental inválido";}
         catch (NoCarAvaliableException e)  {error = NO_CARS_AVAILABLES; }
-        return error;
-    }
-
-    private String reviewRental(String error) {
-        Owner owner = (Owner)this.user;
-        ArrayList<Rental> lR = owner.getPending();
-        if (lR.size() == 0){
-            this.menu.back();
-            return error;
-        }
-        String v = menu.reviewRentShow(
-                error,
-                owner.getRates(),
-                lR.stream()
-                        .map(Rental::toParsableUserString)
-                        .map(x -> Arrays.asList(x.split("\n")))
-                        .collect(Collectors.toList()));
-
-        try {
-            switch (v.charAt(0)) {
-                case 'a':
-                    this.model.rent(lR.get(Integer.parseInt(v.substring(1)) - 1));
-                    this.model.rate(
-                            owner,
-                            lR.get(Integer.parseInt(v.substring(1)) - 1),
-                            this.menu.showRentalRate(
-                                    lR.get(Integer.parseInt(v.substring(1)) - 1).toFinalString()));
-                    break;
-                case 'r':
-                    this.model.refuse(owner, lR.get(Integer.parseInt(v.substring(1)) - 1));
-                    break;
-                case 'b':
-                    this.menu.back();
-                    break;
-                default:
-                    throw new IllegalStateException("Unexpected value: " + v.charAt(0));
-            }
-            error = "";
-        }
-        catch(NumberFormatException | IndexOutOfBoundsException e){error = "Input Inválido";}
         return error;
     }
 
