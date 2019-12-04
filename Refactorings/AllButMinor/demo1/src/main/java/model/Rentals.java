@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 class Rentals implements Serializable {
@@ -117,5 +118,10 @@ class Rentals implements Serializable {
 
         Rentals rentals = (Rentals) o;
         return this.rentalBase.equals(rentals.rentalBase);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(rentalBase);
     }
 }

@@ -6,6 +6,7 @@ import utils.Point;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Car implements Serializable {
     private static final long serialVersionUID = -1292370800088543472L;
@@ -218,6 +219,11 @@ public class Car implements Serializable {
                 && this.type == car.type
                 && this.position.equals(car.position)
                 && this.historic.equals(car.historic);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numberPlate, owner, brand, type, avgSpeed, basePrice, gasMileage, position, fullTankRange, isAvailable, range, rating, nRatings, historic);
     }
 
     @Override

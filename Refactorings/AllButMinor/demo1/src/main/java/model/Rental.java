@@ -6,6 +6,7 @@ import utils.StringBetter;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class Rental implements Serializable {
     private static final long serialVersionUID = 7119901023330524504L;
@@ -154,5 +155,10 @@ public class Rental implements Serializable {
                 && this.start.equals(rental.start)
                 && this.end.equals(rental.end)
                 && this.date.equals(rental.date);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(client, car, start, end, expectedPrice, realPrice, date, expectedTime, realTime);
     }
 }
