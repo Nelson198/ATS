@@ -2,6 +2,7 @@ package Model;
 
 import Exceptions.*;
 import Utils.Point;
+import jdk.internal.vm.compiler.collections.EconomicMap;
 
 import java.io.*;
 import java.time.LocalDateTime;
@@ -242,17 +243,19 @@ public class UMCarroJa implements Serializable {
 
     public void save(String fName) throws IOException {
         FileOutputStream a = new FileOutputStream(fName);
-        ObjectOutputStream r = new ObjectOutputStream(a);
-        r.writeObject(this);
-        r.flush();
-        r.close();
+        try (ObjectOutputStream r = new ObjectOutputStream(a)) {
+            r.writeObject(this);
+            r.flush();
+        }
     }
+
 
     public static UMCarroJa read(String fName) throws IOException, ClassNotFoundException {
         FileInputStream r = new FileInputStream(fName);
-        ObjectInputStream a = new ObjectInputStream(r);
-        UMCarroJa u = (UMCarroJa) a.readObject();
-        a.close();
+        UMCarroJa u;
+        try (ObjectInputStream a = new ObjectInputStream(r)) {
+            u = (UMCarroJa) a.readObject();
+        }
         return u;
     }
 }
