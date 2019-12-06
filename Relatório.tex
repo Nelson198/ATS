@@ -253,6 +253,28 @@ Estes problemas estão divididos pelos seguintes tipos: \textit{Bug}, \textit{Vu
     
     Uma solução para este problema utilizando o refactoring do \textit{IntelliJ}, é extrair estas partes do código para novos métodos.
     
+    (Adicionar print)\\\\
+    
+    \underline{Define a constant instead of duplicating this literal "Parametros Inválidos" 3 times.}
+
+    Duplicar \textit{strings} literais dificultam o processo de refactoring, pois é necessário ter o cuidado de atualizar todas as ocorrências da \textit{string} em causa.
+    Por outro lado, constantes podem ser utilizadas em vários sítios, mas só precisam de ser atualizadas num único sítio.
+
+    Com o \textit{IntelliJ}, é possível utilizar o refactoring "\textit{Introduce Constant...}", que cria uma constante com a \textit{string} selecionada, e automaticamente substitui todos os usos deste literal pela constante criada.
+
+    (Adicionar print)\\\\
+
+    \underline{Add a default case to this switch.}
+
+    Adicionar um caso \textit{default} é programação defensiva e diminui a probabilidade do programa crachar.
+
+    O \textit{IntelliJ} permite fazer isto automaticamente, basta selecionar a cláusula \textit{switch} e carregar na opção "\textit{Insert 'default' branch}".
+
+    (Adicionar print)\\\\
+
+    
+    \underline{}
+
     
     \item \textit{\textbf{Major}}\\
     
