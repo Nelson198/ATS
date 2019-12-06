@@ -24,25 +24,25 @@
 % Capa do relatório
 
 \title{
-	Análise e Teste de Software
-	\\ \Large{\textbf{Trabalho Prático}}
-	\\ -
-	\\ Mestrado em Engenharia Informática
-	\\ \large{Universidade do Minho}
-	\\ Relatório
+    Análise e Teste de Software
+    \\ \Large{\textbf{Trabalho Prático}}
+    \\ -
+    \\ Mestrado em Engenharia Informática
+    \\ \large{Universidade do Minho}
+    \\ Relatório
 }
 \author{
-	\begin{tabular}{ll}
-		\textbf{Grupo nº3}
-		\\\hline
-		PG41091 & Nelson José Dias Teixeira
-		\\
-		PG41081 & José Alberto Martins Boticas
-		\\
-		PG41094 & Pedro Rafael Paiva Moura
-		\\
-		A80499  & Moisés Manuel Borba Roriz Ramires
-	\end{tabular}
+    \begin{tabular}{ll}
+        \textbf{Grupo nº3}
+        \\\hline
+        PG41091 & Nelson José Dias Teixeira
+        \\
+        PG41081 & José Alberto Martins Boticas
+        \\
+        PG41094 & Pedro Rafael Paiva Moura
+        \\
+        A80499  & Moisés Manuel Borba Roriz Ramires
+    \end{tabular}
 }
 
 \date{\today}
@@ -56,10 +56,10 @@
 % Resumo
 
 \begin{abstract}
-	No ano lectivo 2018/2019, no contexto da disciplina de Programação Orientada a Objectos
-	(POO) leccionada no Departamento de Informática da Universidade do Minho, os alunos
-	tiveram de desenvolver em grupo uma aplicação Java, denominada por  \textit{UmCarroJá}, para gerir um serviço de aluguer de
-	veículos particulares pela internet.\,\,No contexto da disciplina de Análise e Teste de Software (ATS) pretende-se que neste projeto se apliquem técnicas de análise e teste de software, estudadas nas aulas, de modo a analisar a qualidade de duas das soluções desenvolvidas pelos alunos de POO.
+    No ano lectivo 2018/2019, no contexto da disciplina de Programação Orientada a Objectos
+    (POO) leccionada no Departamento de Informática da Universidade do Minho, os alunos
+    tiveram de desenvolver em grupo uma aplicação Java, denominada por  \textit{UmCarroJá}, para gerir um serviço de aluguer de
+    veículos particulares pela internet.\,\,No contexto da disciplina de Análise e Teste de Software (ATS) pretende-se que neste projeto se apliquem técnicas de análise e teste de software, estudadas nas aulas, de modo a analisar a qualidade de duas das soluções desenvolvidas pelos alunos de POO.
 \end{abstract}
 
 % Índice
@@ -177,7 +177,88 @@ Nesta tarefa serão utilizadas ferramentas como o \textit{autorefactor}, \textit
 
 \subsection{Versão 1 - \textit{demo1}}
 Como foi referido anteriormente na secção 2.1.1, nesta versão foram observados vários problemas no código fonte.\\
-Estes problemas estão divididos pelos seguintes tipos: \textbf{Bug}, \textbf{Vulnerability} e \textbf{Code Smells}
+Estes problemas estão divididos pelos seguintes tipos: \textit{Bug}, \textit{Vulnerability} e \textit{Code Smells}.\\\\
+\underline{\textbf{Bugs}}
+\begin{itemize}
+    \item \textit{\textbf{blocker}}\\
+        Foi observado o seguinte \textit{blocker bug}:\\
+        \underline{Use try-with-resources or close this "ObjectOutputStream" in a "finally" clause.}\\ (Adicionar print)
+        
+        A classe \texttt{ObjectOutputStream} implementa a interface \texttt{AutoCloseable}, o que significa que é necessário fechá-la depois de a usar. Para isto, é recomendado que o objeto seja criado usando o padrão "\textit{try-with-resources}", pois vai ser fechado automaticamente.
+        
+        O \textit{IntelliJ} tem este refactoring implementado, logo a correção deste \textit{bug} é automática.
+        
+        (Adicionar print)
+    
+    \item \textit{\textbf{critical}}\\
+        Foi observado o seguinte \textit{critical bug}:\\
+        \underline{Save and re-use this "Random".}\\ (Adicionar print)
+        
+        Criar um objeto \texttt{Random} novo sempre que é necessário um valor aleatório é ineficiente e pode produzir números que não sejam completamente aleatórios. Para uma melhor eficiência e aleatoriedade, é preferível criar um único objeto \texttt{Random}, guardá-lo e reutilizá-lo.
+        
+        No \textit{Intellij}, podemos tranformar uma variável local numa variável de instância através do refactoring "\textit{Introduce Field...}", e de seguida, podemos usar o refactoring "\textit{move assignment to field declaration}".
+        
+        (Adicionar print)
+        
+    \item \textit{\textbf{major}}\\
+        Foi observado o seguinte \textit{major bug}:\\
+        \underline{Either override Object.equals(Object), or rename the method to prevent any confusion.}\\
+        (Adicionar print)
+        
+        O nome de método \texttt{equals} deveria ser usado exclusivamente para sobrepor \texttt{Object.equals(Object)}.
+        
+        Usando o refactoring "\textit{Rename}" do \textit{IntelliJ} facilmente resolvemos este problema alterando o nome do método.
+        
+        (Adicionar print)
+        
+    \item \textit{\textbf{minor}}\\
+        Foi observado o seguinte \textit{minor bug}:\\
+        \underline{This class overrides "equals()" and should therefore also override "hashCode()".}\\
+        (Adicionar Print)
+        
+        Se dois objetos são iguais de acordo com o método \texttt{equals(Object)}, então chamar o método \texttt{hashCode()} em ambos os objetos deve produzir resultados iguais.
+        Para isto acontecer, ambos os métodos devem ser herdados ou sobrepostos.
+        
+        Para resolver este problema, o programador apenas necessita de escrever o nome do método \texttt{hashCode} e o \textit{IntelliJ} faz \textit{autocomplete} ao método.
+        
+        (Adicionar print)
+\end{itemize}
+
+\underline{\textbf{Vulnerability}}
+\begin{itemize}
+    \item \textit{\textbf{minor}}\\
+    \underline{Use a logger to log this exception.}\\
+    (Adicionar print)
+    
+    É recomendado a utilização de \textit{Loggers} para imprimir objetos da classe \texttt{Throwable}, pois estes normalmente contêm informação sensível que pode ser exposta.
+    
+    Nesta situação, o utilizador tem de fazer o refactoring manualmente, criando o \texttt{Logger} como uma variável estática da classe, e utilizando o método \texttt{log} para escrever a exceção num ficheiro \textit{log}.
+\end{itemize}
+
+\underline{\textbf{Code Smells}}
+\begin{itemize}
+    \item \textit{\textbf{Blocker}}\\
+    \underline{Remove this "clone" implementation; use a copy constructor or copy factory instead.}\\
+    (Adicionar Print)
+    
+    Acho que este não faz sentido mudar, porque eles utilizam estes métodos em streams
+    
+    \item \textit{\textbf{Critical}}\\
+    \underline{Refactor this method to reduce its Cognitive Complexity from 112 to the 15 allowed.}\\
+    (Adicionar print)
+    
+    Complexidade cognitiva é uma medida de dificuldade sobre o entendimento/compreensão do código. Maior complexidade cognitiva significa que muito provavelmente o programador irá ter uma maior dificuldade na manutenção do seu código.
+    
+    Neste caso, a maior parte complexidade cognitiva resulta da excessiva existência de cláusulas \textit{"catch"}.
+    
+    Uma solução para este problema utilizando o refactoring do \textit{IntelliJ}, é extrair estas partes do código para novos métodos.
+    
+    
+    \item \textit{\textbf{Major}}\\
+    
+    \item \textit{\textbf{Minor}}\\
+\end{itemize}
+
 
 \subsection{Versão 2 - \textit{demo2}}
 
