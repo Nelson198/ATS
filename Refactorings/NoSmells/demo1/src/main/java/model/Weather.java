@@ -1,41 +1,35 @@
-package model;
+package Model;
 
 import java.time.LocalDateTime;
 import java.util.Random;
 
 class Weather {
-    public static final String WINTER = "Winter";
-    public static final String SPRING = "Spring";
-    public static final String SUMMER = "Summer";
-    public static final String FALL = "Fall";
     private static final String[] seasons = {
-            WINTER, WINTER,
-            SPRING, SPRING, SPRING,
-            SUMMER, SUMMER, SUMMER,
-            FALL, FALL, FALL,
-            WINTER
+            "Winter", "Winter",
+            "Spring", "Spring", "Spring",
+            "Summer", "Summer", "Summer",
+            "Fall", "Fall", "Fall",
+            "Winter"
     };
+    private Random a = new Random();
 
     private String getSeason() {
         return seasons[LocalDateTime.now().getMonthValue()];
     }
 
     public double getSeasonDelay() {
-        Random a = new Random();
         switch (getSeason()){
-            case SUMMER:
+            case "Summer":
                 return a.nextDouble() % 0.1;
 
-            case SPRING:
+            case "Spring":
                 return a.nextDouble() % 0.3;
 
-            case FALL:
+            case "Fall":
                 return a.nextDouble() % 0.35;
 
             default:
                 return a.nextDouble() % 0.6;
         }
     }
-    
-
 }

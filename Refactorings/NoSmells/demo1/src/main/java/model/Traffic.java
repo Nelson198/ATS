@@ -1,12 +1,14 @@
-package model;
+package Model;
 
 import java.time.LocalDateTime;
 import java.util.Random;
 
 class Traffic {
+
+    private Random b = new Random();
+
     public double getTraficDelay(double delay) {
         int a = LocalDateTime.now().getHour();
-        Random b = new Random();
         if(a == 18 || a == 8)
             return (b.nextDouble() % 0.6) + (delay % 0.2);
         if(a > 1 && a < 6)

@@ -1,7 +1,7 @@
-package model;
+package Model;
 
-import utils.Point;
-import utils.StringBetter;
+import Utils.Point;
+import Utils.StringBetter;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -10,7 +10,6 @@ import java.util.Objects;
 
 public class Rental implements Serializable {
     private static final long serialVersionUID = 7119901023330524504L;
-    public static final String HORAS_STR = "%.2f Horas";
     private final Client client;
     private final Car car;
     private final Point start;
@@ -125,16 +124,16 @@ public class Rental implements Serializable {
         str.append("Viagem:         ").append(this.start).append(" -> ").append(this.end).append("\n");
         str.append("Tempo a pé      ").append(
                 String.format(
-                        HORAS_STR,
+                        "%.2f Horas",
                         this.client.getPos().distanceBetweenPoints(this.start)/4)).append("\n");
-        str.append("Tempo Estimado: ").append(String.format(HORAS_STR, this.expectedTime)).append("\n");
+        str.append("Tempo Estimado: ").append(String.format("%.2f Horas", this.expectedTime)).append("\n");
         str.append("Custo Estimado: ").append(String.format("%.2f", this.expectedPrice));
         return str.toString();
     }
 
     public String toFinalString() {
         StringBuilder str = new StringBuilder();
-        str.append("Tempo Total: ").append(String.format(HORAS_STR, this.realTime)).append("\n");
+        str.append("Tempo Total: ").append(String.format("%.2f Horas", this.realTime)).append("\n");
         str.append("Custo Total: ").append(String.format("%.2f", this.realPrice)).append("\n\n");
         str.append(new StringBetter(this.car.warnings()).under());
         return str.toString();

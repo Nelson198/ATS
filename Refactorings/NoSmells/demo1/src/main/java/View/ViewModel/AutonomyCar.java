@@ -1,7 +1,7 @@
-package view.view_model;
-import exceptions.InvalidNewRentalException;
-import model.Car;
-import utils.Point;
+package View.ViewModel;
+import Exceptions.InvalidNewRentalException;
+import Model.Car;
+import Utils.Point;
 
 public class AutonomyCar {
     private final Point point;

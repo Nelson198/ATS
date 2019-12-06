@@ -1,7 +1,7 @@
-package model;
+package Model;
 
-import exceptions.UnknownCarTypeException;
-import utils.Point;
+import Exceptions.UnknownCarTypeException;
+import Utils.Point;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -47,28 +47,27 @@ public class Car implements Serializable {
     }
 
     public enum CarType {
-        ELECTRIC,
-        GAS,
-        HYBRID,
-        ANY;
+        electric,
+        gas,
+        hybrid,
+        any;
 
-        public boolean equals(CarType a) {
-            return a == this || a == ANY;
+        public boolean equalsCarType(CarType a) {
+            return a == this || a == any;
         }
 
         public static CarType fromString(String s) throws UnknownCarTypeException {
             switch (s) {
                 case "Electrico":
-                    return CarType.ELECTRIC;
+                    return CarType.electric;
                 case "Gasolina":
-                    return CarType.GAS;
+                    return CarType.gas;
                 case "Hibrido":
-                    return CarType.HYBRID;
+                    return CarType.hybrid;
                 case "Todos":
-                    return CarType.ANY;
-                default:
-                    throw new UnknownCarTypeException();
-            }
+                    return CarType.any;
+                }
+            throw new UnknownCarTypeException();
         }
     }
 
@@ -166,7 +165,7 @@ public class Car implements Serializable {
 
     boolean hasRange(Point dest) {
         if(this.range / this.getFullTankRange() < 0.1) return false;
-        return this.position.distanceBetweenPoints(dest) * 1.2 <= this.range;
+        return !(this.position.distanceBetweenPoints(dest) * 1.2 > this.range);
     }
 
     void rate(int rating) {
@@ -223,6 +222,11 @@ public class Car implements Serializable {
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(numberPlate, owner, brand, type, avgSpeed, basePrice, gasMileage, position, fullTankRange, isAvailable, range, rating, nRatings, historic);
+    }
+
+    @Override
     public String toString() {
         return new StringBuilder()
                 .append(this.getNumberPlate()).append("\n")
@@ -230,10 +234,5 @@ public class Car implements Serializable {
                 .append(String.format("%.2f", this.getBasePrice())).append("\n")
                 .append(this.isAvailable).append("\n")
                 .append(this.getRating()).toString();
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(numberPlate, owner, brand, type, avgSpeed, basePrice, gasMileage, position, fullTankRange, isAvailable, range, rating, nRatings, historic);
     }
 }

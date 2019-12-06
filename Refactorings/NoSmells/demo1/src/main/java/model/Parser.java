@@ -1,7 +1,7 @@
-package model;
+package Model;
 
-import exceptions.*;
-import utils.Point;
+import Exceptions.*;
+import Utils.Point;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -10,10 +10,13 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class Parser {
     private List<String> file;
+    private static final Logger LOGGER = Logger.getLogger( Parser.class.getName() );
 
     public Parser() {
         this.file = new ArrayList<>();
@@ -30,7 +33,7 @@ public class Parser {
                     .map(e -> this.parseLine(e, model))
                     .collect(Collectors.toList());
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.ALL, e.toString(), e);
         }
     }
 
@@ -103,8 +106,6 @@ public class Parser {
                     if (content.length != 2)
                         break;
                     model.rate(content[0], Integer.parseInt(content[1]));
-                    break;
-                default:
                     break;
             }
         }

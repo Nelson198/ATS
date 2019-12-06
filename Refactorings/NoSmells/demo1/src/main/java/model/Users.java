@@ -1,7 +1,7 @@
-package model;
+package Model;
 
-import exceptions.InvalidUserException;
-import exceptions.UserExistsException;
+import Exceptions.InvalidUserException;
+import Exceptions.UserExistsException;
 
 import java.io.Serializable;
 import java.util.*;

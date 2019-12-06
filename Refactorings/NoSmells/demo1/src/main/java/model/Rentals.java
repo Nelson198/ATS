@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -11,16 +11,16 @@ class Rentals implements Serializable {
     private static final long serialVersionUID = 1526373866446179937L;
     private final List<Rental> rentalBase;
 
-    private static int id;
+    static private int id;
 
     Rentals() {
         this.rentalBase = new ArrayList<>();
         id = -1;
     }
 
-    static void addRental(Rentals rentals, Rental r) {
+    void addRental(Rental r) {
         id++;
-        rentals.rentalBase.add(r);
+        this.rentalBase.add(r);
     }
 
     /**

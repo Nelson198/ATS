@@ -1,4 +1,4 @@
-package view.view_model;
+package View.ViewModel;
 
 import java.time.LocalDateTime;
 

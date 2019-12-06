@@ -1,4 +1,4 @@
-package view.view_model;
+package View.ViewModel;
 
 public class RateOwnerCar {
     private final int ownerRate;

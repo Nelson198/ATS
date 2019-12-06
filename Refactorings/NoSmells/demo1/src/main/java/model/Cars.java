@@ -1,10 +1,10 @@
-package model;
+package Model;
 
-import exceptions.CarExistsException;
-import exceptions.InvalidCarException;
-import exceptions.NoCarAvaliableException;
-import exceptions.UnknownCompareTypeException;
-import utils.Point;
+import Exceptions.CarExistsException;
+import Exceptions.InvalidCarException;
+import Exceptions.NoCarAvaliableException;
+import Exceptions.UnknownCompareTypeException;
+import Utils.Point;
 
 import java.io.Serializable;
 import java.util.*;
@@ -63,11 +63,11 @@ public class Cars implements Serializable {
      * @param b Tipo a procurar
      * @return Lista dos carros
      */
-    public List<Car> listOfCarType(Car.CarType b) {
+    public ArrayList<Car> listOfCarType(Car.CarType b) {
         return this.carBase
                 .values()
                 .stream()
-                .filter(e -> e.getType().equals(b))
+                .filter((e)-> e.getType().equalsCarType(b))
                 .map(Car::clone)
                 .collect(Collectors
                         .toCollection(ArrayList::new));
@@ -79,7 +79,7 @@ public class Cars implements Serializable {
                 return this.carBase
                         .values()
                         .stream()
-                        .filter(e -> e.getType().equals(a)
+                        .filter(e -> e.getType().equalsCarType(a)
                                 && e.hasRange(dest)
                                 && e.isAvailable())
                         .sorted(Comparator.comparingDouble(e ->
@@ -93,7 +93,7 @@ public class Cars implements Serializable {
                 return this.carBase
                         .values()
                         .stream()
-                        .filter(e -> e.getType().equals(a)
+                        .filter(e -> e.getType().equalsCarType(a)
                                 && e.hasRange(dest)
                                 && e.getPosition().distanceBetweenPoints(dest) != 0
                                 && e.isAvailable())
@@ -114,7 +114,7 @@ public class Cars implements Serializable {
             return this.carBase
                     .values()
                     .stream()
-                    .filter(e -> e.getType().equals(a)
+                    .filter(e -> e.getType().equalsCarType(a)
                             && e.hasRange(dest)
                             && origin.distanceBetweenPoints(e.getPosition()) <= range
                             && e.isAvailable())
@@ -147,7 +147,7 @@ public class Cars implements Serializable {
             return this.carBase
                     .values()
                     .stream()
-                    .filter(e -> e.getType().equals(a)
+                    .filter(e -> e.getType().equalsCarType(a)
                             && e.hasRange(dest)
                             && e.getRange() >= range
                             && e.isAvailable())

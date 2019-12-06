@@ -1,6 +1,6 @@
-package view;
+package View;
 
-import utils.StringBetter;
+import Utils.StringBetter;
 
 import java.util.List;
 

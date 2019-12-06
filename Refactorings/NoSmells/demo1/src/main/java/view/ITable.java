@@ -1,4 +1,4 @@
-package view;
+package View;
 
 interface ITable {
     String toString();

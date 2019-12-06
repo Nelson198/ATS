@@ -1,6 +1,6 @@
-package view.view_model;
+package View.ViewModel;
 
-import utils.Point;
+import Utils.Point;
 
 public class RegisterUser {
     private final String name;
