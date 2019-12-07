@@ -1,0 +1,74 @@
+* Starting client
+* Connecting to master process on port 8841
+* Analyzing classpath: 
+  - /home/joseb/Desktop/ats/ATS/Refactorings/AllSmells/demo1/target/classes
+  - /home/joseb/Desktop/ats/ATS/Refactorings/AllSmells/demo1/target/classes
+* Finished analyzing classpath
+* Generating tests for class Model.Owner
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Setting up search algorithm for whole suite generation
+[MASTER] 15:38:26.766 [pool-2-thread-1] WARN  TestSuiteSerialization - Cannot load tests because file does not exist: /home/joseb/Desktop/ats/ATS/Refactorings/AllSmells/demo1/.evosuite/evosuite-seeds/Model.Owner.seed
+* Loaded 0 tests from /home/joseb/Desktop/ats/ATS/Refactorings/AllSmells/demo1/.evosuite/evosuite-seeds/Model.Owner.seed
+* Total number of test goals: 
+  - Line 36
+  - Branch 23
+  - Exception 0
+  - MutationFactory 16
+  - Output 18
+  - Method 10
+  - MethodNoException 10
+  - CBranchFitnessFactory 23
+* Using seed 1575733104259
+* Starting evolution
+* Search finished after 75s and 478 generations, 249900 statements, best individual has fitness: 8.833333333333332
+* Writing sequences to pool
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 36
+* Number of covered goals: 36
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 96%
+* Total number of goals: 23
+* Number of covered goals: 22
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 2
+* Number of covered goals: 2
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 100%
+* Total number of goals: 16
+* Number of covered goals: 16
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 72%
+* Total number of goals: 18
+* Number of covered goals: 13
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 10
+* Number of covered goals: 10
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 10
+* Number of covered goals: 10
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 91%
+* Total number of goals: 23
+* Number of covered goals: 21
+* Generated 17 tests with total length 95
+* Resulting test suite's coverage: 95% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 100%
+* Compiling and checking tests
+* Writing JUnit test case 'Owner_ESTest' to /home/joseb/Desktop/ats/ATS/Refactorings/AllSmells/demo1/.evosuite/tmp_2019_12_07_15_32_19/tests
+* Done!
+
