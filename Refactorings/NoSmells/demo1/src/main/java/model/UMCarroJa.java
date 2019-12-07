@@ -149,7 +149,7 @@ public class UMCarroJa implements Serializable {
     }
 
     public void rent(Rental r) {
-        rentals.addRental(r);
+        Rentals.addRental(rentals, r);
         r.rent();
     }
 

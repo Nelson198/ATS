@@ -47,27 +47,28 @@ public class Car implements Serializable {
     }
 
     public enum CarType {
-        electric,
-        gas,
-        hybrid,
-        any;
+        ELECTRIC,
+        GAS,
+        HYBRID,
+        ANY;
 
         public boolean equalsCarType(CarType a) {
-            return a == this || a == any;
+            return a == this || a == ANY;
         }
 
         public static CarType fromString(String s) throws UnknownCarTypeException {
             switch (s) {
                 case "Electrico":
-                    return CarType.electric;
+                    return CarType.ELECTRIC;
                 case "Gasolina":
-                    return CarType.gas;
+                    return CarType.GAS;
                 case "Hibrido":
-                    return CarType.hybrid;
+                    return CarType.HYBRID;
                 case "Todos":
-                    return CarType.any;
-                }
-            throw new UnknownCarTypeException();
+                    return CarType.ANY;
+                default:
+                    throw new UnknownCarTypeException();
+            }
         }
     }
 

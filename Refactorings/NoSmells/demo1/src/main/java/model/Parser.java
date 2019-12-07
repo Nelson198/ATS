@@ -89,24 +89,15 @@ public class Parser {
                 case "Aluguer":
                     if (content.length != 5)
                         break;
-                    try {
-                        model.rental(new StringBuilder()
-                                        .append(content[0])
-                                        .append("@gmail.com")
-                                        .toString(),
-                                new Point(Double.parseDouble(content[1])
-                                        , Double.parseDouble(content[2])),
-                                content[4], Car
-                                        .CarType
-                                        .fromString(content[3]));
-                    } catch (NoCarAvaliableException ignored) {
-                    }
+                    aluguerTryCatch(model, content);
                     break;
                 case "Classificar":
                     if (content.length != 2)
                         break;
                     model.rate(content[0], Integer.parseInt(content[1]));
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + categoria);
             }
         }
         catch (InvalidUserException
@@ -114,8 +105,26 @@ public class Parser {
                 | CarExistsException
                 | UnknownCarTypeException
                 | UnknownCompareTypeException
-                | InvalidCarException ignored) {}
+                | InvalidCarException e) {
+            LOGGER.log(Level.ALL, e.toString(), e);
+        }
         return l;
+    }
+
+    private void aluguerTryCatch(UMCarroJa model, String[] content) throws UnknownCompareTypeException, InvalidUserException, UnknownCarTypeException {
+        try {
+            model.rental(new StringBuilder()
+                            .append(content[0])
+                            .append("@gmail.com")
+                            .toString(),
+                    new Point(Double.parseDouble(content[1])
+                            , Double.parseDouble(content[2])),
+                    content[4], Car
+                            .CarType
+                            .fromString(content[3]));
+        } catch (NoCarAvaliableException e) {
+            LOGGER.log(Level.ALL, e.toString(), e);
+        }
     }
 
     @Override

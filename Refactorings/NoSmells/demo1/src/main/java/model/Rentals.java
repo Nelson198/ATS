@@ -11,16 +11,15 @@ class Rentals implements Serializable {
     private static final long serialVersionUID = 1526373866446179937L;
     private final List<Rental> rentalBase;
 
-    static private int id;
+    static private int id = -1;
 
     Rentals() {
         this.rentalBase = new ArrayList<>();
-        id = -1;
     }
 
-    void addRental(Rental r) {
+    static void addRental(Rentals rentals, Rental r) {
         id++;
-        this.rentalBase.add(r);
+        rentals.rentalBase.add(r);
     }
 
     /**

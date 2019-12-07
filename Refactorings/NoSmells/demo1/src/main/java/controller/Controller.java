@@ -23,63 +23,63 @@ public class Controller {
     public void run(){
         String error = "";
         while(this.menu.getRun()) {
-            switch (menu.getMenu()) {
-                case Login:
+            switch (menu.getMenuInd()) {
+                case LOGIN:
                     error = login(error);
                     break;
-                case RegisterClient:
+                case REGISTER_CLIENT:
                     error = registerClient(error);
                     break;
-                case RegisterOwner:
+                case REGISTER_OWNER:
                     error = registerOwner(error);
                     break;
-                case Closest:
+                case CLOSEST:
                     error = closest(error);
                     break;
-                case Cheapest:
+                case CHEAPEST:
                     error = cheapest(error);
                     break;
-                case ReviewRental:
+                case REVIEW_RENTAL:
                     error = reviewRental(error);
                     break;
 
-                case CheapestNear:
+                case CHEAPEST_NEAR:
                     error = cheapestNear(error);
                     break;
 
-                case Autonomy:
+                case AUTONOMY:
                     error = autonomy(error);
                     break;
 
-                case Specific:
+                case SPECIFIC:
                     error = specific(error);
                     break;
 
-                case AddCar:
+                case ADD_CAR:
                     error = addCar(error);
                     break;
 
-                case NUses:
+                case N_USES:
                     nUses();
                     break;
 
-                case Distance:
+                case DISTANCE:
                     distance();
                     break;
 
-                case CarOverview:
+                case CAR_OVERVIEW:
                     error = carOverview(error);
                     break;
 
-                case Pending:
+                case PENDING:
                     error = pending(error);
                     break;
 
-                case HistoryOwner:
+                case HISTORY_OWNER:
                     error = historyOwner(error);
                     break;
 
-                case HistoryClient:
+                case HISTORY_CLIENT:
                     error = historyClient(error);
                     break;
 
@@ -240,7 +240,7 @@ public class Controller {
         }
         catch (InvalidNewRegisterException e){ error = PARAMETROS_INVALIDOS; }
         catch (CarExistsException e){ error = "Carro já existe"; }
-        catch (InvalidUserException ignored) {}
+        catch (InvalidUserException e) { error = "Utilizador inválido"; }
         return error;
     }
 
@@ -349,7 +349,7 @@ public class Controller {
             menu.back();
             error = "";
         }
-        catch (UnknownCompareTypeException ignored) {}
+        catch (UnknownCompareTypeException e) { error = "CompareType desconhecido"; }
         catch (NoCarAvaliableException e) { error = NO_CARS_AVAILABLES; }
         catch (InvalidNewRentalException e){error = "Novo Rental inválido"; }
         return error;
@@ -367,7 +367,7 @@ public class Controller {
             menu.back();
             error = "";
         }
-        catch (UnknownCompareTypeException ignored) {}
+        catch (UnknownCompareTypeException e) { error = "CompareType desconhecido"; }
         catch (NoCarAvaliableException e) { error = NO_CARS_AVAILABLES; }
         catch (InvalidNewRentalException e){error = "Novo Rental inválido"; }
         return error;
@@ -416,7 +416,7 @@ public class Controller {
         try {
             NewLogin r = menu.newLogin(error);
             user = model.logIn(r.getUser(), r.getPassword());
-            menu.selectOption((user instanceof Client)? Menu.MenuInd.Client : Menu.MenuInd.Owner);
+            menu.selectOption((user instanceof Client)? Menu.MenuInd.CLIENT : Menu.MenuInd.OWNER);
             error = "";
         }
         catch (InvalidUserException e){ error = "Invalid Username"; }

@@ -4,12 +4,16 @@ import java.time.LocalDateTime;
 import java.util.Random;
 
 class Weather {
+    public static final String WINTER = "Winter";
+    public static final String SPRING = "Spring";
+    public static final String SUMMER = "Summer";
+    public static final String FALL = "Fall";
     private static final String[] seasons = {
-            "Winter", "Winter",
-            "Spring", "Spring", "Spring",
-            "Summer", "Summer", "Summer",
-            "Fall", "Fall", "Fall",
-            "Winter"
+            WINTER, WINTER,
+            SPRING, SPRING, SPRING,
+            SUMMER, SUMMER, SUMMER,
+            FALL, FALL, FALL,
+            WINTER
     };
     private Random a = new Random();
 
@@ -19,13 +23,13 @@ class Weather {
 
     public double getSeasonDelay() {
         switch (getSeason()){
-            case "Summer":
+            case SUMMER:
                 return a.nextDouble() % 0.1;
 
-            case "Spring":
+            case SPRING:
                 return a.nextDouble() % 0.3;
 
-            case "Fall":
+            case FALL:
                 return a.nextDouble() % 0.35;
 
             default:
