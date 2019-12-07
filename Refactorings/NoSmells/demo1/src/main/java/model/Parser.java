@@ -1,7 +1,7 @@
-package Model;
+package model;
 
-import Exceptions.*;
-import Utils.Point;
+import exceptions.*;
+import utils.Point;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

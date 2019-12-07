@@ -1,9 +1,9 @@
-package Controller;
+package controller;
 
-import Exceptions.*;
-import Model.*;
-import View.Menu;
-import View.ViewModel.*;
+import exceptions.*;
+import model.*;
+import view.Menu;
+import view.view_model.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -131,7 +131,7 @@ public class Controller {
             Client cli = (Client) user;
             List<Rental> pR = cli.getPendingRates();
 
-            if (pR.size() == 0) {
+            if (pR.isEmpty()) {
                 this.menu.back();
                 return error;
             }
@@ -300,7 +300,7 @@ public class Controller {
     private String reviewRental(String error) {
         Owner owner = (Owner)this.user;
         ArrayList<Rental> lR = owner.getPending();
-        if (lR.size() == 0){
+        if (lR.isEmpty()){
             this.menu.back();
             return error;
         }

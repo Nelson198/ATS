@@ -1,10 +1,10 @@
-package Model;
+package model;
 
-import Exceptions.CarExistsException;
-import Exceptions.InvalidCarException;
-import Exceptions.NoCarAvaliableException;
-import Exceptions.UnknownCompareTypeException;
-import Utils.Point;
+import exceptions.CarExistsException;
+import exceptions.InvalidCarException;
+import exceptions.NoCarAvaliableException;
+import exceptions.UnknownCompareTypeException;
+import utils.Point;
 
 import java.io.Serializable;
 import java.util.*;
@@ -63,11 +63,11 @@ public class Cars implements Serializable {
      * @param b Tipo a procurar
      * @return Lista dos carros
      */
-    public ArrayList<Car> listOfCarType(Car.CarType b) {
+    public List<Car> listOfCarType(Car.CarType b) {
         return this.carBase
                 .values()
                 .stream()
-                .filter((e)-> e.getType().equalsCarType(b))
+                .filter(e -> e.getType().equalsCarType(b))
                 .map(Car::clone)
                 .collect(Collectors
                         .toCollection(ArrayList::new));

@@ -1,7 +1,7 @@
-package Model;
+package model;
 
-import Exceptions.*;
-import Utils.Point;
+import exceptions.*;
+import utils.Point;
 
 import java.io.*;
 import java.time.LocalDateTime;
@@ -32,7 +32,7 @@ public class UMCarroJa implements Serializable {
                 .stream()
                 .collect(Collectors
                         .toMap(Function.identity(),
-                                (e) -> rentals.getRentalListClient(e)
+                                e -> rentals.getRentalListClient(e)
                                         .stream()
                                         .map(Rental::getDistance)
                                         .reduce(0.0, Double::sum)))

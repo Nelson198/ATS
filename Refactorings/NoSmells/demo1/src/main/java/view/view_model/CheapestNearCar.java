@@ -1,8 +1,8 @@
-package View.ViewModel;
+package view.view_model;
 
-import Exceptions.InvalidNewRentalException;
-import Model.Car;
-import Utils.Point;
+import exceptions.InvalidNewRentalException;
+import model.Car;
+import utils.Point;
 
 public class CheapestNearCar {
         private final Point point;

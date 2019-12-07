@@ -325,10 +325,46 @@ Estes problemas estão divididos pelos seguintes tipos: \textit{Bug}, \textit{Vu
     
     Classes sincronizadas têm um impacto muito negativo na performance da aplicação. Devem ser usadas as suas classes dessincronizadas correspondentes.
     
-    No \textit{IntelliJ}, o \textit{refactoring} "\textit{Type Migration}" faz isto automaticamente, apenas é necessário selecionar a nova classe.
+    No \textit{IntelliJ}, o \textit{refactoring} "\textit{Type Migration}" faz isto automaticamente, apenas é necessário selecionar a nova classe.\\
     
     
     \item \textit{\textbf{Minor}}\\
+    \textbf{Move this file to a named package.}
+    
+    De acordo com a especificação da linguagem Java, \textit{packages} sem nome são fornecidos apenas como conveniência para projetos pequenos. Idealmente, estes não existem.
+    
+    No \textit{IntelliJ} basta criar um novo \textit{package} e mover o ficheiro para lá.\\
+    
+    \textbf{Use isEmpty() to check whether the collection is empty or not.}
+    
+    Para testar se uma coleção está vazia é recomendado utilizar o método \texttt{isEmpty()}. Não só é mais intuitivo como há casos em que a sua perfomance é melhor.
+    
+    O programador tem de fazer esta modificação manualmente.\\
+    
+    \textbf{Use the opposite operator (\"<=") instead.}
+    
+    É desnecessário inverter o resultado de uma comperação booleana. É preferíve inverter a comparação em si.
+    
+    O \textit{IntelliJ} disponibiliza este \textit{refactoring}.\\
+    
+    \textbf{Use super.clone() to create and seed the cloned instance to be returned.}
+    
+    Não sei o que fazer aqui\\
+    
+    \textbf{The return type of this method should be an interface such as "List" rather than the implementation "ArrayList".}
+    
+    Declarações devem usar interfaces de coleções em vez de uma implementação específica.\\
+    
+    \textbf{Reorder the modifiers to comply with the Java Language Specification.}
+    
+    Modificadores devem ser declarados na ordem correta, seguindo a especificação da linguagem Java.\\
+    
+    \textbf{Remove the parentheses around the "e" parameter}
+    
+    Inputs lambda com um só elemento não devem ter parentesis.\\
+    
+    
+    
     
 \end{itemize}
 
