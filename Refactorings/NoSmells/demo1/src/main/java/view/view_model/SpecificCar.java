@@ -1,6 +1,6 @@
-package View.ViewModel;
+package view.view_model;
 
-import Utils.Point;
+import utils.Point;
 
 public class SpecificCar {
     private final Point point;

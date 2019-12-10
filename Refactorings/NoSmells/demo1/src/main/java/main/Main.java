@@ -1,6 +1,8 @@
-import Controller.Controller;
-import Model.Parser;
-import Model.UMCarroJa;
+package main;
+
+import controller.Controller;
+import model.Parser;
+import model.UMCarroJa;
 
 import java.io.IOException;
 import java.util.logging.Level;

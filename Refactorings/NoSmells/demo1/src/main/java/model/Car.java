@@ -1,7 +1,7 @@
-package Model;
+package model;
 
-import Exceptions.UnknownCarTypeException;
-import Utils.Point;
+import exceptions.UnknownCarTypeException;
+import utils.Point;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -166,7 +166,7 @@ public class Car implements Serializable {
 
     boolean hasRange(Point dest) {
         if(this.range / this.getFullTankRange() < 0.1) return false;
-        return !(this.position.distanceBetweenPoints(dest) * 1.2 > this.range);
+        return this.position.distanceBetweenPoints(dest) * 1.2 <= this.range;
     }
 
     void rate(int rating) {

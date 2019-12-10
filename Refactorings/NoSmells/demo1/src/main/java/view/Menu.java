@@ -1,12 +1,12 @@
-package View;
+package view;
 
-import Exceptions.InvalidNewRegisterException;
-import Exceptions.InvalidNewRentalException;
-import Exceptions.InvalidRatingException;
-import Exceptions.InvalidTimeIntervalException;
-import Utils.Point;
-import Utils.StringBetter;
-import View.ViewModel.*;
+import exceptions.InvalidNewRegisterException;
+import exceptions.InvalidNewRentalException;
+import exceptions.InvalidRatingException;
+import exceptions.InvalidTimeIntervalException;
+import utils.Point;
+import utils.StringBetter;
+import view.view_model.*;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -356,7 +356,7 @@ public class Menu{
     public boolean getRun() { return this.run; }
 
     public Menu back() {
-        if (this.prev.size() > 0) {
+        if (!this.prev.isEmpty()) {
             this.menuInd = this.prev.pop();
             this.pickChildMenus();
         } else {

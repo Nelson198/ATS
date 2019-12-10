@@ -1,7 +1,7 @@
-package Model;
+package model;
 
-import Utils.Point;
-import Utils.StringBetter;
+import utils.Point;
+import utils.StringBetter;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
