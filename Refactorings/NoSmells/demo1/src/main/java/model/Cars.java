@@ -18,12 +18,12 @@ public class Cars implements Serializable {
         this.carBase = new HashMap<>();
     }
 
-    private Cars(Cars c) {
+    public Cars(Cars c) {
         this.carBase = c.carBase
                 .values()
                 .stream()
                 .collect(Collectors
-                        .toMap(Car::getNumberPlate, Car::clone));
+                        .toMap(Car::getNumberPlate, Car::new));
     }
 
     /**
@@ -49,13 +49,6 @@ public class Cars implements Serializable {
         return car;
     }
 
-    /**
-     * Clona um objeto da classe Model.Cars
-     * @return Clone do objeto
-     */
-    public Cars clone() {
-        return new Cars(this);
-    }
 
     /**
      * Obtem a lista de todos os carros no sistema
@@ -68,7 +61,7 @@ public class Cars implements Serializable {
                 .values()
                 .stream()
                 .filter(e -> e.getType().equalsCarType(b))
-                .map(Car::clone)
+                .map(Car::new)
                 .collect(Collectors
                         .toCollection(ArrayList::new));
     }

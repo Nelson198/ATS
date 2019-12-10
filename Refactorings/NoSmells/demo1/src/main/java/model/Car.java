@@ -29,7 +29,7 @@ public class Car implements Serializable {
 
     private final List<Rental> historic;
 
-    private Car(Car car) {
+    public Car(Car car) {
         this.numberPlate = car.getNumberPlate();
         this.owner = car.getOwner();
         this.brand = car.getBrand();
@@ -186,10 +186,6 @@ public class Car implements Serializable {
     void approvePendingRental(Rental r) {
         this.owner.accept(r);
         this.historic.add(r);
-    }
-
-    public Car clone() {
-        return new Car(this);
     }
 
     public String warnings() {

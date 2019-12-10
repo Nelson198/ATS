@@ -18,12 +18,12 @@ public class Client extends User {
     }
 
     Point getPos() {
-        return this.pos.clone();
+        return new Point(this.pos);
     }
 
     private Client(Client u) {
         super(u);
-        this.pos = u.getPos().clone();
+        this.pos = new Point(u.getPos());
         this.pendingRates = new ArrayList<>(u.pendingRates);
     }
 
