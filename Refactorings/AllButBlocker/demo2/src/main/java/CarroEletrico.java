@@ -65,12 +65,4 @@ public class CarroEletrico extends Veiculo{
         str.append(super.toString());
         return str.toString();
     }
-    
-    /**
-     * Retorna uma cópia da instância.
-     * @return CarroEletrico Um novo carro elétrico, que é cópia do this.
-     */
-    public CarroEletrico clone(){
-        return new CarroEletrico(this);
-    }  
 }

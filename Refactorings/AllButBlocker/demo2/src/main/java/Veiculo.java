@@ -86,7 +86,7 @@ public class Veiculo implements Serializable, Classificação{
         this.posicao = cords;
         this.disponivel = disponivel;
         this.classificacao = classif;
-        this.datasAlugueres = datasAlugs.stream().map(ParDatas :: clone).collect(Collectors.toCollection(ArrayList::new));
+        this.datasAlugueres = datasAlugs.stream().map(ParDatas :: new).collect(Collectors.toCollection(ArrayList::new));
     }
     
     /**
@@ -175,7 +175,7 @@ public class Veiculo implements Serializable, Classificação{
      * Devolve a lista com as datas dos alugueres, confirmados, do veículo.
      * @return List<ParDatas> Representa a lista de pares de datas de alugueres.
      */
-    public List<ParDatas> getDatasAlugueres(){return this.datasAlugueres.stream().map(ParDatas :: clone).collect(Collectors.toList());}
+    public List<ParDatas> getDatasAlugueres(){return this.datasAlugueres.stream().map(ParDatas :: new).collect(Collectors.toList());}
     
     /*****************************************************************************
      *                              END GETTERS                                  *
@@ -238,7 +238,7 @@ public class Veiculo implements Serializable, Classificação{
     /**
      * Altera o valor da lista com as datas dos alugueres, confirmados, do veículo.
      */
-    public void setDatasAlugueres(List<ParDatas> datas){this.datasAlugueres = datas.stream().map(ParDatas :: clone).collect(Collectors.toList());}
+    public void setDatasAlugueres(List<ParDatas> datas){this.datasAlugueres = datas.stream().map(ParDatas :: new).collect(Collectors.toList());}
     
     /*****************************************************************************
      *                              END SETTERS                                  *
@@ -369,13 +369,5 @@ public class Veiculo implements Serializable, Classificação{
        str.append("Classificação: "); str.append(this.classificacao); str.append("\n");
         
        return str.toString();
-    }
-    
-    /**
-     * Retorna uma cópia da instância.
-     * @return Veiculo Um novo veículo, que é cópia do this.
-     */
-    public Veiculo clone(){
-        return new Veiculo(this);
     }
 }

@@ -202,7 +202,7 @@ public class UmCarroJaApp{
                     }
                     break;
                 case 2: registarUtilizador();
-                        break;                        
+                        break;
             }
         }while(menuUtilizador.getOpcao() != 0);
     }
@@ -797,7 +797,7 @@ public class UmCarroJaApp{
 
 
         for(Aluguer a : res) {
-            resOrd.add(a.clone());
+            resOrd.add(new Aluguer(a));
         }
 
         return resOrd.stream().collect(Collectors.toList());
@@ -1320,57 +1320,57 @@ public class UmCarroJaApp{
 
        Veiculo v = new Veiculo();
 
-        if (dados[4].equals("MaisBarato")){
-            if (dados[3].equals("Electrico")){
-                try {
-                    v = ucj.maisBaratoJa(cords, datas, "CarroEletrico");
-                }catch(NaoExistemVeiculosDisponiveisException e){
-                    out.println("Não existem veículos disponíveis para alugar!\n");
-                }
-            }
-            if (dados[3].equals("Hibrido")){
-                try{
-                    v = ucj.maisBaratoJa(cords, datas, "CarroHibrido");
-                }catch(NaoExistemVeiculosDisponiveisException e){
-                    out.println("Não existem veículos disponíveis para alugar!\n");
-                }
-            }
-            if (dados[3].equals("Gasolina")){
-                try {
-                    v = ucj.maisBaratoJa(cords, datas, "CarroGasolina");
-                }catch(NaoExistemVeiculosDisponiveisException e){
-                    out.println("Não existem veículos disponíveis para alugar!\n");
-                }
-            }
-        }else{
-            if (dados[3].equals("Electrico")){
-                try{
-                    v = ucj.maisPertoJa(cli.getPosicao().clone(), cords.clone(), datas, "CarroEletrico");
-                }catch(NaoExistemVeiculosDisponiveisException e){
-                    out.println("Não existem veículos disponíveis para alugar!\n");
-                }
-            }
-            if (dados[3].equals("Hibrido")){
-                try{
-                    v = ucj.maisPertoJa(cli.getPosicao().clone(), cords.clone(), datas, "CarroHibrido");
-                }catch(NaoExistemVeiculosDisponiveisException e){
-                    out.println("Não existem veículos disponíveis para alugar!\n");
-                }
-            }
-            if (dados[3].equals("Gasolina")){
-                try{
-                    v = ucj.maisPertoJa(cli.getPosicao().clone(), cords.clone(), datas, "CarroGasolina");
-                }catch(NaoExistemVeiculosDisponiveisException e){
-                    out.println("Não existem veículos disponíveis para alugar!\n");
-                }
+       if (dados[4].equals("MaisBarato")){
+        if (dados[3].equals("Electrico")){
+            try {
+                v = ucj.maisBaratoJa(cords, datas, "CarroEletrico");
+            }catch(NaoExistemVeiculosDisponiveisException e){
+                out.println("Não existem veículos disponíveis para alugar!\n");
             }
         }
+        if (dados[3].equals("Hibrido")){
+            try{
+                v = ucj.maisBaratoJa(cords, datas, "CarroHibrido");
+            }catch(NaoExistemVeiculosDisponiveisException e){
+                out.println("Não existem veículos disponíveis para alugar!\n");
+            }
+        }
+        if (dados[3].equals("Gasolina")){
+            try {
+                v = ucj.maisBaratoJa(cords, datas, "CarroGasolina");
+            }catch(NaoExistemVeiculosDisponiveisException e){
+                out.println("Não existem veículos disponíveis para alugar!\n");
+            }
+        }
+    }else{
+        if (dados[3].equals("Electrico")){
+            try{
+                v = ucj.maisPertoJa(cli.getPosicao().clone(), cords.clone(), datas, "CarroEletrico");
+            }catch(NaoExistemVeiculosDisponiveisException e){
+                out.println("Não existem veículos disponíveis para alugar!\n");
+            }
+        }
+        if (dados[3].equals("Hibrido")){
+            try{
+                v = ucj.maisPertoJa(cli.getPosicao().clone(), cords.clone(), datas, "CarroHibrido");
+            }catch(NaoExistemVeiculosDisponiveisException e){
+                out.println("Não existem veículos disponíveis para alugar!\n");
+            }
+        }
+        if (dados[3].equals("Gasolina")){
+            try{
+                v = ucj.maisPertoJa(cli.getPosicao().clone(), cords.clone(), datas, "CarroGasolina");
+            }catch(NaoExistemVeiculosDisponiveisException e){
+                out.println("Não existem veículos disponíveis para alugar!\n");
+            }
+        }
+    }
        double dist = v.getPosicao().getDistancia(cords);
-       Coordinate posCli = cli.getPosicao().clone();
+       Coordinate posCli = new Coordinate(cli.getPosicao());
        Aluguer alug = new Aluguer(mail, v.getMatricula(), dataInicio, dataFim, v.custoViagem(dist), v.tempoAteVeiculoPéJa(posCli), v.tempoViagemCarroJa(cords), cords, dist, true, false, true, false, 3);
        ucj.registaAluguer(alug);
-       ucj.alterarPosAutonomiaVeiculo(v.getMatricula(), cords.clone());
-       ucj.alterarPosCliente(mail, cords.clone());
+       ucj.alterarPosAutonomiaVeiculo(v.getMatricula(), new Coordinate(cords));
+       ucj.alterarPosCliente(mail, new Coordinate(cords));
     }
     
     public static void parseClassificar(String linha){

@@ -64,14 +64,6 @@ public class Proprietario extends Utilizador{
     public String toString(){
        return super.toString();
     }
-    
-    /**
-     * Retorna uma cópia da instância.
-     * @return Proprietario Um novo proprietário que é cópia do this.
-     */
-    public Proprietario clone(){
-        return new Proprietario(this);
-    }   
 }
     
     

@@ -65,12 +65,4 @@ public class CarroHibrido extends Veiculo{
         str.append(super.toString());
         return str.toString();
     }
-    
-    /**
-     * Retorna uma cópia da instância.
-     * @return CarroHibrido Um novo carro híbrido, que é cópia do this.
-     */
-    public CarroHibrido clone(){
-        return new CarroHibrido(this);
-    }  
 }

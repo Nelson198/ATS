@@ -120,12 +120,4 @@ public class ParDatas implements Serializable {
         
        return str.toString();         
     }
-    
-    /**
-     * Retorna uma cópia da instância.
-     * @return ParDatas Um novo par de datas que é cópia do this.
-     */
-    public ParDatas clone(){
-        return new ParDatas(this);
-    }
 }

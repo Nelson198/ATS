@@ -294,12 +294,4 @@ public class Aluguer implements Serializable {
         
        return str.toString();         
     }
-    
-    /**
-     * Retorna uma cópia da instância.
-     * @return Aluguer Um novo aluguer que é cópia do this.
-     */
-    public Aluguer clone(){
-        return new Aluguer(this);
-    }  
 }

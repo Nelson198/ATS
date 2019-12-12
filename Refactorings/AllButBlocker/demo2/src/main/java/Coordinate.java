@@ -127,8 +127,4 @@ public class Coordinate implements Comparable<Coordinate>{
     return me.equals(you);
     
   }
-  
-  public Coordinate clone(){
-      return new Coordinate(this);
-  }
 }

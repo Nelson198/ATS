@@ -74,7 +74,7 @@ public class Cliente extends Utilizador implements Classificação{
      * Devolve a posição em que o cliente se encontra.
      * @return Coordinate Representa a posição (latitude e longitude) em que o cliente se encontra.
      */
-    public Coordinate getPosicao(){return this.posicao.clone();}
+    public Coordinate getPosicao(){return new Coordinate(this.posicao);}
     
     /**
      * Devolve a classificação do cliente.
@@ -160,12 +160,4 @@ public class Cliente extends Utilizador implements Classificação{
        str.append("Número de Km percorridos: "); str.append(this.nKM); str.append("\n");
        return str.toString();
     }
-    
-    /**
-     * Retorna uma cópia da instância.
-     * @return Cliente Um novo cliente que é cópia do this.
-     */
-    public Cliente clone(){
-        return new Cliente(this);
-    } 
 }

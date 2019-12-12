@@ -65,12 +65,4 @@ public class CarroGasolina extends Veiculo{
         str.append(super.toString());
         return str.toString();
     }
-    
-    /**
-     * Retorna uma cópia da instância.
-     * @return CarroGasolina Um novo carro a gasolina, que é cópia do this.
-     */
-    public CarroGasolina clone(){
-        return new CarroGasolina(this);
-    }  
 }

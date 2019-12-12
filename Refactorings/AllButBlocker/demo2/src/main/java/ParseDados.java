@@ -29,9 +29,7 @@ public class ParseDados{
         email = dados[2];
         morada = dados[3];
 
-        Proprietario prop = new Proprietario(nome, nif, email, nif, morada, date);
-
-        return prop.clone();
+        return new Proprietario(nome, nif, email, nif, morada, date);
     }
 
     public static Cliente parseCliente(String linha){
@@ -58,10 +56,7 @@ public class ParseDados{
 
         Coordinate cords = new Coordinate(x,y);
 
-        Cliente cli = new Cliente(nome, nif, email, nif, morada, date, cords, 0, 0, 0.0);
-
-        return cli.clone();
-
+        return new Cliente(nome, nif, email, nif, morada, date, cords, 0, 0, 0.0);
     }
 
     public static Veiculo parseVeiculo(String linha){
@@ -70,13 +65,13 @@ public class ParseDados{
         switch(dados[0]){
             case "Electrico":
                 Veiculo ce = parseCarroEletrico(linha);
-                return ce.clone();
+                return ce;
             case "Hibrido":
                 Veiculo ch = parseCarroHibrido(linha);
-                return ch.clone();
+                return ch;
             case "Gasolina":
                 Veiculo cg = parseCarroGasolina(linha);
-                return cg.clone();
+                return cg;
         }
         return new Veiculo();
     }

@@ -182,19 +182,11 @@ public class Utilizador implements Serializable {
        str.append("Password: "); str.append(this.password); str.append("\n");
        str.append("Morada: "); str.append(this.morada); str.append("\n");
        str.append("Data de Nascimento: "); str.append(this.dataNascimento.get(GregorianCalendar.DAY_OF_MONTH));
-       str.append("/"); str.append(this.dataNascimento.get(GregorianCalendar.MONTH) + 1); str.append("/"); 
+       str.append("/"); str.append(this.dataNascimento.get(GregorianCalendar.MONTH) + 1); str.append("/");
        str.append(this.dataNascimento.get(GregorianCalendar.YEAR)); str.append("\n");
         
        return str.toString();
     }
-    
-    /**
-     * Retorna uma cópia da instância.
-     * @return Utilizador Um novo utilizador que é cópia do this.
-     */
-    public Utilizador clone(){
-        return new Utilizador(this);
-    }  
 }
 
 
