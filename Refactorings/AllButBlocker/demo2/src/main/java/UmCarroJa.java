@@ -787,7 +787,7 @@ public class UmCarroJa implements Serializable {
                     for (List<Aluguer> a : aux.values()) {
                         for(Aluguer al : a) {
                             if(al.getEmail().equals(mail)){
-                                lista.add(al.clone());
+                                lista.add(new Aluguer(al));
                             }
                         }
                     } 

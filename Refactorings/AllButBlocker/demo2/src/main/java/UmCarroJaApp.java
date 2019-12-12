@@ -1345,21 +1345,21 @@ public class UmCarroJaApp{
     }else{
         if (dados[3].equals("Electrico")){
             try{
-                v = ucj.maisPertoJa(cli.getPosicao().clone(), cords.clone(), datas, "CarroEletrico");
+                v = ucj.maisPertoJa(new Coordinate(cli.getPosicao()), new Coordinate(cords), datas, "CarroEletrico");
             }catch(NaoExistemVeiculosDisponiveisException e){
                 out.println("Não existem veículos disponíveis para alugar!\n");
             }
         }
         if (dados[3].equals("Hibrido")){
             try{
-                v = ucj.maisPertoJa(cli.getPosicao().clone(), cords.clone(), datas, "CarroHibrido");
+                v = ucj.maisPertoJa(new Coordinate(cli.getPosicao()), new Coordinate(cords), datas, "CarroHibrido");
             }catch(NaoExistemVeiculosDisponiveisException e){
                 out.println("Não existem veículos disponíveis para alugar!\n");
             }
         }
         if (dados[3].equals("Gasolina")){
             try{
-                v = ucj.maisPertoJa(cli.getPosicao().clone(), cords.clone(), datas, "CarroGasolina");
+                v = ucj.maisPertoJa(new Coordinate(cli.getPosicao()), new Coordinate(cords), datas, "CarroGasolina");
             }catch(NaoExistemVeiculosDisponiveisException e){
                 out.println("Não existem veículos disponíveis para alugar!\n");
             }
