@@ -77,6 +77,7 @@ public class CoordinateManager{
   
   }
   
+  static final String ALL_PARAM_REQUIRED = "All parameters are required and must be valid";
   
   /**
    * Método que adiciona uma distancia na direção NORTE a uma coordenada
@@ -86,7 +87,7 @@ public class CoordinateManager{
   
     // verifica os parametros
     if(isValidLatitude(latitude) == false || isValidLongitude(longitude) == false || distance <= 0) {
-      throw new IllegalArgumentException("All parameters are required and must be valid");
+      throw new IllegalArgumentException(ALL_PARAM_REQUIRED);
     }
     
     // converte metros para km
@@ -107,7 +108,7 @@ public class CoordinateManager{
   
     // verifica os parametros
     if(isValidLatitude(latitude) == false || isValidLongitude(longitude) == false || distance <= 0) {
-      throw new IllegalArgumentException("All parameters are required and must be valid");
+      throw new IllegalArgumentException(ALL_PARAM_REQUIRED);
     }
     
     // converte metros para km
@@ -128,7 +129,7 @@ public class CoordinateManager{
   
     // verifica os parametros
     if(isValidLatitude(latitude) == false || isValidLongitude(longitude) == false || distance <= 0) {
-      throw new IllegalArgumentException("All parameters are required and must be valid");
+      throw new IllegalArgumentException(ALL_PARAM_REQUIRED);
     }
     
     // converte metros para km
@@ -149,7 +150,7 @@ public class CoordinateManager{
   
     // verifica os parametros
     if(isValidLatitude(latitude) == false || isValidLongitude(longitude) == false || distance <= 0) {
-      throw new IllegalArgumentException("All parameters are required and must be valid");
+      throw new IllegalArgumentException(ALL_PARAM_REQUIRED);
     }
     
     // converte metros para km
@@ -172,7 +173,7 @@ public class CoordinateManager{
   
     // verifica os parametros
     if(isValidLatitude(latitude) == false || isValidLongitude(longitude) == false || distance <= 0) {
-      throw new IllegalArgumentException("All parameters are required and must be valid");
+      throw new IllegalArgumentException(ALL_PARAM_REQUIRED);
     }
     
     // converte metros para km

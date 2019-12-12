@@ -10,6 +10,8 @@
 import java.io.Serializable;
 import java.util.GregorianCalendar;
 
+import static java.util.Calendar.*;
+
 public class Utilizador implements Serializable {
     
     /** Variáveis de Instância */
@@ -181,9 +183,9 @@ public class Utilizador implements Serializable {
        str.append("Email: "); str.append(this.email); str.append("\n");
        str.append("Password: "); str.append(this.password); str.append("\n");
        str.append("Morada: "); str.append(this.morada); str.append("\n");
-       str.append("Data de Nascimento: "); str.append(this.dataNascimento.get(GregorianCalendar.DAY_OF_MONTH));
-       str.append("/"); str.append(this.dataNascimento.get(GregorianCalendar.MONTH) + 1); str.append("/"); 
-       str.append(this.dataNascimento.get(GregorianCalendar.YEAR)); str.append("\n");
+       str.append("Data de Nascimento: "); str.append(this.dataNascimento.get(DAY_OF_MONTH));
+       str.append("/"); str.append(this.dataNascimento.get(MONTH) + 1); str.append("/"); 
+       str.append(this.dataNascimento.get(YEAR)); str.append("\n");
         
        return str.toString();
     }

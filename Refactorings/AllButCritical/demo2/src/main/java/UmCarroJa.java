@@ -501,10 +501,8 @@ public class UmCarroJa implements Serializable {
         for (Map<String, List<Aluguer>> mAlugs : this.alugueres.values()){
             for (List<Aluguer> lAlugs : mAlugs.values()){
                 for (Aluguer alug : lAlugs){
-                    if (alug.getEmail().equals(getEmailUser()) && alug.getRealizado()){
-                        if (alug.getEstadoClassificacao() == 0 || alug.getEstadoClassificacao() == 1){
+                    if (alug.getEmail().equals(getEmailUser()) && alug.getRealizado() && (alug.getEstadoClassificacao() == 0 || alug.getEstadoClassificacao() == 1)){
                             alugsClassif.add(alug);
-                        }
                     }
                 }
             }
@@ -649,7 +647,7 @@ public class UmCarroJa implements Serializable {
             veiculosOrdenados.add(v.clone());
         }
         if(veiculosOrdenados.size() == 0){
-            throw new NaoExistemVeiculosDisponiveisException("Nao existem veiculos disponiveis para alugar. 1");
+            throw new NaoExistemVeiculosDisponiveisException();
         }
         Coordinate posCli = getPosicaoCliente();
         veiculosOrdenados.sort(new Comparator<Veiculo>(){
@@ -682,7 +680,7 @@ public class UmCarroJa implements Serializable {
             veic.add(v.clone());
         }
         if(veic.size() == 0){
-            throw new NaoExistemVeiculosDisponiveisException("Nao existem veiculos disponiveis para alugar. 1");
+            throw new NaoExistemVeiculosDisponiveisException();
         }
         veic.sort(new ComparadorPreco());
         return veic.stream().limit(quantos).collect(Collectors.toList());
@@ -714,7 +712,7 @@ public class UmCarroJa implements Serializable {
             }
         }
         if(veiculosBaratosNoP.size() == 0){
-            throw new NaoExistemVeiculosDisponiveisException("Não Existem Veículos Disponíveis para Alugar.");
+            throw new NaoExistemVeiculosDisponiveisException();
         }
         return veiculosBaratosNoP.stream().limit(quantos).collect(Collectors.toList());
     }
@@ -768,10 +766,27 @@ public class UmCarroJa implements Serializable {
             }
         }
         if(veiculosAuto.size() == 0){
-            throw new NaoExistemVeiculosDisponiveisException("Não Existem Veículos Disponíveis para Alugar.");
+            throw new NaoExistemVeiculosDisponiveisException();
         }
         veiculosAuto.sort(new ComparadorAutonomia());
         return veiculosAuto.stream().limit(quantos).collect(Collectors.toList());
+    }
+
+
+    /**
+    * Método auxiliar de getAlugueresClientes.
+    * 
+    * @param aux  Map - chave matricula/id, valor alugueres do cliente para essa matricula.
+    */
+    private List<Aluguer> getListaAlugueres(String mail, Map<String, List<Aluguer>> aux, List<Aluguer> lista) {
+        for (List<Aluguer> a : aux.values()) {
+            for(Aluguer al : a) {
+                if(al.getEmail().equals(mail)){
+                    lista.add(new Aluguer(al));
+                }
+            }
+        }
+        return lista;
     }
     
    /**
@@ -784,13 +799,8 @@ public class UmCarroJa implements Serializable {
        if(this.alugueres != null){
            for(Map<String, List<Aluguer>> aux : this.alugueres.values()) {
                if(aux != null) {
-                   for (List<Aluguer> a : aux.values()) {
-                       for(Aluguer al : a) {
-                           if(al.getEmail().equals(mail)){
-                               lista.add(al.clone());
-                           }
-                       }
-                   }
+                    lista_aux = lista;
+                    lista = getListaAlugueres(mail, aux, lista_aux);
                }
            }
        }
@@ -829,7 +839,7 @@ public class UmCarroJa implements Serializable {
             }
         }
         if(veiculosOrdenados.size() == 0){
-            throw new NaoExistemVeiculosDisponiveisException("Nao existem veículos disponíveis para alugar.");
+            throw new NaoExistemVeiculosDisponiveisException();
         }
         /*veiculosOrdenados.sort(new Comparator<Veiculo>(){
             public int compare(Veiculo a1, Veiculo a2) {
@@ -863,7 +873,7 @@ public class UmCarroJa implements Serializable {
             }
         }
         if(veiculosOrdenados.size() == 0){
-            throw new NaoExistemVeiculosDisponiveisException("Não Existem Veículos Disponíveis para Alugar.");
+            throw new NaoExistemVeiculosDisponiveisException();
         }
         return veiculosOrdenados.get(0).clone();
     }
