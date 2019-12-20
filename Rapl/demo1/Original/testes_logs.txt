@@ -1,0 +1,8 @@
+Input de logs com 5
+Energy consumption of dram: 0.02679400000010901 Energy consumption of cpu: 0.2764280000001236 Energy consumption of package: 0.43005300000004354
+
+Input de logs com 50
+Energy consumption of dram: 0.02716099999997823 Energy consumption of cpu: 0.3530880000000707 Energy consumption of package: 0.5308839999997872
+
+Input de Logs com 5555
+Energy consumption of dram: 0.1190190000002076 Energy consumption of cpu: 2.451233000000002 Energy consumption of package: 3.120850000000246

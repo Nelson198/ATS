@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c56d5f08-8ee8-486e-b41f-939f266160b1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1UfDL9o2fpJRteRLUNAmQieacxG" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="demo1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c56d5f08-8ee8-486e-b41f-939f266160b1" name="Default Changelist" comment="" />
+      <created>1575738697650</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575738697650</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1634" height="277" key="GridCell.Tab.0.bottom" timestamp="1575738904074">
+      <screen x="0" y="309" width="1680" height="741" />
+    </state>
+    <state width="1634" height="277" key="GridCell.Tab.0.bottom/1680.282.1366.768/0.309.1680.741@0.309.1680.741" timestamp="1575738904074" />
+    <state width="1634" height="277" key="GridCell.Tab.0.center" timestamp="1575738904074">
+      <screen x="0" y="309" width="1680" height="741" />
+    </state>
+    <state width="1634" height="277" key="GridCell.Tab.0.center/1680.282.1366.768/0.309.1680.741@0.309.1680.741" timestamp="1575738904074" />
+    <state width="1634" height="277" key="GridCell.Tab.0.left" timestamp="1575738904073">
+      <screen x="0" y="309" width="1680" height="741" />
+    </state>
+    <state width="1634" height="277" key="GridCell.Tab.0.left/1680.282.1366.768/0.309.1680.741@0.309.1680.741" timestamp="1575738904073" />
+    <state width="1634" height="277" key="GridCell.Tab.0.right" timestamp="1575738904074">
+      <screen x="0" y="309" width="1680" height="741" />
+    </state>
+    <state width="1634" height="277" key="GridCell.Tab.0.right/1680.282.1366.768/0.309.1680.741@0.309.1680.741" timestamp="1575738904074" />
+    <state width="1634" height="342" key="GridCell.Tab.1.bottom" timestamp="1575738829799">
+      <screen x="0" y="309" width="1680" height="741" />
+    </state>
+    <state width="1634" height="342" key="GridCell.Tab.1.bottom/1680.282.1366.768/0.309.1680.741@0.309.1680.741" timestamp="1575738829799" />
+    <state width="1634" height="342" key="GridCell.Tab.1.center" timestamp="1575738829799">
+      <screen x="0" y="309" width="1680" height="741" />
+    </state>
+    <state width="1634" height="342" key="GridCell.Tab.1.center/1680.282.1366.768/0.309.1680.741@0.309.1680.741" timestamp="1575738829799" />
+    <state width="1634" height="342" key="GridCell.Tab.1.left" timestamp="1575738829799">
+      <screen x="0" y="309" width="1680" height="741" />
+    </state>
+    <state width="1634" height="342" key="GridCell.Tab.1.left/1680.282.1366.768/0.309.1680.741@0.309.1680.741" timestamp="1575738829799" />
+    <state width="1634" height="342" key="GridCell.Tab.1.right" timestamp="1575738829799">
+      <screen x="0" y="309" width="1680" height="741" />
+    </state>
+    <state width="1634" height="342" key="GridCell.Tab.1.right/1680.282.1366.768/0.309.1680.741@0.309.1680.741" timestamp="1575738829799" />
+    <state x="496" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1575738700038">
+      <screen x="0" y="309" width="1680" height="741" />
+    </state>
+    <state x="496" y="351" key="com.intellij.ide.util.TipDialog/1680.282.1366.768/0.309.1680.741@0.309.1680.741" timestamp="1575738700038" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/demo1$Main.ic" NAME="Main Coverage Results" MODIFIED="1575738889768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

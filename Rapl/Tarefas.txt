@@ -1,0 +1,10 @@
+Em falta :
+	Análise do demo1 com refractered
+	Análise do demo2 ambas as versões, não consigo compilar pelo terminal apenas no intellij
+	Relatório
+
+Usar o Rapl:
+	-Copiar os ficheiros de Ralp/Java para a directoria.
+	-No CPUScaler.c mudar onde está EnergyCheckUtils para o nome da classe que irá utilizar
+	-Seguir as instruções do Readme do Rapl
+	-O demo1 original já funciona, ver esse exemplo na classe Main
