@@ -347,10 +347,6 @@ Estes problemas estão divididos pelos seguintes tipos: \textit{Bug}, \textit{Vu
     
     O \textit{IntelliJ} disponibiliza este \textit{refactoring}.\\
     
-    \textbf{Use super.clone() to create and seed the cloned instance to be returned.}
-    
-    Não sei o que fazer aqui\\
-    
     \textbf{The return type of this method should be an interface such as "List" rather than the implementation "ArrayList".}
     
     Declarações devem usar interfaces de coleções em vez de uma implementação específica.\\
@@ -362,10 +358,16 @@ Estes problemas estão divididos pelos seguintes tipos: \textit{Bug}, \textit{Vu
     \textbf{Remove the parentheses around the "e" parameter}
     
     Inputs lambda com um só elemento não devem ter parentesis.\\
-    
-    
-    
-    
+\end{itemize}
+
+Antes de serem aplicados os refactorings, o projeto apresentava uma \textit{technical debt} de 2 dias e 5 horas.
+Após a remoção dos diversos tipos de bugs e smells, pode-se constatar a diferença nesta \textit{technical debt}:
+\begin{itemize}
+    \item \textbf{Blocker} - 2 dias e 2 horas, ou seja, 3 horas de diferença;
+    \item \textbf{Critical} - 2 dias, ou seja, 5 horas de diferença;
+    \item \textbf{Major} - 2 dias e 2 horas, ou seja, 3 horas de diferença;
+    \item \textbf{Minor} - 1 dia e 5 horas, ou seja, 1 dia de diferença;
+    \item \textbf{Todos} - 4 horas e 20 minutos, ou seja, 2 dias e 40 minutos de diferença;
 \end{itemize}
 
 
