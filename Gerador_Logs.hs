@@ -410,6 +410,11 @@ genMarca = frequency [(389991, return "Chevrolet"),
                       (2     , return "Rolls-Royce"),
                       (1     , return "McLaren")]
 
+genMatricula:: Gen Matricula
+genMatricula = do [l1, l2]         <- vectorOf 2 $ elements ['A'..'Z']
+                  [n1, n2, n3, n4] <- vectorOf 4 $ elements ['0'..'9']
+                  return [l1, l2, '-', n1, n2, '-', n3, n4]
+
 -- Velocidade Média
 genVelocidade :: Gen Velocidade
 genVelocidade = choose (20, 200)
@@ -467,11 +472,6 @@ instance Show Classificar where
 showClassificar :: Classificar -> String
 showClassificar (Classificar info classificacao) = "Classificar:" ++ info ++ "," ++ (show classificacao)
 
-genMatricula:: Gen Matricula
-genMatricula = do [l1, l2]         <- vectorOf 2 $ elements ['A'..'Z']
-                  [n1, n2, n3, n4] <- vectorOf 4 $ elements ['0'..'9']
-                  return [l1, l2, '-', n1, n2, '-', n3, n4]
-
 genClassificacao :: Gen Classificacao
 genClassificacao = choose (0, 100)
 
@@ -481,6 +481,14 @@ genClassificar = do info          <- oneof [genMatricula, genNIF]
                     return (Classificar info classificacao)
 
 {---------- Gerador de Logs ----------}
+
+genNIFs :: Int -> Gen [NIF]
+genNIFs i = do nifs <- suchThat (vectorOf i $ genNIF) allDifferent
+               return nifs
+
+genMatriculas :: Int -> Gen [Matricula]
+genMatriculas i = do matriculas <- suchThat (vectorOf i $ genMatricula) allDifferent
+                     return matriculas
 
 fileName :: FilePath
 fileName = "logs.bak"
@@ -500,6 +508,12 @@ genLogsIO = do putStr "\nBem-vindo ao gerador de logs.\n> Indique o número de l
                           if (nLogs > 0 && mod nLogs 5 == 0)
                               then do let i = (div nLogs 5)
                                       writeFile fileName "Ficheiro de logs:\n\n"
+                                      
+                                      {- Lista de nifs sem repetições -}
+                                      nifs <- generate $ genNIFs (i * 2)
+                                      {- Lista de matriculas sem repetições -}
+                                      matriculas <- generate $ genMatriculas i
+                                    
                                       genLogs i genProprietario
                                       genLogs i genCliente
                                       genLogs i genCarro
