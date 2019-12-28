@@ -172,6 +172,9 @@ Quanto à cobertura não foram testados nenhuns aspetos intrínsecos a esta impl
 \subsubsection{Duplicação de código}
 No que diz respeito à duplicação de código existem 23 blocos repetidos em duas das classes implementadas, representando apenas 3,7\% do código total.
 
+\subsection{Tarefa extra}
+Quanto à realização desta tarefa, após dialogar os docentes desta unidade curricular, optou-se por dar prioridade à segunda e última tarefa extra deste projeto. Esta supremacia surge pelo simples facto de a adição de novas regras à ferramenta SonarQube não ter sido muito explorada nas aulas e também não ter havido grande oportunidade para experimentar esta tarefa de forma mais cuidada.
+
 \section{Tarefa 2 - \textit{Refactoring}}
 Nesta tarefa serão utilizadas ferramentas como o \textit{autorefactor}, \textit{IDEs} do \textit{Java} que suportam \textit{refactoring}, ou o \textit{jStanley} para identificar e eliminar os \textit{bad smells} e \textit{red smells} existentes no \textit{software} fornecido. Um estudo detalhado sobre os \textit{smells} encontrados na(s) aplicação(ões) fornecidas, os \textit{refactorings} aplicados e o \textit{technical debt} obtidos deverão ser incluídos no relatório.
 
@@ -418,8 +421,41 @@ Quanto à cobertura de testes, foi possível verificar que ...
 \section{Tarefa 4 - Análise de desempenho}
 \subsection{Versão 1 - \textit{demo1}}
 \subsection{Versão 2 - \textit{demo2}}
+\subsection{Tarefa extra}
+Nesta tarefa adicional é requerido uma análise detalhada por cada \textit{smell}. Dito por outras palavras, é necessário fazer um estudo sobre como cada \textit{smell} individualmente influência (melhora ou piora) o desempenho do \textit{software}. 
+Como tal, foram executadas ambas as versões do programa em questão com cada tipo de \textit{smells} de forma isolada. Consequentemente, obtiveram-se os seguintes resultados:
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline  
+    \multicolumn{4}{|c|}{\textbf{demo1}} \\
+    \hline
+    \textbf{Tipo de \textit{smell}} & \textbf{Energia comsumida} & \textbf{Tempo de execução} & \textbf{Memória} \\ \hline
+    \textit{minor} & ? J & ? ms & ? MB \\ \hline
+    \textit{major} & ? J & ? ms & ? MB \\ \hline
+    \textit{critical} & ? J & ? ms & ? MB \\ \hline
+    \textit{blocker} & ? J & ? ms & ? MB \\ \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline  
+    \multicolumn{4}{|c|}{\textbf{demo2}} \\
+    \hline
+    \textbf{Tipo de \textit{smell}} & \textbf{Energia comsumida} & \textbf{Tempo de execução} & \textbf{Memória} \\ \hline
+    \textit{minor} & ? J & ? ms & ? MB \\ \hline
+    \textit{major} & ? J & ? ms & ? MB \\ \hline
+    \textit{critical} & ? J & ? ms & ? MB \\ \hline
+    \textit{blocker} & ? J & ? ms & ? MB \\ \hline
+    \end{tabular}
+\end{center}
 
 \chapter{Conclusão}
+Após a demonstração da abordagem tomada para cada uma das tarefas propostas neste trabalho prático e, ainda, a exibição dos resultados obtidos em cada uma das mesmas, dá-se por concluído a execução deste projeto. 
+Durante o processo de realização do mesmo foi possível analisar o código fonte de ambas as versões implementadas, identificando os \textit{bad smells} e o seu \textit{technical debt}. Posteriormente, foram aplicados \textit{refactorings}
+de maneira a eliminar os \textit{bad smells} encontrados e, deste modo, reduzir o respetivo \textit{technical debt}. Numa terceira fase, foi testado com sucesso o \textit{software} em questão de forma a garantir que o mesmo exprimia o 
+comportamento esperado. E, por fim, foi realizada uma análise a nível do desempenho das duas versões implementadas (antes e depois da aplicação de \textit{refactorings}).
 
 \appendix
 \chapter{Observações}
