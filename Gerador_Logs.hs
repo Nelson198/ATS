@@ -219,12 +219,14 @@ genMorada = frequency[(507220, return "Lisboa"),
                       (13283 , return "Valença"),
                       (11898 , return "Vieira do Minho")]
 
-genProprietario :: Gen Proprietario 
-genProprietario = do nome   <- genNome
-                     nif    <- genNIF
-                     email  <- genEmail nif
-                     morada <- genMorada
-                     return (NovoProp nome nif email morada)
+genProprietario :: [NIF] -> Int -> Gen [Proprietario]
+genProprietario _    0    = return []
+genProprietario nifs size = do nome   <- genNome
+                               let nif = head nifs
+                               email  <- genEmail nif
+                               morada <- genMorada
+                               proprietarios <- genProprietario (tail nifs) (size - 1)
+                               return $ (NovoProp nome nif email morada) : proprietarios
 
 {------------ Cliente -----------}
 
@@ -346,16 +348,18 @@ allDifferent = uncurry (==) . split id nub
 split :: (a -> b) -> (a -> c) -> a -> (b, c)
 split f g x = (f x, g x)
 
-genCliente :: Gen Cliente 
-genCliente = do pNome                          <- genNome
-                apelidos                       <- suchThat (vectorOf 3 $ genApelido) allDifferent
-                [apelido1, apelido2, apelido3] <- shuffle apelidos
-                let nome = pNome ++ " " ++ apelido1 ++ " " ++ apelido2 ++ " " ++ apelido3
-                nif                            <- genNIF
-                email                          <- genEmail nif
-                morada                         <- genMorada
-                coordenadas                    <- genCoordenadas
-                return (NovoCliente nome nif email morada coordenadas)
+genCliente :: [NIF] -> Int -> Gen [Cliente]
+genCliente _    0    = return []
+genCliente nifs size = do pNome                          <- genNome
+                          apelidos                       <- suchThat (vectorOf 3 $ genApelido) allDifferent
+                          [apelido1, apelido2, apelido3] <- shuffle apelidos
+                          let nome                        = pNome ++ " " ++ apelido1 ++ " " ++ apelido2 ++ " " ++ apelido3
+                          let nif                         = head nifs
+                          email                          <- genEmail nif
+                          morada                         <- genMorada
+                          coordenadas                    <- genCoordenadas
+                          clientes <- genCliente (tail nifs) (size - 1)
+                          return $ (NovoCliente nome nif email morada coordenadas) : clientes
 
 {------------ Carro -------------}
 
@@ -507,24 +511,35 @@ genLogsIO = do putStr "\nBem-vindo ao gerador de logs.\n> Indique o número de l
                        do let nLogs = (read str :: Int)
                           if (nLogs > 0 && mod nLogs 5 == 0)
                               then do let i = (div nLogs 5)
-                                      writeFile fileName "Ficheiro de logs:\n\n"
                                       
                                       {- Lista de nifs sem repetições -}
                                       nifs <- generate $ genNIFs (i * 2)
+                                      let nifsProprietario = take i nifs
+                                      let nifsClientes = drop i nifs
+
                                       {- Lista de matriculas sem repetições -}
                                       matriculas <- generate $ genMatriculas i
+
+                                      writeFile fileName "Ficheiro de logs:\n\n"
                                     
-                                      genLogs i genProprietario
-                                      genLogs i genCliente
-                                      genLogs i genCarro
-                                      genLogs i genAluguer
-                                      genLogs i genClassificar
+                                      genLogs1 genProprietario nifsProprietario i
+                                      genLogs1 genCliente nifsClientes i
+                                      genLogs2 genCarro i
+                                      genLogs2 genAluguer i
+                                      genLogs2 genClassificar i
+
                                       putStrLn ("> Ficheiro de logs gravado com sucesso.\n> " ++ "\"" ++ fileName ++ "\"" ++ ": " ++ (show nLogs) ++ " logs adicionados.\n")
                           else
                               putStrLn "> Erro: Não foi introduzido um número válido.\n        Por favor indique um número positivo que seja múltiplo de 5.\n"
 
-genLogs :: (Show a) => Int -> Gen a -> IO ()
-genLogs 0 _   = return ()
-genLogs n gen = do s <- generate gen
-                   appendFile fileName (show s ++ "\n")
-                   genLogs (n-1) gen
+genLogs1 :: (Foldable t, Show a) => ([NIF] -> Int -> Gen (t a)) -> [NIF] -> Int -> IO ()
+genLogs1 _   _    0    = return ()
+genLogs1 gen nifs size = do list <- generate $ gen nifs size
+                            mapM_ (\x -> appendFile fileName (show x ++ "\n")) list
+
+
+genLogs2 :: (Show a) => Gen a -> Int -> IO ()
+genLogs2 _   0 = return ()
+genLogs2 gen n = do s <- generate gen
+                    appendFile fileName (show s ++ "\n")
+                    genLogs2 gen (n-1)
