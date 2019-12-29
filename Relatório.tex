@@ -5,6 +5,8 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
+\usepackage{hyperref}
+
 % Encoding
 %--------------------------------------
 \usepackage[T1]{fontenc}
@@ -402,7 +404,7 @@ A implementação do gerador pretendido segue, naturalmente, a estrutura apresen
     \item \textit{Classificar}: classificação atribuída a um carro ou a um cliente/proprietário.
 \end{itemize}
 
-Também é preciso salientar que existe uma diversidade considerável de atributos associados a estes novos tipos (como por exemplo, \textit{emails}, nomes, marcas, moradas, entre outros). Por forma a garantir uma grande variedade de atributos, a maior parte dos geradores implementados utiliza o combinador \textit{frequency}. Este gerador associa a um determinado tipo de dados uma probabilidade de escolha. Consequentemente, foi possível gerar nomes, apelidos, moradas e marcas de automóveis de forma mais realista e em grande escala.
+Também é preciso salientar que existe uma diversidade considerável de atributos associados a estes novos tipos (como por exemplo, \textit{emails}, nomes, marcas, moradas, entre outros). Por forma a garantir uma grande variedade de atributos, a maior parte dos geradores implementados utiliza o combinador \textit{frequency}. Este gerador associa a um determinado tipo de dados uma probabilidade de escolha. Consequentemente, foi possível gerar nomes, apelidos, moradas e marcas de automóveis de forma mais realista e em grande escala. De notar também que os elementos deste grupo tiveram em consideração a geração de \textit{NIF's} e de matrículas sem repetições, permitindo assim um simulação fidedigna e correta da aplicação.
 
 Por fim, de maneira a executar o gerador proposto, foi necessário parametrizar numa variável o número de registos a serem escritos para o ficheiro \textit{logs.bak} que irá armazenar toda esta informação. Desta forma, durante a execução da função \textbf{\textit{genLogsIO}} (responsável por gerar todos os registos dos tipos de dados mencionados anteriormente), é perguntado ao utilizador quantos registos pretende produzir.
 
@@ -417,10 +419,50 @@ Quanto à cobertura de testes, foi possível verificar que ...
 Quanto à cobertura de testes, foi possível verificar que ...
 
 \subsubsection{Geração automática de testes - \textit{QuickCheck}}
+Nesta sub-tarefa foi-nos proposto gerar automaticamente ficheiros de \textit{logs} para testar a aplicação \textit{UmCarroJá}. Como seria de esperar, foi adoptada a utilização do sistema \textit{QuickCheck} para o efeito, tal como foi feito nas aulas.
+
+A implementação do gerador pretendido segue, naturalmente, a estrutura apresentada pelo exemplo disponibilizado pelos docentes na página da disciplina. Como tal, foi necessário criar essencialmente 5 tipos de geradores, cada um com o seu tipo de dados:
+\begin{itemize}
+    \item \textit{NovoProp}: registo de um novo proprietário;
+    \item \textit{NovoCliente}: registo de um novo cliente;
+    \item \textit{NovoCarro}: registo de um novo carro;
+    \item \textit{Aluguer}: registo de um aluguer efetuado por um cliente;
+    \item \textit{Classificar}: classificação atribuída a um carro ou a um cliente/proprietário.
+\end{itemize}
+
+Também é preciso salientar que existe uma diversidade considerável de atributos associados a estes novos tipos (como por exemplo, \textit{emails}, nomes, marcas, moradas, entre outros). Por forma a garantir uma grande variedade de atributos, a maior parte dos geradores implementados utiliza o combinador \textit{frequency}. Este gerador associa a um determinado tipo de dados uma probabilidade de escolha. Consequentemente, foi possível gerar nomes, apelidos, moradas e marcas de automóveis de forma mais realista e em grande escala. De notar também que os elementos deste grupo tiveram em consideração a geração de \textit{NIF's} e de matrículas sem repetições, permitindo assim um simulação fidedigna e correta da aplicação.
+
+Por fim, de maneira a executar o gerador proposto, foi necessário parametrizar numa variável o número de registos a serem escritos para o ficheiro \textit{logs.bak} que irá armazenar toda esta informação. Desta forma, durante a execução da função \textbf{\textit{genLogsIO}} (responsável por gerar todos os registos dos tipos de dados mencionados anteriormente), é perguntado ao utilizador quantos registos pretende produzir.
 
 \section{Tarefa 4 - Análise de desempenho}
 \subsection{Versão 1 - \textit{demo1}}
+...
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline  
+    \multicolumn{4}{|c|}{\textbf{demo1}} \\
+    \hline
+    \textbf{\textit{Smells}?} & \textbf{Energia comsumida} & \textbf{Tempo de execução} & \textbf{Memória} \\ \hline
+    Sim & ? J & ? ms & ? MB \\ \hline
+    Não & ? J & ? ms & ? MB \\ \hline
+    \end{tabular}
+\end{center}
+
 \subsection{Versão 2 - \textit{demo2}}
+...
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline  
+    \multicolumn{4}{|c|}{\textbf{demo2}} \\
+    \hline
+    \textbf{\textit{Smells}?} & \textbf{Energia comsumida} & \textbf{Tempo de execução} & \textbf{Memória} \\ \hline
+    Sim & ? J & ? ms & ? MB \\ \hline
+    Não & ? J & ? ms & ? MB \\ \hline
+    \end{tabular}
+\end{center}
+
 \subsection{Tarefa extra}
 Nesta tarefa adicional é requerido uma análise detalhada por cada \textit{smell}. Dito por outras palavras, é necessário fazer um estudo sobre como cada \textit{smell} individualmente influência (melhora ou piora) o desempenho do \textit{software}. 
 Como tal, foram executadas ambas as versões do programa em questão com cada tipo de \textit{smells} de forma isolada. Consequentemente, obtiveram-se os seguintes resultados:
