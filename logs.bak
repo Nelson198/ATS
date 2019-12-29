@@ -1,22 +1,1002 @@
 Ficheiro de logs:
 
-NovoProp:Santiago,210431843,210431843@outlook.com,Porto
-NovoProp:Pedro,502823118,502823118@gmail.com,Ílhavo
-NovoProp:Santiago,714969848,714969848@live.com,Marco de Canaveses
-NovoProp:Maria,715539911,715539911@yahoo.com,Santarém
-NovoCliente:Maria Silva Santos Correia,177902069,177902069@yahoo.com,Aveiro,29.13417,19.336555
-NovoCliente:Gabriel Sousa Monteiro Pinheiro,784936132,784936132@hotmail.com,Amadora,-8.804855,-14.245773
-NovoCliente:Leonor Freitas Almeida Vieira,580784622,580784622@gmail.com,Santa Cruz,-97.74511,10.6822815
-NovoCliente:Beatriz Gomes Nascimento Soares,248054031,248054031@gmail.com,Vila Nova de Famalicão,-14.702415,17.011345
-NovoCarro:Gasolina,Volkswagen,OO-98-57,524541860,119,0.19806635,2.259549,325,-38.506794,22.471367
-NovoCarro:Gasolina,Ford,AF-50-42,169460043,148,0.2396254,1.7439175,582,65.445526,-46.335995
-NovoCarro:Gasolina,Fiat,GL-90-11,568259979,108,0.31051564,1.730755,448,12.383354,-25.315498
-NovoCarro:Gasolina,Volkswagen,PI-37-29,567672023,91,0.14957187,1.6870732,322,-56.34383,53.93895
-Aluguer:506198953,47.728653,95.18956,Gasolina,MaisBarato
-Aluguer:206061101,53.166138,28.966309,Gasolina,MaisPerto
-Aluguer:131403215,-7.042137,73.40492,Gasolina,MaisPerto
-Aluguer:118134799,9.827042,19.060661,Gasolina,MaisBarato
-Classificar:HC-37-80,46
-Classificar:YB-24-37,82
-Classificar:570133391,74
-Classificar:FQ-09-92,46
+NovoProp:Maria,175830396,175830396@hotmail.com,Seixal
+NovoProp:Afonso,504289855,504289855@outlook.com,Vila Nova de Gaia
+NovoProp:Vicente,259430787,259430787@gmail.com,Setúbal
+NovoProp:João,784402641,784402641@hotmail.com,Viana de Castelo
+NovoProp:Rafael,757977997,757977997@live.com,Sintra
+NovoProp:Maria,732054123,732054123@gmail.com,Cascais
+NovoProp:Lourenço,238632523,238632523@hotmail.com,Setúbal
+NovoProp:Lara,205893089,205893089@gmail.com,Guimarães
+NovoProp:Guilherme,764630109,764630109@yahoo.com,Loures
+NovoProp:Duarte,754863719,754863719@yahoo.com,Braga
+NovoProp:Vicente,203916161,203916161@outlook.com,Figueira da Foz
+NovoProp:Pedro,144211146,144211146@gmail.com,Póvoa de Varzim
+NovoProp:Dinis,774031253,774031253@hotmail.com,Montijo
+NovoProp:Francisca,209925288,209925288@live.com,Ponta Delgada
+NovoProp:Leonor,558620419,558620419@yahoo.com,Santo Tirso
+NovoProp:Ana,178387728,178387728@outlook.com,Valongo
+NovoProp:Carolina,529780266,529780266@yahoo.com,Viana de Castelo
+NovoProp:Santiago,119732899,119732899@hotmail.com,Cascais
+NovoProp:Maria,213668286,213668286@hotmail.com,Póvoa de Varzim
+NovoProp:Matilde,710751790,710751790@gmail.com,Sintra
+NovoProp:Tomás,190037339,190037339@yahoo.com,Covilhã
+NovoProp:Beatriz,528160418,528160418@outlook.com,Amadora
+NovoProp:Carolina,288251498,288251498@outlook.com,Cascais
+NovoProp:Vicente,597360978,597360978@hotmail.com,Vila Real
+NovoProp:Gonçalo,163588953,163588953@gmail.com,Peniche
+NovoProp:Ana,255493960,255493960@yahoo.com,Gondomar
+NovoProp:Maria,186867822,186867822@live.com,Porto
+NovoProp:Francisca,299120836,299120836@gmail.com,Lisboa
+NovoProp:Carolina,760998636,760998636@gmail.com,Oeiras
+NovoProp:Guilherme,227235365,227235365@gmail.com,Oeiras
+NovoProp:Leonor,730529244,730529244@yahoo.com,Lourinhã
+NovoProp:Pedro,548089558,548089558@gmail.com,Viseu
+NovoProp:Rodrigo,286030208,286030208@hotmail.com,Braga
+NovoProp:Lourenço,741781053,741781053@gmail.com,Covilhã
+NovoProp:Dinis,285197039,285197039@hotmail.com,Amarante
+NovoProp:Maria,123824343,123824343@outlook.com,Beja
+NovoProp:Francisca,104639390,104639390@gmail.com,Valongo
+NovoProp:Gabriel,208422048,208422048@hotmail.com,Ílhavo
+NovoProp:Gustavo,290616860,290616860@gmail.com,Coimbra
+NovoProp:Maria,171738371,171738371@gmail.com,Felgueiras
+NovoProp:Maria,195693894,195693894@hotmail.com,Vila Nova de Gaia
+NovoProp:Gabriel,533654896,533654896@live.com,Mafra
+NovoProp:Gustavo,769916495,769916495@gmail.com,Odivelas
+NovoProp:Leonor,215506796,215506796@outlook.com,Braga
+NovoProp:Benedita,177160145,177160145@yahoo.com,Marco de Canaveses
+NovoProp:Leonor,158007134,158007134@gmail.com,Vila Franca de Xira
+NovoProp:Miguel,126026128,126026128@yahoo.com,Câmara de Lobos
+NovoProp:Francisca,563136136,563136136@outlook.com,Lisboa
+NovoProp:Maria,524380562,524380562@hotmail.com,Vila Franca de Xira
+NovoProp:Diana,198191842,198191842@hotmail.com,Oeiras
+NovoProp:Rodrigo,701387711,701387711@gmail.com,Amarante
+NovoProp:Maria,531669657,531669657@outlook.com,Amadora
+NovoProp:Matilde,204947973,204947973@live.com,Loures
+NovoProp:Benedita,728333504,728333504@hotmail.com,Matosinhos
+NovoProp:Gustavo,559144524,559144524@yahoo.com,Sintra
+NovoProp:Miguel,261214165,261214165@hotmail.com,Leiria
+NovoProp:Martim,133092836,133092836@yahoo.com,Sintra
+NovoProp:Maria,282692223,282692223@hotmail.com,Barcelos
+NovoProp:Gonçalo,543417243,543417243@outlook.com,Oliveira de Azeméis
+NovoProp:João,184485459,184485459@gmail.com,Cascais
+NovoProp:Lourenço,245198895,245198895@gmail.com,Barreiro
+NovoProp:Santiago,287638346,287638346@gmail.com,Palmela
+NovoProp:Santiago,285974917,285974917@gmail.com,Lisboa
+NovoProp:Gonçalo,263879446,263879446@live.com,Amadora
+NovoProp:Francisca,270851778,270851778@outlook.com,Beja
+NovoProp:Maria,557412422,557412422@outlook.com,Albufeira
+NovoProp:Salvador,139810906,139810906@outlook.com,Loures
+NovoProp:Francisco,158564455,158564455@outlook.com,Viana de Castelo
+NovoProp:Clara,272720808,272720808@live.com,Lisboa
+NovoProp:Francisca,192813543,192813543@gmail.com,Setúbal
+NovoProp:Salvador,135969261,135969261@gmail.com,Barreiro
+NovoProp:Gustavo,269317500,269317500@outlook.com,Viseu
+NovoProp:Diana,757035706,757035706@hotmail.com,Amarante
+NovoProp:Maria,273577621,273577621@outlook.com,Benavente
+NovoProp:Joana,749874255,749874255@yahoo.com,Vila do Conde
+NovoProp:Gustavo,117738774,117738774@live.com,Amadora
+NovoProp:Duarte,299057197,299057197@outlook.com,Ribeira Grande
+NovoProp:Matilde,271342784,271342784@live.com,Viseu
+NovoProp:Sofia,505877728,505877728@outlook.com,Albergaria-a-Velha
+NovoProp:Inês,138816557,138816557@live.com,Vila Verde
+NovoProp:Dinis,715971360,715971360@gmail.com,Gondomar
+NovoProp:Gustavo,786124908,786124908@yahoo.com,Lisboa
+NovoProp:Lucas,714252914,714252914@live.com,Sintra
+NovoProp:Santiago,241228727,241228727@gmail.com,Seixal
+NovoProp:Benedita,716727810,716727810@gmail.com,Silves
+NovoProp:Beatriz,748348629,748348629@outlook.com,Fafe
+NovoProp:Inês,543010822,543010822@hotmail.com,Cascais
+NovoProp:Francisca,569113640,569113640@outlook.com,Matosinhos
+NovoProp:Santiago,731718568,731718568@yahoo.com,Lisboa
+NovoProp:Miguel,526554533,526554533@gmail.com,Fundão
+NovoProp:Lourenço,501516988,501516988@yahoo.com,Amadora
+NovoProp:Miguel,208243546,208243546@hotmail.com,Barreiro
+NovoProp:Santiago,143967905,143967905@outlook.com,Santarém
+NovoProp:Gabriel,528928525,528928525@gmail.com,Funchal
+NovoProp:Gonçalo,104845005,104845005@live.com,Vila Nova de Gaia
+NovoProp:Eva,744493816,744493816@yahoo.com,Vila Franca de Xira
+NovoProp:Matilde,295190291,295190291@yahoo.com,Vila Nova de Gaia
+NovoProp:Pedro,560255652,560255652@hotmail.com,Matosinhos
+NovoProp:Afonso,762282154,762282154@gmail.com,Vila Nova de Gaia
+NovoProp:Duarte,554006908,554006908@outlook.com,Sintra
+NovoProp:Miguel,185409741,185409741@live.com,Olhão
+NovoProp:Ana,201953344,201953344@yahoo.com,Gondomar
+NovoProp:Maria,190414032,190414032@gmail.com,Lisboa
+NovoProp:Matilde,517821893,517821893@hotmail.com,Lisboa
+NovoProp:Santiago,717013084,717013084@hotmail.com,Sintra
+NovoProp:Benedita,253031378,253031378@live.com,Esposende
+NovoProp:Benedita,229277220,229277220@gmail.com,Loulé
+NovoProp:Inês,197332678,197332678@gmail.com,Odivelas
+NovoProp:Salvador,286236393,286236393@hotmail.com,Marinha Grande
+NovoProp:Alice,531932256,531932256@live.com,Valongo
+NovoProp:Leonor,217232357,217232357@yahoo.com,Maia
+NovoProp:Lara,731924059,731924059@yahoo.com,Braga
+NovoProp:Margarida,557306723,557306723@gmail.com,Amarante
+NovoProp:Guilherme,222405206,222405206@yahoo.com,Tondela
+NovoProp:Gabriel,151531361,151531361@live.com,Amadora
+NovoProp:Lucas,186814002,186814002@hotmail.com,Moita
+NovoProp:Francisco,735319060,735319060@hotmail.com,Marinha Grande
+NovoProp:Maria,224262913,224262913@yahoo.com,Lagoa
+NovoProp:Lucas,764200051,764200051@gmail.com,Almada
+NovoProp:Laura,558180839,558180839@gmail.com,Moita
+NovoProp:Vicente,218146013,218146013@hotmail.com,Penafiel
+NovoProp:Salvador,508424954,508424954@gmail.com,Mafra
+NovoProp:Maria,578801056,578801056@outlook.com,Guimarães
+NovoProp:Carolina,538972070,538972070@gmail.com,Oeiras
+NovoProp:Maria,560534044,560534044@live.com,Mafra
+NovoProp:Maria,274019012,274019012@yahoo.com,Lisboa
+NovoProp:Sofia,772274203,772274203@live.com,Loures
+NovoProp:Santiago,581186926,581186926@hotmail.com,Porto
+NovoProp:João,583657733,583657733@hotmail.com,Loures
+NovoProp:Duarte,784307546,784307546@hotmail.com,Sintra
+NovoProp:Dinis,234387495,234387495@yahoo.com,Oliveira de Azeméis
+NovoProp:Beatriz,756923268,756923268@hotmail.com,Coimbra
+NovoProp:Maria,271257834,271257834@gmail.com,Aveiro
+NovoProp:Maria,763242619,763242619@hotmail.com,Aveiro
+NovoProp:Leonor,561118919,561118919@outlook.com,Sintra
+NovoProp:Carolina,143759421,143759421@gmail.com,Paredes
+NovoProp:Madalena,292606906,292606906@gmail.com,Seixal
+NovoProp:Sofia,122746161,122746161@hotmail.com,Odivelas
+NovoProp:Guilherme,278239107,278239107@gmail.com,Seixal
+NovoProp:Duarte,124519732,124519732@live.com,Funchal
+NovoProp:Maria,284190028,284190028@gmail.com,Vila Nova de Gaia
+NovoProp:Afonso,595508556,595508556@hotmail.com,Porto
+NovoProp:Maria,528649018,528649018@hotmail.com,Sintra
+NovoProp:Afonso,197798434,197798434@gmail.com,Vila Nova de Gaia
+NovoProp:Joana,729512516,729512516@hotmail.com,Santo Tirso
+NovoProp:Martim,102567304,102567304@outlook.com,Braga
+NovoProp:Rafael,740056384,740056384@hotmail.com,Braga
+NovoProp:Beatriz,764397134,764397134@gmail.com,Évora
+NovoProp:Rafael,736666520,736666520@yahoo.com,Sintra
+NovoProp:Matilde,251070738,251070738@outlook.com,Paredes
+NovoProp:Duarte,245127830,245127830@gmail.com,Guimarães
+NovoProp:Inês,110087064,110087064@gmail.com,Funchal
+NovoProp:Ana,183800305,183800305@hotmail.com,Amadora
+NovoProp:Duarte,126395217,126395217@yahoo.com,Braga
+NovoProp:Francisco,276300060,276300060@yahoo.com,Faro
+NovoProp:Dinis,593082502,593082502@yahoo.com,Loures
+NovoProp:Benedita,732478539,732478539@live.com,Barcelos
+NovoProp:Miguel,293526589,293526589@gmail.com,Marinha Grande
+NovoProp:Ana,205634827,205634827@live.com,Vila Nova de Famalicão
+NovoProp:Sofia,572553920,572553920@gmail.com,Seixal
+NovoProp:Leonor,598661774,598661774@yahoo.com,Alcobaça
+NovoProp:Dinis,765065483,765065483@gmail.com,Torres Vedras
+NovoProp:Laura,546536286,546536286@gmail.com,Viana de Castelo
+NovoProp:Mariana,795302103,795302103@gmail.com,Maia
+NovoProp:Maria,174667521,174667521@gmail.com,Ponte de Lima
+NovoProp:Dinis,534687516,534687516@hotmail.com,Setúbal
+NovoProp:Guilherme,574158610,574158610@gmail.com,Trofa
+NovoProp:Gonçalo,272615159,272615159@yahoo.com,Almada
+NovoProp:Lucas,544045361,544045361@hotmail.com,Barcelos
+NovoProp:Madalena,569760060,569760060@gmail.com,Póvoa de Varzim
+NovoProp:Margarida,775349903,775349903@outlook.com,Braga
+NovoProp:Ana,142210845,142210845@outlook.com,Penafiel
+NovoProp:Sofia,244910476,244910476@gmail.com,Coimbra
+NovoProp:Francisco,744524844,744524844@outlook.com,Guimarães
+NovoProp:Carolina,111167805,111167805@gmail.com,Angra do Heroísmo
+NovoProp:Mariana,596772232,596772232@gmail.com,Leiria
+NovoProp:Margarida,198732800,198732800@yahoo.com,Vila do Conde
+NovoProp:Rafael,784994845,784994845@gmail.com,Sintra
+NovoProp:Duarte,547539573,547539573@live.com,Almada
+NovoProp:Tomás,518360227,518360227@gmail.com,Penafiel
+NovoProp:Duarte,136568721,136568721@gmail.com,Amadora
+NovoProp:Benedita,747283212,747283212@hotmail.com,Porto
+NovoProp:Santiago,201566283,201566283@outlook.com,Vila Nova de Gaia
+NovoProp:João,717914217,717914217@gmail.com,Porto
+NovoProp:Martim,778495861,778495861@gmail.com,Viseu
+NovoProp:Miguel,192374894,192374894@hotmail.com,Torres Vedras
+NovoProp:Miguel,137290090,137290090@yahoo.com,Sintra
+NovoProp:Leonor,137545955,137545955@yahoo.com,Cascais
+NovoProp:Maria,762295659,762295659@hotmail.com,Porto
+NovoProp:Alice,582295825,582295825@gmail.com,Covilhã
+NovoProp:Afonso,731315433,731315433@outlook.com,Guimarães
+NovoProp:Duarte,168844460,168844460@yahoo.com,Gondomar
+NovoProp:Maria,582726568,582726568@yahoo.com,Bragança
+NovoProp:Pedro,551939752,551939752@yahoo.com,Amadora
+NovoProp:Guilherme,764837063,764837063@gmail.com,Vila Nova de Famalicão
+NovoProp:Benedita,238939258,238939258@live.com,Loures
+NovoProp:Matilde,557347044,557347044@yahoo.com,Albufeira
+NovoProp:Benedita,540502311,540502311@gmail.com,Barcelos
+NovoProp:Maria,577943825,577943825@gmail.com,Vila Real
+NovoProp:Inês,534057155,534057155@outlook.com,Viseu
+NovoCliente:Benedita Pereira Henriques Santos,156664000,156664000@outlook.com,Funchal,78.9189,-88.94584
+NovoCliente:Lourenço Silva Marques Gaspar,112087686,112087686@gmail.com,Angra do Heroísmo,-82.44939,22.115517
+NovoCliente:Francisco Almeida Ramos Pinto,714454481,714454481@hotmail.com,Paços de Ferreira,67.980484,-53.492973
+NovoCliente:Madalena Pinho Gonçalves Pereira,553495695,553495695@hotmail.com,Setúbal,-61.67344,99.7715
+NovoCliente:Gonçalo Vieira Sousa Silva,534789898,534789898@yahoo.com,Odivelas,82.07356,-32.7463
+NovoCliente:Sofia Jesus Guerreiro Oliveira,509596296,509596296@hotmail.com,Matosinhos,-19.758675,-73.72019
+NovoCliente:Maria Silva Fernandes Henriques,132404046,132404046@gmail.com,Beja,49.17578,76.113815
+NovoCliente:Maria Jesus Mota Santos,787739084,787739084@live.com,Lisboa,-27.665474,59.03607
+NovoCliente:Sofia Coelho Batista Rodrigues,278995331,278995331@gmail.com,Barreiro,69.35782,-22.581848
+NovoCliente:Dinis Pinto Pereira Jesus,202508761,202508761@hotmail.com,Anadia,90.668365,11.847328
+NovoCliente:Ana Amorim Guerreiro Rodrigues,732815229,732815229@outlook.com,Tomar,12.022766,-18.796791
+NovoCliente:Francisco Assunção Costa Pinto,240152086,240152086@gmail.com,Cascais,49.271255,-83.62726
+NovoCliente:Margarida Lopes Silva Pereira,790657978,790657978@yahoo.com,Gondomar,60.412415,-43.578648
+NovoCliente:Inês Pires Teixeira Sousa,251414726,251414726@outlook.com,Cantanhede,-49.975716,-60.727417
+NovoCliente:Beatriz Santos Fonseca Torres,757083401,757083401@outlook.com,Loulé,-74.52748,-84.937035
+NovoCliente:Alice Correia Gonçalves Sousa,131765762,131765762@live.com,Barreiro,42.92746,75.74278
+NovoCliente:Diana Ribeiro Campos Ferreira,533730508,533730508@yahoo.com,Coimbra,-36.43018,-73.66653
+NovoCliente:Duarte Melo Almeida Pinto,766840595,766840595@hotmail.com,Angra do Heroísmo,20.642212,87.37929
+NovoCliente:Pedro Oliveira Mendes Silva,523379555,523379555@gmail.com,Mirandela,37.219193,-56.605267
+NovoCliente:Ana Correia Silva Oliveira,734643517,734643517@hotmail.com,Ponta Delgada,53.1994,-16.015793
+NovoCliente:Maria Batista Santos Mendes,181383186,181383186@gmail.com,Barreiro,99.55824,62.22287
+NovoCliente:Matilde Oliveira Valente Silva,570242518,570242518@gmail.com,Sintra,-8.306625,87.66269
+NovoCliente:Maria Silva Branco Martins,237059108,237059108@yahoo.com,Porto,-47.207474,68.91916
+NovoCliente:Rodrigo Cardoso Tavares Lourenço,566844441,566844441@hotmail.com,Silves,66.86264,-19.685684
+NovoCliente:Duarte Pereira Teixeira Machado,106249242,106249242@yahoo.com,Lisboa,-0.75553894,-26.857582
+NovoCliente:Leonor Reis Pinto Cruz,136052999,136052999@live.com,Funchal,10.238411,-50.347923
+NovoCliente:Francisco Sousa Santos Fernandes,291260611,291260611@gmail.com,Maia,-53.163517,85.57066
+NovoCliente:Maria Moreira Santos Carneiro,177776339,177776339@gmail.com,Odivelas,-55.349266,-55.349586
+NovoCliente:Eva Branco Maia Sousa,546130331,546130331@yahoo.com,Vila Nova de Gaia,-94.857216,61.474854
+NovoCliente:João Silva Santos Azevedo,189009810,189009810@gmail.com,Montemor-o-Velho,76.9787,59.45439
+NovoCliente:Madalena Marques Nunes Mendes,133004341,133004341@yahoo.com,Coimbra,-27.676132,-17.454353
+NovoCliente:Gustavo Gomes Rodrigues Martins,116154004,116154004@gmail.com,Lisboa,-32.832314,72.688644
+NovoCliente:Afonso Figueiredo Teixeira Garcia,573384986,573384986@yahoo.com,Lagos,-15.256561,89.780365
+NovoCliente:Afonso Cardoso Teixeira Coelho,503210725,503210725@gmail.com,Faro,3.005539,78.03926
+NovoCliente:Laura Lopes Costa Gonçalves,111254558,111254558@yahoo.com,Amadora,-13.923431,-7.309532
+NovoCliente:Miguel Baptista Domingues Ferreira,558047310,558047310@yahoo.com,Almada,-80.4001,30.456146
+NovoCliente:Tomás Nascimento Costa Pinto,773497882,773497882@yahoo.com,Pombal,-37.875843,-12.79998
+NovoCliente:Francisco Pereira Figueiredo Barbosa,744989778,744989778@yahoo.com,Leiria,-75.458275,-87.55004
+NovoCliente:Maria Pereira Costa Henriques,260451407,260451407@outlook.com,Porto,43.90941,37.003845
+NovoCliente:Rodrigo Fernandes Moreira Carneiro,169860328,169860328@hotmail.com,Santa Cruz,-62.760044,-11.856232
+NovoCliente:Alice Silva Oliveira Monteiro,712221080,712221080@hotmail.com,Olhão,28.584106,41.698273
+NovoCliente:Dinis Antunes Nunes Reis,785059699,785059699@outlook.com,Portimão,30.609528,-27.492096
+NovoCliente:Francisca Monteiro Pereira Matos,740426507,740426507@yahoo.com,Porto,-79.148315,-8.843697
+NovoCliente:Carolina Azevedo Cardoso Silva,750309613,750309613@gmail.com,Seixal,-56.92637,53.485687
+NovoCliente:Benedita Simões Alves Guerreiro,162188561,162188561@yahoo.com,Bragança,-22.625603,-19.567574
+NovoCliente:Sofia Alves Ferreira Silva,717953662,717953662@yahoo.com,Sintra,42.077866,-86.09159
+NovoCliente:Mariana Pires Pereira Oliveira,255503280,255503280@yahoo.com,Guimarães,35.395386,-77.65297
+NovoCliente:Tomás Marques Correia Reis,129636961,129636961@live.com,Santarém,26.442253,33.43799
+NovoCliente:Francisca Rocha Sousa Carvalho,767538707,767538707@gmail.com,Ovar,-92.139206,-22.07383
+NovoCliente:Martim Alves Cardoso Santos,753321001,753321001@live.com,Guimarães,3.135315,81.73149
+NovoCliente:Mariana Silva Marques Santos,575670526,575670526@hotmail.com,Penafiel,-59.26167,29.749344
+NovoCliente:Maria Gonçalves Jesus Gaspar,505450674,505450674@yahoo.com,Esposende,21.976112,89.25545
+NovoCliente:Miguel Oliveira Marques Carvalho,716791292,716791292@hotmail.com,Mafra,-77.94655,-57.262196
+NovoCliente:Miguel Santos Alves Tavares,118819918,118819918@gmail.com,Santiago de Cacém,35.70488,18.13469
+NovoCliente:Beatriz Almeida Correia Mendes,733943692,733943692@yahoo.com,Guimarães,-39.61135,80.39389
+NovoCliente:Matilde Nunes Azevedo Costa,119790103,119790103@gmail.com,Santa Maria da Feira,-15.976013,67.59807
+NovoCliente:Miguel Costa Ramos Ferreira,701876424,701876424@hotmail.com,Vila Nova de Famalicão,90.86459,33.412994
+NovoCliente:Benedita Lopes Pinheiro Borges,283389639,283389639@gmail.com,Paredes,-92.11934,-90.568924
+NovoCliente:Rodrigo Jesus Alves Silva,137515548,137515548@outlook.com,Valongo,-51.935852,-57.634865
+NovoCliente:Gustavo Raposo Carvalho Lima,709888884,709888884@yahoo.com,Bragança,21.030579,5.1727905
+NovoCliente:Diana Martins Leite Pereira,512592715,512592715@gmail.com,Águeda,15.912399,22.159233
+NovoCliente:Duarte Ferreira Azevedo Costa,256818615,256818615@yahoo.com,Lisboa,47.896408,42.567474
+NovoCliente:Rodrigo Martins Nunes Carvalho,741723151,741723151@gmail.com,Valongo,-32.70556,38.992126
+NovoCliente:Laura Cardoso Guerreiro Silva,285140593,285140593@outlook.com,Vila Real,98.87286,-10.975281
+NovoCliente:Maria Carvalho Oliveira Rodrigues,182090492,182090492@live.com,Gondomar,-98.39065,34.29236
+NovoCliente:Maria Rodrigues Antunes Sousa,720478572,720478572@gmail.com,Montemor-o-Velho,-96.19052,-44.45472
+NovoCliente:Carolina Marques Lopes Ferreira,148318362,148318362@live.com,Braga,-6.635666,61.088257
+NovoCliente:Maria Rodrigues Teixeira Oliveira,104564562,104564562@hotmail.com,Odivelas,67.14099,-23.752426
+NovoCliente:Beatriz Vieira Pereira Oliveira,112154366,112154366@gmail.com,Póvoa de Lanhoso,35.873856,-68.05462
+NovoCliente:Gonçalo Silva Martins Gomes,121997647,121997647@live.com,Maia,65.66803,78.11386
+NovoCliente:Rodrigo Oliveira Carneiro Gonçalves,124632509,124632509@hotmail.com,Vila Verde,-46.158363,5.6490173
+NovoCliente:Francisca Maia Silva Costa,155461253,155461253@yahoo.com,Lisboa,-2.215805,-46.52891
+NovoCliente:Santiago Pereira Nogueira Teixeira,758484927,758484927@outlook.com,Figueira da Foz,15.605713,78.10149
+NovoCliente:Gustavo Rocha Silva Marques,589683606,589683606@outlook.com,Águeda,-97.27065,-67.05252
+NovoCliente:Mariana Alves Santos Silva,183302458,183302458@gmail.com,Lisboa,-0.13809204,-52.973186
+NovoCliente:Guilherme Simões Costa Macedo,120188078,120188078@gmail.com,Braga,50.363907,-32.37332
+NovoCliente:Sofia Nunes Almeida Lopes,534612017,534612017@gmail.com,Santa Maria da Feira,-79.20245,-63.29571
+NovoCliente:Benedita Miranda Ramos Silva,586579937,586579937@yahoo.com,Loures,97.14987,42.59091
+NovoCliente:Maria Mota Rodrigues Moreira,523339311,523339311@gmail.com,Lisboa,27.334236,-72.4966
+NovoCliente:Guilherme Santos Costa Ribeiro,267182927,267182927@gmail.com,Almada,6.2849274,-22.77974
+NovoCliente:Benedita Garcia Gomes Barbosa,144983712,144983712@yahoo.com,Paços de Ferreira,5.9563065,96.65935
+NovoCliente:Diana Mendes Melo Silva,532914940,532914940@yahoo.com,Esposende,-2.3414993,-82.27414
+NovoCliente:Vicente Ramos Ribeiro Esteves,537072671,537072671@yahoo.com,Ovar,68.00784,-44.358086
+NovoCliente:João Gomes Cunha Silva,773531582,773531582@gmail.com,Barreiro,-88.83366,65.54683
+NovoCliente:Diana Santos Martins Gonçalves,163698046,163698046@yahoo.com,Vila do Conde,31.063568,65.186874
+NovoCliente:Francisco Raposo Ramos Freitas,202598396,202598396@outlook.com,Vila Franca de Xira,43.500107,8.431755
+NovoCliente:João Silva Santos Cunha,705805314,705805314@gmail.com,Cabeceiras de Basto,70.09094,18.3555
+NovoCliente:Guilherme Araújo Ferreira Marques,720335484,720335484@live.com,Santa Maria da Feira,-38.931812,-36.95736
+NovoCliente:Mariana Ferreira Henriques Silva,154188041,154188041@hotmail.com,Lisboa,4.4561768,57.05356
+NovoCliente:Santiago Anjos Pereira Oliveira,548032092,548032092@gmail.com,Sesimbra,-72.875175,-24.877975
+NovoCliente:Rafael Ferreira Costa Vicente,787693743,787693743@hotmail.com,Trofa,67.88153,-86.59892
+NovoCliente:Lourenço Nunes Rodrigues Vicente,554528438,554528438@outlook.com,Torres Vedras,-53.178085,99.451416
+NovoCliente:Guilherme Pinto Simões Marques,581123323,581123323@outlook.com,Guimarães,-30.575523,-40.093136
+NovoCliente:Vicente Silva Gomes Ferreira,279316804,279316804@gmail.com,Santarém,79.53781,52.46306
+NovoCliente:Beatriz Vieira Valente Silva,509422225,509422225@gmail.com,Lisboa,-12.8153305,0.12645721
+NovoCliente:Maria Ferreira Antunes Costa,791170451,791170451@outlook.com,Funchal,14.631248,80.60707
+NovoCliente:Leonor Cardoso Costa Gomes,108107260,108107260@gmail.com,Santa Maria da Feira,-7.3513947,78.44112
+NovoCliente:Alice Cruz Teixeira Carvalho,538254890,538254890@yahoo.com,Paredes,-45.034897,-40.757706
+NovoCliente:Guilherme Lopes Loureiro Lourenço,774719133,774719133@gmail.com,Funchal,64.625046,-0.35502625
+NovoCliente:Francisca Figueiredo Vieira Ferreira,208610511,208610511@yahoo.com,Lisboa,-40.35256,-77.49927
+NovoCliente:Ana Fernandes Campos Gonçalves,197336406,197336406@gmail.com,Vila Nova de Famalicão,81.14285,8.386787
+NovoCliente:Maria Gonçalves Barros Pinho,561106618,561106618@hotmail.com,Santa Maria da Feira,-4.988823,99.05655
+NovoCliente:Maria Barbosa Moreira Coelho,199733439,199733439@hotmail.com,Pombal,36.210236,76.210205
+NovoCliente:Leonor Ferreira Pereira Morais,193770443,193770443@yahoo.com,Lisboa,76.93527,34.333496
+NovoCliente:Gustavo Ribeiro Jesus Santos,111388864,111388864@gmail.com,Sintra,-93.922874,-69.536194
+NovoCliente:Tomás Silva Fernandes Ramos,273071684,273071684@outlook.com,Setúbal,62.638504,73.43761
+NovoCliente:Margarida Raposo Gonçalves Oliveira,174255957,174255957@outlook.com,Maia,59.19377,-19.497993
+NovoCliente:Maria Ribeiro Almeida Silva,729609590,729609590@outlook.com,Guimarães,-78.957405,-67.65436
+NovoCliente:João Gonçalves Vaz Brito,769085489,769085489@outlook.com,Cascais,-75.91417,22.26429
+NovoCliente:Clara Nascimento Sousa Oliveira,139960993,139960993@outlook.com,Arouca,-27.508072,-92.09425
+NovoCliente:Gonçalo Teixeira Gonçalves Pereira,728412155,728412155@yahoo.com,Setúbal,76.83151,37.965042
+NovoCliente:Francisca Costa Tavares Jesus,776758630,776758630@yahoo.com,Viseu,29.883804,52.08084
+NovoCliente:Clara Ferreira Loureiro Lopes,167030827,167030827@gmail.com,Setúbal,-13.446297,77.43463
+NovoCliente:Mariana Azevedo Gonçalves Tavares,772270433,772270433@outlook.com,Gondomar,-16.902336,-35.39634
+NovoCliente:João Sousa Almeida Carvalho,512508071,512508071@yahoo.com,Santiago de Cacém,29.978088,57.778763
+NovoCliente:Carolina Alves Marques Azevedo,232263947,232263947@yahoo.com,Mafra,3.7375107,36.684677
+NovoCliente:Vicente Alves Sousa Rodrigues,175587479,175587479@outlook.com,Mafra,81.95163,75.23369
+NovoCliente:Benedita Costa Pereira Correia,530125251,530125251@hotmail.com,Paredes,78.72717,-51.099373
+NovoCliente:Gonçalo Domingues Pinto Amaral,737326588,737326588@outlook.com,Valongo,6.803177,-27.93869
+NovoCliente:Afonso Anjos Ferreira Fonseca,165391645,165391645@gmail.com,Amares,-4.8599243e-2,62.12108
+NovoCliente:Francisco Teixeira Silva Martins,111567134,111567134@outlook.com,Peniche,45.65193,96.34778
+NovoCliente:Mariana Ribeiro Fernandes Simões,177819819,177819819@hotmail.com,Coimbra,66.74283,-25.43322
+NovoCliente:Gabriel Carvalho Faria Gomes,235368045,235368045@gmail.com,Maia,37.104065,76.732605
+NovoCliente:Laura Silva Jesus Pinto,547960135,547960135@hotmail.com,Ovar,73.25101,-21.41101
+NovoCliente:Mariana Freitas Gomes Fernandes,100506401,100506401@hotmail.com,Câmara de Lobos,12.677856,-62.330235
+NovoCliente:Rafael Lima Ferreira Maia,733668443,733668443@hotmail.com,Viseu,4.134575,95.816345
+NovoCliente:Guilherme Moura Ferreira Sousa,557357060,557357060@outlook.com,Santarém,-8.059692,36.737595
+NovoCliente:Maria Marques Cardoso Ribeiro,555696123,555696123@yahoo.com,Setúbal,-92.73037,19.26233
+NovoCliente:Maria Lopes Martins Gonçalves,277031413,277031413@gmail.com,Vila Verde,-69.94947,-81.00816
+NovoCliente:Maria Henriques Andrade Pereira,587934638,587934638@live.com,Paços de Ferreira,0.4017563,-85.09544
+NovoCliente:Gonçalo Ribeiro Gonçalves Silva,716506782,716506782@outlook.com,Paredes,-12.027634,61.615417
+NovoCliente:Gustavo Gonçalves Pereira Machado,593470882,593470882@live.com,Águeda,-6.6517944,63.70073
+NovoCliente:Maria Pereira Silva Oliveira,515250049,515250049@yahoo.com,Ponte de Lima,55.711243,-23.999115
+NovoCliente:Francisco Jesus Pereira Miranda,295342658,295342658@outlook.com,Águeda,-50.655376,52.714172
+NovoCliente:Francisco Sousa Gonçalves Martins,719954678,719954678@gmail.com,Arcos de Valdevez,87.34743,-47.27999
+NovoCliente:Diana Batista Pereira Fernandes,237139485,237139485@hotmail.com,Viseu,8.973022,-52.10216
+NovoCliente:Benedita Cunha Costa Vieira,293001652,293001652@live.com,Ribeira Grande,-15.670181,65.57767
+NovoCliente:Diana Jesus Pereira Rodrigues,295103130,295103130@live.com,Almada,-35.99739,36.0493
+NovoCliente:Clara Moreira Carvalho Pereira,253492559,253492559@hotmail.com,Amadora,71.805725,-77.36467
+NovoCliente:Maria Sousa Reis Figueiredo,773065954,773065954@yahoo.com,Amadora,-7.0233917,-73.380875
+NovoCliente:João Fernandes Pereira Cardoso,763630525,763630525@live.com,Seixal,24.266449,-42.722466
+NovoCliente:Carolina Figueiredo Silva Abreu,570601210,570601210@gmail.com,Cascais,-85.960205,-42.670654
+NovoCliente:Rodrigo Oliveira Gomes Costa,569239520,569239520@gmail.com,Porto,32.835342,-76.56081
+NovoCliente:Gustavo Nunes Simões Sousa,767979525,767979525@gmail.com,Vila Franca de Xira,-46.177578,42.83812
+NovoCliente:Madalena Carvalho Silva Alves,572471752,572471752@gmail.com,Sintra,13.91436,65.219315
+NovoCliente:Clara Macedo Pereira Martins,221441747,221441747@yahoo.com,Vila Franca de Xira,44.32631,-70.526085
+NovoCliente:Clara Oliveira Silva Antunes,149406337,149406337@gmail.com,Viana de Castelo,63.26297,55.458755
+NovoCliente:Lucas Simões Antunes Ferreira,566320316,566320316@yahoo.com,Lisboa,87.5119,-12.8839035
+NovoCliente:Martim Teixeira Gomes Freitas,180515723,180515723@live.com,Seixal,-77.718185,92.51988
+NovoCliente:Leonor Silva Raposo Fernandes,523544430,523544430@gmail.com,Oliveira de Azeméis,44.083115,-37.026108
+NovoCliente:Maria Martins Silva Costa,220003720,220003720@live.com,Oliveira de Azeméis,-41.872643,20.149658
+NovoCliente:Carolina Teixeira Simões Oliveira,754162677,754162677@hotmail.com,Setúbal,-12.303337,80.99068
+NovoCliente:Maria Figueiredo Azevedo Lopes,508707462,508707462@outlook.com,Paredes,-75.896545,-12.340591
+NovoCliente:Santiago Cunha Nunes Silva,748007792,748007792@yahoo.com,Póvoa de Varzim,11.740341,9.723686
+NovoCliente:Diana Alves Sousa Martins,577464660,577464660@outlook.com,Amadora,-10.64743,21.836723
+NovoCliente:Lucas Silva Santos Garcia,755429715,755429715@gmail.com,Lagos,65.94202,52.323288
+NovoCliente:Gabriel Oliveira Ferreira Martins,798696624,798696624@gmail.com,Pombal,48.671646,79.08632
+NovoCliente:Pedro Leal Barros Ferreira,224125690,224125690@live.com,Sintra,8.598694,-49.086605
+NovoCliente:Maria Pinto Castro Martins,757163842,757163842@hotmail.com,Sintra,-37.1279,-98.42397
+NovoCliente:Maria Pinho Vieira Ferreira,794534296,794534296@gmail.com,Viseu,-19.166473,30.36377
+NovoCliente:Matilde Ferreira Pereira Santos,736996041,736996041@gmail.com,Setúbal,-29.339561,29.24649
+NovoCliente:Eva Silva Fernandes Henriques,705093311,705093311@hotmail.com,Santa Maria da Feira,-23.34671,-4.1334
+NovoCliente:Martim Ferreira Ribeiro Martins,159980779,159980779@gmail.com,Alenquer,14.439537,1.6116257
+NovoCliente:Gonçalo Rocha Pinho Carvalho,501744306,501744306@outlook.com,Funchal,99.30585,66.15051
+NovoCliente:Afonso Teixeira Gomes Henriques,786491240,786491240@hotmail.com,Alcobaça,6.8575287,-45.228016
+NovoCliente:Rodrigo Pereira Moreira Alves,183994902,183994902@hotmail.com,Cascais,98.94652,-46.052204
+NovoCliente:João Ferreira Pires Marques,720184589,720184589@outlook.com,Portalegre,12.862816,56.736023
+NovoCliente:Margarida Oliveira Silva Fonseca,772050460,772050460@gmail.com,Valongo,97.88217,9.639397
+NovoCliente:Maria Fonseca Gomes Barros,716819015,716819015@gmail.com,Loures,79.42258,-46.65215
+NovoCliente:Clara Barbosa Pereira Vieira,531399378,531399378@outlook.com,Palmela,3.8490677,81.341156
+NovoCliente:Dinis Monteiro Alves Santos,115365292,115365292@outlook.com,Póvoa de Varzim,-26.060059,-24.64888
+NovoCliente:Santiago Silva Cruz Fonseca,258954887,258954887@outlook.com,Valença,77.71269,-7.852661
+NovoCliente:Dinis Santos Coelho Martins,558093894,558093894@yahoo.com,Vila Nova de Gaia,62.79138,-61.046364
+NovoCliente:Lucas Freitas Pereira Borges,133641125,133641125@hotmail.com,Sintra,3.9310074,22.435669
+NovoCliente:Guilherme Miranda Tavares Silva,280912275,280912275@yahoo.com,Marco de Canaveses,41.70514,3.219757
+NovoCliente:Diana Cruz Almeida Fernandes,529781122,529781122@gmail.com,Matosinhos,56.224625,-38.75687
+NovoCliente:Afonso Coelho Correia Baptista,164196929,164196929@gmail.com,Estarreja,54.779785,-52.646576
+NovoCliente:João Araújo Silva Rodrigues,143968468,143968468@yahoo.com,Barreiro,-78.86549,41.260345
+NovoCliente:Mariana Silva Lourenço Costa,529491702,529491702@yahoo.com,Albergaria-a-Velha,-6.5860596,91.3011
+NovoCliente:Margarida Pereira Reis Mendes,229901419,229901419@gmail.com,Porto,26.365105,76.49983
+NovoCliente:Rodrigo Cruz Lopes Ferreira,528781903,528781903@hotmail.com,Ponte de Lima,25.396599,48.94052
+NovoCliente:Leonor Santos Almeida Neves,749588103,749588103@gmail.com,Oliveira de Azeméis,89.30757,-73.16092
+NovoCliente:Clara Jesus Silva Santos,592526359,592526359@yahoo.com,Peniche,-41.315495,-34.428955
+NovoCliente:Lourenço Costa Batista Matos,768721889,768721889@gmail.com,Loures,7.700119,58.227722
+NovoCliente:Guilherme Santos Martins Rodrigues,719190026,719190026@outlook.com,Porto,-94.14226,-0.95256805
+NovoCliente:Gustavo Matos Pires Raposo,196072022,196072022@gmail.com,Amadora,-31.914604,-50.756287
+NovoCliente:Mariana Cardoso Lourenço Soares,288748882,288748882@outlook.com,Mafra,-45.76465,31.501923
+NovoCliente:Maria Lima Santos Silva,501631635,501631635@gmail.com,Penafiel,11.279335,60.02301
+NovoCliente:Gustavo Miranda Lopes Alves,270659353,270659353@hotmail.com,Porto,-58.910454,-42.37286
+NovoCliente:Carolina Pinto Raposo Ferreira,513048805,513048805@yahoo.com,Beja,-27.824036,55.549545
+NovoCliente:Madalena Martins Silva Lima,719846400,719846400@hotmail.com,Cascais,-21.064232,74.21132
+NovoCliente:Pedro Campos Pereira Jesus,561860858,561860858@outlook.com,Coimbra,25.71244,28.50438
+NovoCliente:Maria Almeida Barbosa Ramos,741314560,741314560@outlook.com,Faro,26.031616,-34.433792
+NovoCliente:Laura Carvalho Monteiro Lopes,795151429,795151429@yahoo.com,Porto,91.64169,54.930634
+NovoCliente:Maria Matos Alves Fernandes,240192015,240192015@outlook.com,Ourém,-43.054962,86.281296
+NovoCliente:Duarte Silva Branco Sousa,797307265,797307265@yahoo.com,Guimarães,-45.536278,45.123413
+NovoCliente:Beatriz Pereira Correia Gonçalves,231583207,231583207@gmail.com,Loures,53.979645,6.6411285
+NovoCliente:Alice Gonçalves Magalhães Santos,121941045,121941045@outlook.com,Cascais,17.318466,52.477417
+NovoCliente:Leonor Andrade Ramos Guerreiro,131101391,131101391@gmail.com,Seixal,63.294937,84.09027
+NovoCliente:Martim Santos Raposo Silva,566834030,566834030@gmail.com,Vila Nova de Gaia,-33.895454,-71.76374
+NovoCarro:Gasolina,Hyundai,EC-18-41,175830396,43,0.25150588,1.1204665,342,10.645294,67.72426
+NovoCarro:Gasolina,Renault,GW-11-31,504289855,79,0.24353677,2.0094016,447,-42.935753,85.313065
+NovoCarro:Gasolina,Chevrolet,ZN-84-03,259430787,175,0.16929747,1.5291407,380,-88.293335,35.359955
+NovoCarro:Gasolina,Mitsubishi,AF-07-23,784402641,152,0.14785011,2.8789425,563,-93.22203,56.34665
+NovoCarro:Gasolina,Hyundai,VB-28-33,757977997,83,0.1519862,2.3642626,537,71.95445,-19.225708
+NovoCarro:Gasolina,Renault,JB-49-50,732054123,34,0.25941586,1.3298509,401,63.055603,71.25659
+NovoCarro:Gasolina,Volkswagen,HA-90-29,238632523,163,0.24051142,1.8478211,387,-55.277588,25.128899
+NovoCarro:Gasolina,Fiat,VN-39-14,205893089,26,0.1454677,1.4674989,511,30.91658,-65.110565
+NovoCarro:Gasolina,Mercedes-Benz,MH-84-70,764630109,118,0.15901071,1.2782295,423,5.926117,-35.388924
+NovoCarro:Gasolina,Hyundai,IP-82-96,754863719,126,0.30745012,2.1330862,379,13.131165,53.79393
+NovoCarro:Gasolina,Jeep,EX-90-34,203916161,151,0.19546418,2.6797276,481,66.52202,-18.978691
+NovoCarro:Gasolina,Hyundai,FP-82-56,144211146,88,0.348383,2.051525,282,84.83186,23.958351
+NovoCarro:Gasolina,Nissan,BS-74-70,774031253,100,0.25535807,1.4595443,284,44.48401,63.376923
+NovoCarro:Gasolina,Fiat,LU-76-10,209925288,109,0.13866937,1.3166181,373,88.79353,-82.63336
+NovoCarro:Gasolina,Fiat,TX-84-85,558620419,108,0.23863328,2.2151523,580,-86.095085,66.620834
+NovoCarro:Gasolina,Chevrolet,XW-39-69,178387728,172,0.15098721,2.2481384,408,-43.510033,55.66542
+NovoCarro:Gasolina,Chevrolet,ZI-40-99,529780266,154,0.13168472,1.6833222,493,-77.751816,-0.732399
+NovoCarro:Gasolina,Chevrolet,FA-42-76,119732899,96,0.28966218,2.3968258,358,-88.631584,-45.154644
+NovoCarro:Gasolina,Ford,WG-76-49,213668286,175,0.1333084,2.2375274,307,13.366989,31.937073
+NovoCarro:Gasolina,Volkswagen,NU-71-55,710751790,176,0.2583847,1.535656,455,32.95598,-51.939056
+NovoCarro:Gasolina,Ford,LK-78-92,190037339,115,0.11673345,2.066999,516,39.42694,-90.02942
+NovoCarro:Gasolina,Hyundai,DP-16-02,528160418,38,0.2734074,2.9450333,298,-50.669933,4.4755325
+NovoCarro:Electrico,Renault,SY-51-60,288251498,37,0.20125794,1.7955837,269,81.86954,-87.52265
+NovoCarro:Gasolina,Ford,GC-26-10,597360978,167,0.3166231,1.6116186,540,21.67698,-31.420006
+NovoCarro:Gasolina,Volkswagen,WZ-50-54,163588953,37,0.19206952,2.913367,375,-33.778526,-48.1326
+NovoCarro:Gasolina,Land Rover,WO-24-37,255493960,169,0.18761279,2.6429949,317,-68.390564,63.52591
+NovoCarro:Gasolina,Fiat,QN-65-71,186867822,53,0.17996965,1.8281472,458,67.189865,-61.220814
+NovoCarro:Gasolina,Ford,LY-41-12,299120836,122,0.21187969,1.0152261,345,-32.085106,-93.19242
+NovoCarro:Electrico,Hyundai,QN-75-85,760998636,112,0.15109487,2.1321669,422,49.11583,-84.4137
+NovoCarro:Gasolina,Toyota,FL-56-12,227235365,137,0.32391584,1.3745524,518,73.43973,-86.530876
+NovoCarro:Gasolina,Nissan,SY-93-38,730529244,127,0.28846294,1.7705278,350,-83.536064,-67.681915
+NovoCarro:Gasolina,Volkswagen,LZ-98-20,548089558,55,0.34256473,1.4857304,314,-47.03754,50.714035
+NovoCarro:Gasolina,Fiat,JG-71-79,286030208,138,0.20158252,2.5850725,293,-40.174995,66.12053
+NovoCarro:Gasolina,Volkswagen,KZ-63-63,741781053,173,0.2623539,1.3804078,387,84.10321,49.444168
+NovoCarro:Gasolina,Toyota,HL-47-47,285197039,189,0.31523174,1.991217,316,-86.46393,-60.906197
+NovoCarro:Gasolina,Toyota,FJ-60-91,123824343,171,0.18332961,1.7303461,384,51.46054,-42.099846
+NovoCarro:Gasolina,Renault,OG-73-92,104639390,81,0.21789683,2.3320203,407,-90.06193,-61.7728
+NovoCarro:Gasolina,Renault,EH-83-46,208422048,38,0.26760936,2.5958269,364,87.69945,-20.853935
+NovoCarro:Gasolina,Fiat,KD-07-37,290616860,63,0.18460868,2.7513835,309,-33.367554,87.23848
+NovoCarro:Gasolina,Hyundai,ZK-26-37,171738371,174,0.2083277,2.7107365,339,17.715584,40.890793
+NovoCarro:Gasolina,Fiat,MI-34-22,195693894,33,0.16090019,2.3284826,362,99.54013,6.110779
+NovoCarro:Gasolina,Fiat,DI-52-36,533654896,163,0.3592779,2.7241,394,-61.452137,-41.861713
+NovoCarro:Gasolina,Honda,CM-05-82,769916495,61,0.24060442,1.3776876,270,-12.273941,26.265038
+NovoCarro:Hibrido,Honda,AO-08-40,215506796,104,0.2041274,2.4813576,552,51.76808,-80.03584
+NovoCarro:Gasolina,Renault,NU-04-61,177160145,51,0.12059885,1.122214,437,82.08566,48.98674
+NovoCarro:Gasolina,Jeep,KY-56-00,158007134,49,0.28616828,2.3569908,386,-4.6497498,-99.609924
+NovoCarro:Gasolina,Chevrolet,ZL-73-43,126026128,39,0.12756489,1.771114,454,-72.90909,62.48976
+NovoCarro:Gasolina,Fiat,CV-16-83,563136136,100,0.2646429,2.183378,370,-66.59384,33.736496
+NovoCarro:Gasolina,Nissan,UO-30-77,524380562,186,0.11372213,1.0763586,585,-63.285088,65.84204
+NovoCarro:Gasolina,Jeep,DT-14-77,198191842,90,0.2818666,1.2414781,335,86.23311,5.286171
+NovoCarro:Gasolina,Volkswagen,MV-25-94,701387711,166,0.19621696,1.7037344,523,92.70317,-42.867184
+NovoCarro:Gasolina,Volkswagen,XJ-12-39,531669657,67,0.3083415,2.4114976,289,-78.51141,54.537155
+NovoCarro:Gasolina,Chevrolet,LO-05-23,204947973,143,0.13642035,2.9445949,578,-65.304184,-62.53835
+NovoCarro:Gasolina,Chevrolet,ZQ-63-86,728333504,54,0.19950315,1.3263112,350,-66.29794,-91.30603
+NovoCarro:Gasolina,Chevrolet,SX-52-03,559144524,96,0.2977092,1.7196195,324,83.49353,76.16632
+NovoCarro:Gasolina,Volkswagen,EK-23-18,261214165,190,0.28504068,1.6323013,292,89.67981,-38.501022
+NovoCarro:Gasolina,Nissan,HS-75-15,133092836,200,0.28392893,2.0314329,552,-26.678154,-55.577995
+NovoCarro:Gasolina,Renault,ZV-83-63,282692223,41,0.18128428,1.6181048,341,33.03206,-73.214554
+NovoCarro:Gasolina,Hyundai,XD-95-40,543417243,118,0.30280536,1.8585714,468,2.327057,-69.77704
+NovoCarro:Gasolina,Chevrolet,VC-23-22,184485459,160,0.2306956,1.4819652,399,-55.635166,-39.791965
+NovoCarro:Gasolina,Volkswagen,CF-35-58,245198895,178,0.15976235,1.9035681,303,5.9829712e-2,41.58336
+NovoCarro:Gasolina,Honda,CC-06-32,287638346,159,0.3188543,1.3870842,538,29.306717,63.711243
+NovoCarro:Gasolina,Volkswagen,SI-81-25,285974917,145,0.29744476,2.5363224,544,-95.49548,-79.81633
+NovoCarro:Gasolina,Toyota,MM-53-87,263879446,58,0.32507896,1.2950032,519,-66.72096,80.83679
+NovoCarro:Gasolina,Volkswagen,PE-30-88,270851778,21,0.26293534,1.0560486,301,-51.948868,-12.8723755
+NovoCarro:Gasolina,Nissan,DE-48-06,557412422,134,0.29663113,1.773767,371,-39.142693,-71.83389
+NovoCarro:Gasolina,Fiat,KB-30-13,139810906,200,0.13639571,2.684577,561,9.870789,-34.24411
+NovoCarro:Gasolina,Toyota,KK-35-32,158564455,42,0.19775094,2.9496143,531,69.89862,11.264816
+NovoCarro:Gasolina,Fiat,DE-78-33,272720808,106,0.18934622,1.6452323,590,-92.49085,-3.5124512
+NovoCarro:Gasolina,Citroen,XO-70-19,192813543,155,0.23252168,1.1520679,315,65.14557,-75.49697
+NovoCarro:Gasolina,Volkswagen,EC-56-04,135969261,115,0.32254577,1.3469557,440,-50.95806,28.509064
+NovoCarro:Gasolina,Renault,BS-68-65,269317500,49,0.16224326,2.080258,315,-99.388245,64.07698
+NovoCarro:Gasolina,Jeep,OH-58-95,757035706,158,0.11364576,2.2441502,499,86.15874,37.142044
+NovoCarro:Gasolina,Jeep,DX-73-43,273577621,153,0.1697908,2.7000518,336,29.990952,-98.92167
+NovoCarro:Gasolina,Nissan,BP-79-17,749874255,45,0.12185991,1.5159637,321,73.465836,-28.548721
+NovoCarro:Gasolina,Honda,ZK-22-33,117738774,80,0.17491724,1.4865791,459,81.99255,13.378777
+NovoCarro:Gasolina,Toyota,ER-11-22,299057197,139,0.30965677,1.1230564,506,95.61932,-71.245895
+NovoCarro:Hibrido,Jeep,QJ-00-44,271342784,115,0.24548921,1.4233356,471,-51.334656,10.5744705
+NovoCarro:Gasolina,Chevrolet,HK-08-57,505877728,145,0.2738207,1.075824,543,52.028244,-31.17237
+NovoCarro:Gasolina,Ford,XT-08-54,138816557,131,0.13972764,1.7701781,584,80.44263,88.95424
+NovoCarro:Gasolina,Volkswagen,RC-54-34,715971360,123,0.25066185,1.6612685,517,0.9734268,0.7586746
+NovoCarro:Gasolina,Ford,ZT-92-03,786124908,198,0.3319236,2.8424165,357,-59.40323,-27.52739
+NovoCarro:Gasolina,Volkswagen,TH-58-46,714252914,71,0.15387368,1.4659604,327,55.41696,-61.713455
+NovoCarro:Gasolina,Ford,RF-40-35,241228727,109,0.3082623,2.182014,518,-37.93551,18.272575
+NovoCarro:Gasolina,Ford,XK-40-07,716727810,25,0.22690117,2.5988975,508,-49.39573,-75.46764
+NovoCarro:Gasolina,Chevrolet,WO-30-51,748348629,178,0.17593487,1.2021275,295,13.438972,-91.330734
+NovoCarro:Gasolina,Chevrolet,TM-60-98,543010822,173,0.27712142,1.2893405,281,89.399536,36.473984
+NovoCarro:Gasolina,Chevrolet,MW-58-62,569113640,120,0.13609895,2.8163824,483,-13.220787,-84.05888
+NovoCarro:Gasolina,Toyota,AY-79-67,731718568,32,0.17832355,2.698566,555,85.68021,90.53224
+NovoCarro:Gasolina,Ford,CE-20-79,526554533,103,0.25866503,2.7659738,432,-11.643471,93.55939
+NovoCarro:Gasolina,Jeep,TT-78-10,501516988,152,0.29107332,2.8929572,332,-96.56508,0.63739777
+NovoCarro:Gasolina,Fiat,IC-64-84,208243546,76,0.2622451,2.0170102,580,-12.454628,-83.905014
+NovoCarro:Gasolina,Nissan,IJ-43-48,143967905,129,0.15090308,1.2128834,380,-99.52072,-54.178547
+NovoCarro:Gasolina,Volkswagen,GD-44-07,528928525,50,0.11806367,2.0310616,535,-88.85954,-95.81573
+NovoCarro:Gasolina,Peugeot,BN-11-32,104845005,187,0.26371342,2.2955003,308,-99.69485,-97.20209
+NovoCarro:Gasolina,Chevrolet,FH-45-29,744493816,140,0.22164534,2.137879,600,80.3745,-19.39116
+NovoCarro:Gasolina,Volkswagen,QK-82-97,295190291,109,0.19803499,2.3594744,261,-92.53648,-26.447334
+NovoCarro:Gasolina,Ford,HA-95-63,560255652,93,0.23205432,2.3419757,407,-54.443096,25.46202
+NovoCarro:Gasolina,Chevrolet,FM-22-68,762282154,25,0.14903301,1.5945454,377,44.4601,93.50214
+NovoCarro:Gasolina,Hyundai,AY-59-77,554006908,82,0.17168254,1.4625899,464,40.292984,7.3810425
+NovoCarro:Gasolina,Chevrolet,KO-88-69,185409741,64,0.34938633,1.4237057,409,41.85356,-54.318573
+NovoCarro:Gasolina,Fiat,YM-56-57,201953344,146,0.32516396,1.339436,560,-41.43146,77.79721
+NovoCarro:Gasolina,Chevrolet,KX-91-09,190414032,169,0.25264138,2.7149649,301,-3.1642685,-93.2219
+NovoCarro:Gasolina,Renault,OW-49-18,517821893,28,0.21066187,1.1541076,434,80.88574,-73.07197
+NovoCarro:Gasolina,Nissan,CC-04-65,717013084,98,0.21449909,2.3677235,325,5.6188736,-44.07445
+NovoCarro:Gasolina,Volkswagen,TL-65-58,253031378,143,0.21736552,1.3592778,396,-70.53949,46.999405
+NovoCarro:Gasolina,Toyota,IY-83-23,229277220,186,0.16217683,1.3027121,534,-23.662857,-13.151482
+NovoCarro:Gasolina,Ford,CC-42-26,197332678,51,0.25043353,1.8638982,405,82.790955,48.434265
+NovoCarro:Gasolina,Ford,DN-61-64,286236393,45,0.24588451,2.5056708,457,-25.357773,-17.138847
+NovoCarro:Gasolina,Renault,JX-57-68,531932256,164,0.26795352,2.7501023,464,-21.850716,-28.938614
+NovoCarro:Gasolina,Fiat,KD-40-87,217232357,23,0.1447399,2.7857056,292,6.1208954,46.586304
+NovoCarro:Gasolina,Toyota,JZ-12-29,731924059,184,0.3429045,2.7890072,446,35.38794,40.251343
+NovoCarro:Gasolina,Chevrolet,WU-43-34,557306723,189,0.16206598,1.878477,389,32.595734,-40.21293
+NovoCarro:Gasolina,Volkswagen,OF-68-58,222405206,79,0.17148787,2.7550163,450,-21.157547,-57.094692
+NovoCarro:Gasolina,Fiat,BE-39-38,151531361,145,0.23190439,1.5760742,492,24.322273,55.96974
+NovoCarro:Gasolina,Nissan,LE-47-47,186814002,190,0.1350133,1.0940442,511,-78.403656,-86.42845
+NovoCarro:Gasolina,Fiat,TL-82-31,735319060,99,0.3582288,1.9641796,476,-86.09612,-60.595142
+NovoCarro:Gasolina,Volkswagen,MM-27-13,224262913,150,0.26949418,1.1696924,466,0.16542816,76.81746
+NovoCarro:Gasolina,Renault,JV-67-20,764200051,110,0.20913175,1.245691,555,87.820724,-18.175865
+NovoCarro:Gasolina,Jeep,GM-85-04,558180839,158,0.21826516,1.4337956,441,76.72522,32.258636
+NovoCarro:Gasolina,Chevrolet,NJ-62-08,218146013,62,0.2856121,2.9364192,420,-75.943756,-33.449997
+NovoCarro:Gasolina,Chevrolet,WC-49-60,508424954,150,0.35040426,1.5154955,330,55.404327,50.814865
+NovoCarro:Gasolina,BMW,AN-59-24,578801056,164,0.20420434,1.303034,398,45.541992,-73.24325
+NovoCarro:Gasolina,Toyota,KO-72-70,538972070,126,0.25142702,1.4653789,352,-26.96518,3.742218e-2
+NovoCarro:Gasolina,Fiat,VL-59-76,560534044,130,0.23658489,1.3832163,505,-60.221863,-53.994263
+NovoCarro:Gasolina,Hyundai,FT-88-63,274019012,154,0.116102636,2.084118,507,-13.214493,-42.729305
+NovoCarro:Gasolina,Nissan,QC-45-79,772274203,87,0.29773146,2.0210323,465,-31.994537,33.582245
+NovoCarro:Gasolina,Toyota,WB-38-65,581186926,53,0.32223332,2.6676998,456,-27.275063,-40.871513
+NovoCarro:Electrico,Chevrolet,TU-91-31,583657733,187,0.33430535,2.742982,411,-58.809925,-16.518188
+NovoCarro:Gasolina,Chevrolet,ED-22-55,784307546,84,0.16139467,1.3287024,276,-90.47674,-4.0900574
+NovoCarro:Hibrido,Volkswagen,BN-21-65,234387495,67,0.16119994,2.2330298,367,-16.444305,-75.63156
+NovoCarro:Electrico,Volkswagen,PF-31-60,756923268,164,0.31643963,2.860473,312,17.145576,20.816948
+NovoCarro:Gasolina,Fiat,LI-96-82,271257834,111,0.28534633,1.2848188,326,-26.684296,-11.879822
+NovoCarro:Gasolina,Chevrolet,EA-29-24,763242619,43,0.33378232,2.8859396,304,0.45975494,10.391129
+NovoCarro:Gasolina,Chevrolet,UX-44-77,561118919,187,0.26399198,1.7251711,445,35.19713,10.266518
+NovoCarro:Gasolina,Chevrolet,WG-47-90,143759421,58,0.28426343,1.6136968,573,-47.51432,68.60051
+NovoCarro:Gasolina,Fiat,AB-93-08,292606906,125,0.17662768,2.3928409,321,-72.50652,1.4031372
+NovoCarro:Gasolina,Volkswagen,RK-68-86,122746161,133,0.3113196,2.8551145,297,-13.763855,-90.1763
+NovoCarro:Gasolina,Chevrolet,NE-56-56,278239107,31,0.3143269,1.6821377,514,87.60989,-32.221115
+NovoCarro:Gasolina,Chevrolet,LT-20-79,124519732,197,0.1510323,1.7573115,311,-66.852905,-47.833847
+NovoCarro:Gasolina,Volkswagen,UT-75-00,284190028,169,0.18668766,1.5436319,337,-87.51219,-19.806686
+NovoCarro:Gasolina,Ford,ZY-30-50,595508556,80,0.21773902,2.9218278,470,-11.909363,16.14122
+NovoCarro:Gasolina,Chevrolet,GI-52-12,528649018,193,0.23675063,1.3070161,468,-37.858795,7.815361
+NovoCarro:Gasolina,Chevrolet,SO-98-64,197798434,103,0.23162724,1.6887535,399,28.511078,-46.92552
+NovoCarro:Gasolina,Volkswagen,DH-02-55,729512516,101,0.22248387,1.5707105,581,3.3245316,53.191956
+NovoCarro:Gasolina,Chevrolet,CX-87-64,102567304,126,0.121273726,2.829103,381,25.742813,71.337814
+NovoCarro:Gasolina,Chevrolet,AB-61-37,740056384,67,0.29361874,1.2830632,542,30.94455,28.1857
+NovoCarro:Gasolina,BMW,DG-32-17,764397134,53,0.1761079,1.2472336,284,94.22418,-91.97773
+NovoCarro:Gasolina,Renault,WB-73-01,736666520,140,0.18238977,1.4444876,468,74.357254,-96.61482
+NovoCarro:Gasolina,Volkswagen,ED-25-55,251070738,155,0.1926206,2.6809773,434,78.85448,-13.088676
+NovoCarro:Gasolina,Ford,BJ-35-50,245127830,194,0.16346243,1.0201375,501,-68.00661,72.24309
+NovoCarro:Gasolina,Ford,IY-21-79,110087064,86,0.3291996,1.6860224,539,84.19949,50.14412
+NovoCarro:Gasolina,Chevrolet,XD-91-45,183800305,186,0.23865508,2.7118855,541,-24.12461,-26.38749
+NovoCarro:Gasolina,Fiat,HD-63-38,126395217,91,0.2504419,2.9323566,484,52.505936,-51.44596
+NovoCarro:Gasolina,Volkswagen,PC-10-95,276300060,101,0.32979003,2.9751992,508,-58.493744,-88.95296
+NovoCarro:Gasolina,Renault,UT-09-88,593082502,181,0.21444803,2.8556132,516,54.01082,-98.70152
+NovoCarro:Gasolina,Volkswagen,ED-44-19,732478539,200,0.16068226,2.0325882,570,-71.68973,86.16724
+NovoCarro:Gasolina,Chevrolet,MA-28-46,293526589,159,0.33699328,1.3356917,544,-56.029034,-14.631119
+NovoCarro:Gasolina,Chevrolet,WS-82-64,205634827,121,0.11441022,2.6171007,459,95.8761,64.94046
+NovoCarro:Gasolina,Chevrolet,DT-85-34,572553920,130,0.29561907,2.580277,425,-19.992638,6.527199
+NovoCarro:Gasolina,Chevrolet,GS-08-22,598661774,153,0.21826014,1.0554405,370,-91.33882,-79.82579
+NovoCarro:Gasolina,Volkswagen,UL-23-92,765065483,180,0.18530324,2.4627948,431,-70.19513,69.18886
+NovoCarro:Gasolina,Fiat,HF-30-30,546536286,114,0.11605357,2.3055406,291,-61.174404,94.328094
+NovoCarro:Gasolina,Chevrolet,QD-62-52,795302103,164,0.2287973,1.3307254,563,7.9652405,-60.41883
+NovoCarro:Gasolina,Volkswagen,JI-53-00,174667521,41,0.2522853,1.7698895,402,77.09386,-36.236034
+NovoCarro:Gasolina,Ford,CZ-00-88,534687516,150,0.31541687,2.2758958,425,-92.30321,71.593475
+NovoCarro:Gasolina,Toyota,XM-97-77,574158610,87,0.30054736,1.8465718,423,-43.58933,55.550888
+NovoCarro:Gasolina,Ford,JA-58-26,272615159,188,0.27925715,1.0982304,543,-15.357277,33.38179
+NovoCarro:Gasolina,Honda,VL-23-39,544045361,53,0.23311979,2.528006,354,90.39615,-59.83206
+NovoCarro:Gasolina,Honda,YR-52-62,569760060,168,0.14614749,2.722347,527,29.57254,57.67151
+NovoCarro:Gasolina,Volkswagen,PN-82-30,775349903,28,0.12214872,1.5983914,386,-62.208866,-61.331284
+NovoCarro:Gasolina,Renault,MD-37-37,142210845,112,0.16662127,2.8305612,326,-3.709015,61.922104
+NovoCarro:Gasolina,Chevrolet,SW-67-02,244910476,84,0.14543097,1.0489455,533,-23.976242,-35.545982
+NovoCarro:Gasolina,Volkswagen,NY-28-72,744524844,37,0.2699612,2.937698,531,-24.402985,25.711754
+NovoCarro:Gasolina,Volkswagen,RM-28-05,111167805,42,0.13507645,1.6535152,451,4.207596,74.449875
+NovoCarro:Gasolina,Fiat,EQ-63-33,596772232,142,0.295207,2.3830175,403,53.709717,17.552605
+NovoCarro:Gasolina,Chevrolet,QO-22-80,198732800,28,0.21989058,2.7157395,456,-26.867607,-85.124626
+NovoCarro:Gasolina,Volkswagen,IK-24-80,784994845,182,0.14361304,2.3236256,398,-53.031372,-52.450977
+NovoCarro:Gasolina,Ford,LS-30-32,547539573,198,0.27819288,1.739036,516,-69.521225,-27.499054
+NovoCarro:Gasolina,Chevrolet,JK-14-99,518360227,131,0.1299152,2.0839634,556,94.15602,84.18028
+NovoCarro:Gasolina,Renault,TZ-06-63,136568721,101,0.114011645,2.5298643,437,66.23602,44.688873
+NovoCarro:Gasolina,Hyundai,MQ-53-19,747283212,91,0.32391113,2.0215964,276,93.21744,53.28987
+NovoCarro:Gasolina,Honda,AY-71-77,201566283,103,0.20021223,2.0725923,324,57.26007,-99.45517
+NovoCarro:Gasolina,Chevrolet,FA-90-57,717914217,36,0.3389656,2.482623,502,88.027145,19.983086
+NovoCarro:Gasolina,Ford,GB-19-93,778495861,98,0.34901905,1.8582448,496,-65.388725,42.498245
+NovoCarro:Gasolina,Chevrolet,ZJ-45-72,192374894,71,0.23792182,1.2267891,527,-40.243362,29.42192
+NovoCarro:Gasolina,Fiat,AN-84-97,137290090,197,0.28125978,1.6482338,555,87.332794,-26.633453
+NovoCarro:Gasolina,Jeep,CP-77-66,137545955,56,0.33037186,2.6724687,353,-68.53725,75.621124
+NovoCarro:Gasolina,Chevrolet,WZ-84-01,762295659,77,0.27814597,1.2955431,441,98.56355,82.91951
+NovoCarro:Gasolina,Ford,ZD-70-12,582295825,131,0.18277171,1.2140834,291,-13.582489,-54.2629
+NovoCarro:Gasolina,Jeep,HU-01-94,731315433,139,0.3575068,1.3459032,545,33.565308,86.79791
+NovoCarro:Gasolina,Nissan,ZL-69-08,168844460,161,0.1293373,1.903804,543,-39.8896,-78.72285
+NovoCarro:Gasolina,Renault,XZ-01-57,582726568,138,0.25663817,2.8486433,307,69.94879,43.74539
+NovoCarro:Gasolina,Volkswagen,HZ-29-18,551939752,128,0.29932323,1.8414913,517,32.621735,-9.806511
+NovoCarro:Gasolina,Toyota,DS-72-95,764837063,106,0.35238874,1.8053687,442,-56.030727,71.653366
+NovoCarro:Gasolina,Ford,EF-18-03,238939258,122,0.33029938,1.1418768,471,-43.84029,-92.11144
+NovoCarro:Gasolina,Toyota,WQ-30-93,557347044,187,0.26809147,2.6714141,276,93.636734,-35.338844
+NovoCarro:Gasolina,Chevrolet,ZY-77-94,540502311,62,0.16602667,2.5355327,423,-37.89408,48.989212
+NovoCarro:Gasolina,Renault,CA-97-61,577943825,143,0.16951722,2.9543335,311,76.027374,-1.1935272
+NovoCarro:Gasolina,Fiat,CE-88-33,534057155,109,0.19428162,2.832935,556,-77.52371,-7.6828e-2
+Aluguer:156664000,-40.51844,-1.945198,Gasolina,MaisBarato
+Aluguer:112087686,7.1228027,-96.35828,Gasolina,MaisBarato
+Aluguer:714454481,-86.15403,-1.9249649,Gasolina,MaisPerto
+Aluguer:553495695,-9.357605,-45.780766,Gasolina,MaisBarato
+Aluguer:534789898,89.82274,77.94058,Gasolina,MaisBarato
+Aluguer:509596296,9.794113,67.297424,Gasolina,MaisBarato
+Aluguer:132404046,-24.107872,-51.019825,Gasolina,MaisBarato
+Aluguer:787739084,95.39673,46.80867,Gasolina,MaisPerto
+Aluguer:278995331,8.813011,-5.1727676,Gasolina,MaisBarato
+Aluguer:202508761,-89.935776,-14.469376,Gasolina,MaisPerto
+Aluguer:732815229,95.96419,99.70418,Gasolina,MaisBarato
+Aluguer:240152086,81.70409,-6.435356,Gasolina,MaisPerto
+Aluguer:790657978,83.31889,15.973854,Gasolina,MaisBarato
+Aluguer:251414726,-28.73758,31.46666,Gasolina,MaisBarato
+Aluguer:757083401,-33.028496,4.788925,Gasolina,MaisPerto
+Aluguer:131765762,72.554855,40.79689,Gasolina,MaisPerto
+Aluguer:533730508,9.90329,-97.733185,Gasolina,MaisPerto
+Aluguer:766840595,-30.891037,45.554733,Gasolina,MaisBarato
+Aluguer:523379555,89.91263,18.172523,Gasolina,MaisBarato
+Aluguer:734643517,19.48516,10.3938675,Gasolina,MaisBarato
+Aluguer:181383186,53.670624,45.197495,Gasolina,MaisBarato
+Aluguer:570242518,52.033203,-35.354088,Electrico,MaisBarato
+Aluguer:237059108,94.12097,95.37274,Gasolina,MaisBarato
+Aluguer:566844441,-94.53603,92.86197,Gasolina,MaisBarato
+Aluguer:106249242,-49.60357,38.02391,Gasolina,MaisBarato
+Aluguer:136052999,73.59207,0.36654663,Gasolina,MaisPerto
+Aluguer:291260611,10.864662,38.2137,Gasolina,MaisPerto
+Aluguer:177776339,29.557373,88.528595,Gasolina,MaisBarato
+Aluguer:546130331,94.27304,-20.888397,Gasolina,MaisBarato
+Aluguer:189009810,-47.700024,-46.495186,Gasolina,MaisBarato
+Aluguer:133004341,-89.62126,-58.28315,Gasolina,MaisBarato
+Aluguer:116154004,-45.92129,-78.48125,Gasolina,MaisBarato
+Aluguer:573384986,87.4395,-49.02829,Gasolina,MaisBarato
+Aluguer:503210725,89.85918,-21.81401,Gasolina,MaisBarato
+Aluguer:111254558,-24.45108,81.828995,Gasolina,MaisBarato
+Aluguer:558047310,-14.518036,10.651039,Gasolina,MaisBarato
+Aluguer:773497882,89.31615,-44.612347,Gasolina,MaisPerto
+Aluguer:744989778,31.349915,-23.602234,Gasolina,MaisBarato
+Aluguer:260451407,78.28923,-10.968567,Gasolina,MaisPerto
+Aluguer:169860328,27.655289,-92.21675,Gasolina,MaisPerto
+Aluguer:712221080,41.434097,-81.13427,Gasolina,MaisPerto
+Aluguer:785059699,20.684769,-83.29457,Gasolina,MaisBarato
+Aluguer:740426507,-64.78203,-8.97728,Gasolina,MaisPerto
+Aluguer:750309613,-11.227486,-35.111404,Gasolina,MaisPerto
+Aluguer:162188561,-47.605957,-99.66634,Electrico,MaisPerto
+Aluguer:717953662,23.847496,5.265808e-2,Gasolina,MaisPerto
+Aluguer:255503280,15.880432,59.825455,Gasolina,MaisBarato
+Aluguer:129636961,9.214439,-62.81644,Gasolina,MaisBarato
+Aluguer:767538707,-36.70449,-86.2118,Gasolina,MaisPerto
+Aluguer:753321001,-6.349655,25.655174,Gasolina,MaisBarato
+Aluguer:575670526,-72.51322,-76.29462,Gasolina,MaisPerto
+Aluguer:505450674,-36.486984,64.66644,Gasolina,MaisBarato
+Aluguer:716791292,-28.719734,8.810333,Gasolina,MaisBarato
+Aluguer:118819918,-62.118435,23.969528,Gasolina,MaisBarato
+Aluguer:733943692,55.148697,-48.21876,Gasolina,MaisBarato
+Aluguer:119790103,78.92172,36.268753,Gasolina,MaisBarato
+Aluguer:701876424,88.26042,71.78134,Gasolina,MaisPerto
+Aluguer:283389639,-71.89114,-18.514954,Electrico,MaisPerto
+Aluguer:137515548,20.42698,-20.295082,Gasolina,MaisPerto
+Aluguer:709888884,-10.3528595,74.68071,Gasolina,MaisPerto
+Aluguer:512592715,16.654816,80.44861,Gasolina,MaisBarato
+Aluguer:256818615,74.35663,-46.407402,Gasolina,MaisPerto
+Aluguer:741723151,-18.04477,-88.69603,Gasolina,MaisBarato
+Aluguer:285140593,-42.153786,43.856354,Gasolina,MaisPerto
+Aluguer:182090492,-39.884567,63.188232,Gasolina,MaisPerto
+Aluguer:720478572,17.149315,94.095245,Gasolina,MaisBarato
+Aluguer:148318362,5.960022,-70.2585,Gasolina,MaisPerto
+Aluguer:104564562,92.45265,60.413315,Gasolina,MaisBarato
+Aluguer:112154366,-61.506462,90.537506,Gasolina,MaisPerto
+Aluguer:121997647,69.80675,67.78078,Gasolina,MaisBarato
+Aluguer:124632509,-10.489204,38.92775,Gasolina,MaisBarato
+Aluguer:155461253,0.3305893,73.916336,Gasolina,MaisBarato
+Aluguer:758484927,63.434525,-90.92299,Gasolina,MaisPerto
+Aluguer:589683606,-46.088062,66.579956,Gasolina,MaisBarato
+Aluguer:183302458,91.76436,0.46057892,Gasolina,MaisBarato
+Aluguer:120188078,-75.54837,-22.603622,Gasolina,MaisBarato
+Aluguer:534612017,81.79445,38.42253,Gasolina,MaisPerto
+Aluguer:586579937,-15.476402,-54.74063,Gasolina,MaisBarato
+Aluguer:523339311,-29.383698,28.74881,Gasolina,MaisPerto
+Aluguer:267182927,-27.997498,27.516678,Gasolina,MaisPerto
+Aluguer:144983712,58.00879,10.747108,Gasolina,MaisPerto
+Aluguer:532914940,-92.472244,-84.50726,Gasolina,MaisBarato
+Aluguer:537072671,-28.195213,15.054581,Gasolina,MaisBarato
+Aluguer:773531582,95.75755,5.3206787,Gasolina,MaisBarato
+Aluguer:163698046,-89.053925,95.24637,Gasolina,MaisBarato
+Aluguer:202598396,-77.442764,-58.509945,Gasolina,MaisBarato
+Aluguer:705805314,-21.370064,22.445297,Gasolina,MaisPerto
+Aluguer:720335484,-78.403076,14.4370575,Gasolina,MaisPerto
+Aluguer:154188041,93.826004,-42.338657,Gasolina,MaisBarato
+Aluguer:548032092,-44.1162,48.472717,Gasolina,MaisBarato
+Aluguer:787693743,-71.60542,75.32495,Gasolina,MaisBarato
+Aluguer:554528438,-11.2908325,-17.233208,Gasolina,MaisBarato
+Aluguer:581123323,25.781013,-56.46962,Gasolina,MaisPerto
+Aluguer:279316804,-13.172363,-72.47351,Gasolina,MaisBarato
+Aluguer:509422225,-81.376114,-62.629543,Gasolina,MaisBarato
+Aluguer:791170451,90.34694,34.071915,Gasolina,MaisPerto
+Aluguer:108107260,76.53473,-75.491165,Gasolina,MaisPerto
+Aluguer:538254890,-3.8583755,25.959137,Gasolina,MaisBarato
+Aluguer:774719133,58.48004,50.165924,Gasolina,MaisPerto
+Aluguer:208610511,45.70941,6.6949844,Gasolina,MaisBarato
+Aluguer:197336406,-70.53219,4.9232025,Gasolina,MaisBarato
+Aluguer:561106618,42.639847,-21.584976,Gasolina,MaisBarato
+Aluguer:199733439,-50.51645,97.689865,Hibrido,MaisPerto
+Aluguer:193770443,69.77997,-84.26594,Gasolina,MaisBarato
+Aluguer:111388864,-98.93254,-36.87452,Gasolina,MaisPerto
+Aluguer:273071684,-89.59592,-77.69615,Gasolina,MaisBarato
+Aluguer:174255957,11.63385,-48.74401,Gasolina,MaisPerto
+Aluguer:729609590,-74.4733,-97.81801,Gasolina,MaisBarato
+Aluguer:769085489,-21.993065,90.93495,Gasolina,MaisPerto
+Aluguer:139960993,-14.407555,40.562973,Gasolina,MaisPerto
+Aluguer:728412155,-68.29138,-19.920662,Gasolina,MaisPerto
+Aluguer:776758630,-95.6885,-26.31134,Gasolina,MaisBarato
+Aluguer:167030827,-54.99524,-95.940384,Gasolina,MaisPerto
+Aluguer:772270433,-56.398,5.3807755,Gasolina,MaisBarato
+Aluguer:512508071,24.74562,-72.73731,Gasolina,MaisPerto
+Aluguer:232263947,17.237556,-76.19241,Electrico,MaisPerto
+Aluguer:175587479,-94.85699,-19.876823,Gasolina,MaisBarato
+Aluguer:530125251,28.34842,63.88391,Gasolina,MaisBarato
+Aluguer:737326588,-97.182846,35.44696,Gasolina,MaisPerto
+Aluguer:165391645,-0.29992676,-44.05732,Gasolina,MaisPerto
+Aluguer:111567134,81.776184,33.121338,Electrico,MaisPerto
+Aluguer:177819819,-28.944305,-65.445625,Gasolina,MaisBarato
+Aluguer:235368045,-50.423084,68.42912,Gasolina,MaisPerto
+Aluguer:547960135,77.985214,60.778717,Gasolina,MaisBarato
+Aluguer:100506401,-80.23963,58.949112,Gasolina,MaisPerto
+Aluguer:733668443,18.462326,-25.423721,Gasolina,MaisPerto
+Aluguer:557357060,18.204308,-63.040768,Gasolina,MaisBarato
+Aluguer:555696123,-78.89722,48.489502,Gasolina,MaisBarato
+Aluguer:277031413,-26.663818,16.74694,Gasolina,MaisPerto
+Aluguer:587934638,-4.848671,88.49429,Gasolina,MaisBarato
+Aluguer:716506782,-64.763794,53.650986,Gasolina,MaisPerto
+Aluguer:593470882,16.986046,43.84529,Gasolina,MaisBarato
+Aluguer:515250049,83.3938,32.07663,Gasolina,MaisPerto
+Aluguer:295342658,30.95755,-28.560997,Gasolina,MaisPerto
+Aluguer:719954678,28.97226,26.975204,Gasolina,MaisPerto
+Aluguer:237139485,23.779404,84.76021,Gasolina,MaisPerto
+Aluguer:293001652,-89.34684,48.25009,Gasolina,MaisPerto
+Aluguer:295103130,-39.061714,62.19998,Hibrido,MaisPerto
+Aluguer:253492559,-89.28276,1.574585,Gasolina,MaisBarato
+Aluguer:773065954,-44.00494,-62.874187,Gasolina,MaisPerto
+Aluguer:763630525,-49.017273,-99.49235,Gasolina,MaisPerto
+Aluguer:570601210,-19.238686,-8.112732,Gasolina,MaisPerto
+Aluguer:569239520,-63.256336,-13.041176,Gasolina,MaisPerto
+Aluguer:767979525,46.869476,-73.548256,Gasolina,MaisPerto
+Aluguer:572471752,-35.781548,76.36017,Gasolina,MaisPerto
+Aluguer:221441747,26.18486,-85.04797,Gasolina,MaisPerto
+Aluguer:149406337,-70.86834,-83.07853,Gasolina,MaisPerto
+Aluguer:566320316,54.98404,60.10251,Gasolina,MaisPerto
+Aluguer:180515723,-10.164055,50.997208,Gasolina,MaisPerto
+Aluguer:523544430,54.58864,38.17108,Gasolina,MaisBarato
+Aluguer:220003720,8.8127365,-99.28277,Gasolina,MaisPerto
+Aluguer:754162677,97.61769,-32.122765,Gasolina,MaisPerto
+Aluguer:508707462,-4.846344,0.65839386,Gasolina,MaisBarato
+Aluguer:748007792,33.869797,1.5262604,Gasolina,MaisPerto
+Aluguer:577464660,0.11705017,-5.2936935,Gasolina,MaisBarato
+Aluguer:755429715,-1.8945694,8.349251,Gasolina,MaisBarato
+Aluguer:798696624,25.11493,-43.562675,Gasolina,MaisBarato
+Aluguer:224125690,-34.40657,32.31961,Gasolina,MaisBarato
+Aluguer:757163842,74.5285,70.288086,Gasolina,MaisPerto
+Aluguer:794534296,49.496475,-31.540466,Gasolina,MaisBarato
+Aluguer:736996041,3.5301666,10.943237,Electrico,MaisPerto
+Aluguer:705093311,83.60216,-83.61746,Gasolina,MaisPerto
+Aluguer:159980779,93.80708,-82.70892,Gasolina,MaisBarato
+Aluguer:501744306,-44.771492,94.35547,Gasolina,MaisBarato
+Aluguer:786491240,49.255554,-3.7919846,Gasolina,MaisBarato
+Aluguer:183994902,14.0728,36.16342,Gasolina,MaisBarato
+Aluguer:720184589,-91.51664,36.027344,Gasolina,MaisBarato
+Aluguer:772050460,30.61679,7.8825226,Gasolina,MaisPerto
+Aluguer:716819015,-49.653553,-33.962616,Gasolina,MaisBarato
+Aluguer:531399378,45.80452,-84.7534,Gasolina,MaisBarato
+Aluguer:115365292,63.235764,7.487068,Gasolina,MaisPerto
+Aluguer:258954887,-78.09478,54.295914,Gasolina,MaisPerto
+Aluguer:558093894,-10.811844,-74.03146,Gasolina,MaisPerto
+Aluguer:133641125,94.35045,87.48723,Gasolina,MaisPerto
+Aluguer:280912275,93.92717,-28.497383,Gasolina,MaisPerto
+Aluguer:529781122,-39.342796,-3.6303177,Gasolina,MaisBarato
+Aluguer:164196929,74.80769,-1.0120544,Gasolina,MaisBarato
+Aluguer:143968468,-59.36253,-18.602737,Gasolina,MaisBarato
+Aluguer:529491702,-17.878448,69.95967,Gasolina,MaisBarato
+Aluguer:229901419,-69.65207,-34.7293,Hibrido,MaisBarato
+Aluguer:528781903,23.14444,-49.16662,Gasolina,MaisBarato
+Aluguer:749588103,-28.163994,70.25235,Gasolina,MaisBarato
+Aluguer:592526359,-0.85544586,-40.55519,Gasolina,MaisPerto
+Aluguer:768721889,-54.66671,-84.39867,Gasolina,MaisBarato
+Aluguer:719190026,60.276855,4.7530975,Gasolina,MaisBarato
+Aluguer:196072022,-20.399162,-29.62252,Gasolina,MaisBarato
+Aluguer:288748882,-34.42559,95.35858,Gasolina,MaisPerto
+Aluguer:501631635,53.84723,-23.438408,Gasolina,MaisBarato
+Aluguer:270659353,99.675186,13.779358,Gasolina,MaisPerto
+Aluguer:513048805,-10.547516,-84.50241,Gasolina,MaisPerto
+Aluguer:719846400,-47.918392,17.345337,Gasolina,MaisBarato
+Aluguer:561860858,82.276215,-52.290047,Gasolina,MaisBarato
+Aluguer:741314560,90.6438,-31.174507,Gasolina,MaisPerto
+Aluguer:795151429,-85.96098,-8.582367,Gasolina,MaisPerto
+Aluguer:240192015,21.278404,-11.343155,Gasolina,MaisBarato
+Aluguer:797307265,6.413101,92.67389,Gasolina,MaisPerto
+Aluguer:231583207,31.87912,-74.4769,Gasolina,MaisPerto
+Aluguer:121941045,58.774918,-25.156464,Gasolina,MaisBarato
+Aluguer:131101391,-67.92868,-65.33669,Gasolina,MaisBarato
+Aluguer:566834030,-47.84732,-21.086525,Gasolina,MaisPerto
+Classificar:MV-25-94,46
+Classificar:ZY-77-94,88
+Classificar:764630109,97
+Classificar:774031253,19
+Classificar:137515548,87
+Classificar:198191842,32
+Classificar:720478572,95
+Classificar:AY-59-77,99
+Classificar:AN-84-97,92
+Classificar:267182927,41
+Classificar:129636961,21
+Classificar:258954887,97
+Classificar:279316804,29
+Classificar:227235365,83
+Classificar:KZ-63-63,35
+Classificar:ZV-83-63,72
+Classificar:178387728,89
+Classificar:767979525,75
+Classificar:HU-01-94,58
+Classificar:DE-48-06,98
+Classificar:773531582,78
+Classificar:ZK-22-33,41
+Classificar:775349903,40
+Classificar:YM-56-57,64
+Classificar:LI-96-82,57
+Classificar:583657733,10
+Classificar:149406337,37
+Classificar:719190026,17
+Classificar:501744306,62
+Classificar:JZ-12-29,22
+Classificar:201566283,100
+Classificar:OH-58-95,6
+Classificar:CC-04-65,75
+Classificar:DS-72-95,20
+Classificar:557357060,85
+Classificar:KY-56-00,56
+Classificar:769085489,47
+Classificar:135969261,91
+Classificar:DG-32-17,53
+Classificar:SO-98-64,92
+Classificar:261214165,75
+Classificar:272720808,88
+Classificar:202508761,88
+Classificar:183800305,22
+Classificar:192813543,90
+Classificar:EH-83-46,10
+Classificar:555696123,1
+Classificar:122746161,58
+Classificar:731924059,98
+Classificar:205893089,44
+Classificar:AY-71-77,89
+Classificar:TU-91-31,62
+Classificar:203916161,75
+Classificar:KO-88-69,94
+Classificar:BS-74-70,14
+Classificar:ED-44-19,53
+Classificar:505877728,63
+Classificar:778495861,92
+Classificar:WB-38-65,40
+Classificar:240192015,11
+Classificar:MA-28-46,58
+Classificar:JI-53-00,28
+Classificar:MI-34-22,47
+Classificar:757035706,24
+Classificar:754162677,5
+Classificar:LT-20-79,17
+Classificar:561118919,47
+Classificar:QC-45-79,91
+Classificar:LZ-98-20,47
+Classificar:MM-27-13,94
+Classificar:222405206,17
+Classificar:714252914,67
+Classificar:UX-44-77,51
+Classificar:IJ-43-48,35
+Classificar:JX-57-68,60
+Classificar:DH-02-55,23
+Classificar:272615159,75
+Classificar:FL-56-12,35
+Classificar:CC-42-26,89
+Classificar:582726568,32
+Classificar:RC-54-34,70
+Classificar:NY-28-72,49
+Classificar:757977997,47
+Classificar:572553920,90
+Classificar:XW-39-69,51
+Classificar:MM-53-87,24
+Classificar:199733439,7
+Classificar:293526589,44
+Classificar:GW-11-31,24
+Classificar:BS-68-65,18
+Classificar:AO-08-40,80
+Classificar:534612017,87
+Classificar:774719133,15
+Classificar:575670526,34
+Classificar:BN-11-32,33
+Classificar:732815229,31
+Classificar:XO-70-19,82
+Classificar:OW-49-18,90
+Classificar:563136136,28
+Classificar:566834030,92
+Classificar:SX-52-03,36
+Classificar:WG-76-49,89
+Classificar:TX-84-85,70
+Classificar:FA-42-76,4
+Classificar:710751790,96
+Classificar:757083401,94
+Classificar:123824343,0
+Classificar:OG-73-92,63
+Classificar:LO-05-23,34
+Classificar:RM-28-05,44
+Classificar:794534296,82
+Classificar:528781903,60
+Classificar:263879446,100
+Classificar:577464660,93
+Classificar:NU-04-61,30
+Classificar:WG-47-90,68
+Classificar:282692223,37
+Classificar:XJ-12-39,31
+Classificar:237059108,65
+Classificar:HL-47-47,19
+Classificar:786491240,82
+Classificar:GD-44-07,80
+Classificar:HK-08-57,79
+Classificar:278995331,99
+Classificar:136568721,33
+Classificar:120188078,42
+Classificar:126026128,58
+Classificar:548089558,70
+Classificar:748007792,95
+Classificar:198732800,1
+Classificar:LS-30-32,67
+Classificar:132404046,59
+Classificar:FJ-60-91,16
+Classificar:570242518,90
+Classificar:762295659,98
+Classificar:534789898,68
+Classificar:NE-56-56,31
+Classificar:185409741,53
+Classificar:193770443,55
+Classificar:747283212,18
+Classificar:558093894,36
+Classificar:HZ-29-18,59
+Classificar:557306723,95
+Classificar:517821893,99
+Classificar:BJ-35-50,43
+Classificar:158007134,3
+Classificar:ZL-69-08,82
+Classificar:IY-21-79,49
+Classificar:244910476,26
+Classificar:TT-78-10,47
+Classificar:MH-84-70,30
+Classificar:CE-88-33,71
+Classificar:558047310,91
+Classificar:YR-52-62,29
+Classificar:CA-97-61,67
+Classificar:543417243,24
+Classificar:513048805,90
+Classificar:CE-20-79,54
+Classificar:197798434,39
+Classificar:AB-61-37,36
+Classificar:XZ-01-57,25
+Classificar:121941045,31
+Classificar:270659353,6
+Classificar:736996041,17
+Classificar:CV-16-83,38
+Classificar:CF-35-58,57
+Classificar:278239107,45
+Classificar:ZY-30-50,28
+Classificar:KD-40-87,83
+Classificar:MD-37-37,54
+Classificar:566320316,83
+Classificar:UL-23-92,57
+Classificar:741781053,99
+Classificar:229277220,79
+Classificar:DT-14-77,10
+Classificar:FM-22-68,41
+Classificar:133641125,88
+Classificar:PF-31-60,75
+Classificar:ZQ-63-86,50
+Classificar:240152086,5
+Classificar:190037339,85
+Classificar:HA-95-63,66
+Classificar:790657978,54
+Classificar:195693894,27
+Classificar:DE-78-33,83
+Classificar:546536286,84
+Classificar:175830396,4
+Classificar:TM-60-98,95
+Classificar:288748882,92
+Classificar:RF-40-35,32
+Classificar:117738774,1
+Classificar:VB-28-33,31
+Classificar:ER-11-22,86
+Classificar:748348629,86
+Classificar:EX-90-34,42
+Classificar:136052999,87
+Classificar:AF-07-23,72
+Classificar:SW-67-02,76
+Classificar:GS-08-22,12
+Classificar:295190291,23
