@@ -3,6 +3,9 @@ import Model.Parser;
 import Model.UMCarroJa;
 import java.lang.reflect.Field;
 import java.io.IOException;
+import Exceptions.InvalidUserException;
+import Exceptions.WrongPasswordExecption;
+import Exceptions.InvalidCarException;
 
 
 public class  Main {
@@ -90,9 +93,28 @@ public native static int scale(int freq);
             new Parser("../../../db/logsPOO_carregamentoInicial.bak", model);
             double[] after = getEnergyStats();	
 			System.out.println("Energy consumption of dram: " + (after[0] - before[0])+ " Energy consumption of cpu: " + (after[1] - before[1])+ " Energy consumption of package: " + (after[2] - before[2]));
-		
-		 
+			   try {
+        	double[] beforei = getEnergyStats();
+        	model.logIn("168283301@outlook.com","168283301@outlook.com");
+        	model.logIn("168283301@outlook.com","168283301@outlook.com");
+        	model.logIn("168283301@outlook.com","168283301@outlook.com");
+        	model.logIn("168283301@outlook.com","168283301@outlook.com");
+        	model.logIn("168283301@outlook.com","168283301@outlook.com");
+        	model.logIn("168283301@outlook.com","168283301@outlook.com");
+        	model.getBestClientsTravel();
+          	model.getBestClientsTimes();
+          	model.getBestClients();
+          	model.rate("231390477",78);
+          	model.rate("778124711",01);
+          	model.rate("231390477",99);
+          	model.rate("151156220",56);
+        	double[] afteri = getEnergyStats();	
+			System.out.println("Functions Energy consumption of dram: " + (afteri[0] - beforei[0])+ " Energy consumption of cpu: " + (afteri[1] - beforei[1])+ " Energy consumption of package: " + (afteri[2] - beforei[2]));
+			
+
+        } catch (InvalidCarException | InvalidUserException | WrongPasswordExecption w) {};
         }
+     
         try { Thread.sleep(10000);} catch (Exception e) {}
         new Controller(model).run();
         try {
