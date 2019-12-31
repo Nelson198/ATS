@@ -23,7 +23,7 @@ public class Aluguer implements Serializable {
     /* Tempo total da viagem em minutos */
     private int tempoViagem;
     /* Destino do Cliente */
-    private Coordinate destino;
+    private transient Coordinate destino;
     /* Número de Kms desde a origem até ao destino */
     private double distancia;
     /* Aluguer foi aceite pelo proprietário ou não */

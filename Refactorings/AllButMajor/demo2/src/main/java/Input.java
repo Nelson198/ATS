@@ -28,6 +28,10 @@ import java.text.ParseException;
 
 public class Input {
 
+    private Input() {
+        throw  new IllegalStateException("Utility Class");
+    }
+
  /**
   * Métodos de Classe
   */
@@ -47,7 +51,7 @@ public class Input {
                input.nextLine(); 
              }
      }
-     //input.close();
+
      return txt;
   } 
 
@@ -67,7 +71,7 @@ public class Input {
                input.nextLine(); 
              }
      }
-     //input.close();
+
      return i;
   } 
   
@@ -86,7 +90,7 @@ public class Input {
                input.nextLine(); 
              }
      }
-     //input.close();
+
      return d;
   }  
   
@@ -105,7 +109,7 @@ public class Input {
                input.nextLine(); 
              }
      }
-     //input.close();
+
      return f;
   }  
   
@@ -124,7 +128,7 @@ public class Input {
                input.nextLine(); 
              }
      }
-     //input.close();
+
      return b;
   } 
   
@@ -143,7 +147,7 @@ public class Input {
                input.nextLine(); 
              }
      }
-     //input.close();
+
      return s;
   }
   

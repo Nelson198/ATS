@@ -15,7 +15,9 @@ import com.google.gson.reflect.*;
 
 public class Weather {
     
-
+    private Weather() {
+        throw new IllegalStateException("Utility Class");
+    }
     /**
      * COnstrutor para objetos da classe Weather
      */
@@ -50,12 +52,7 @@ public class Weather {
            double hum = (Double) mainMap.get("humidity");
            double wSpeed = (Double) windMap.get("speed");
            double wAngle = (Double) windMap.get("deg");
-           //System.out.println("Current Temperature:" +  temp);
-           //System.out.println("Current Humidity:" + hum);
-           //System.out.println("Wind Speeds:" + wSpeed);
-           //System.out.println("Wind Angle:" + wAngle);
            percentage = (temp*0.4/4 + hum*0.4/4 + wSpeed*0.15/4 + wAngle*0.05/4) / 100;
-           //System.out.println("Percentage:" + percentage);
         } catch(IOException e){
             System.out.println(e.getMessage());
         }

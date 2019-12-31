@@ -48,6 +48,7 @@ public class CarroEletrico extends Veiculo{
      * @param obj O objeto a comparar.
      * @return true se forem iguais, false caso contrário.
      */
+    @Override
     public boolean equals(Object obj) {
         if(obj==this) return true;
         if(obj==null || obj.getClass()!=this.getClass()) return false;
@@ -59,6 +60,7 @@ public class CarroEletrico extends Veiculo{
      * Devolve uma representação do objeto em formato textual.
      * @return String Representa o objeto em formato textual.
      */
+    @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
         str.append("***** Carro Elétrico *****\n");
@@ -70,6 +72,7 @@ public class CarroEletrico extends Veiculo{
      * Retorna uma cópia da instância.
      * @return CarroEletrico Um novo carro elétrico, que é cópia do this.
      */
+    @Override
     public CarroEletrico clone(){
         return new CarroEletrico(this);
     }  

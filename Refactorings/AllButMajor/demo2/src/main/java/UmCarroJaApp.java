@@ -14,15 +14,12 @@
 import java.io.*;
 import static java.lang.System.out;
 
-
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.ArrayList;
 
 import java.util.TreeSet;
 import java.util.stream.Collectors;
-import java.util.Comparator;
-
 
 import java.io.IOException;
 import java.util.InputMismatchException;
@@ -58,33 +55,6 @@ public class UmCarroJaApp{
     private UmCarroJaApp() {}
 
     /** Métodos de Classe */
-
-    /**
-     * @brief Inicia a aplicação lendo o ficheiro objeto que contém
-     * a data de início da aplicacação e os dados.
-     */
-    private static void initApp() {
-        try {
-            FileInputStream fis = new FileInputStream(ficheiroDados);
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            dataInicioApp = (GregorianCalendar) ois.readObject();
-            ucj = (UmCarroJa) ois.readObject();
-        }catch (FileNotFoundException e){
-            dataInicioApp = new GregorianCalendar();
-            ucj = new UmCarroJa();
-            out.println("O ficheiro de dados não foi encontrado!\n.");
-        }
-        catch (IOException e) {
-            dataInicioApp = new GregorianCalendar();
-            ucj = new UmCarroJa();
-            System.out.println("Erro ao ler os dados!\nErro de leitura\n.");
-        }
-        catch (ClassNotFoundException e){
-            dataInicioApp = new GregorianCalendar();
-            ucj = new UmCarroJa();
-            out.println("Erro ao ler os dados! Ficheiro com formato desconhecido!\n.");
-        }
-    }
 
     /**
      * Inicia os diferentes Menus da aplicação, respetivamente o Menu Inicial,
@@ -155,16 +125,14 @@ public class UmCarroJaApp{
     }
     
     public static void main(String[] args){
-        //initApp();
+
         initMenus();
         ucj = new UmCarroJa();
         lerDadosTXT("logsPOO_carregamentoInicial.bak");
         out.println("NÚMERO UTILIZADORES: " + ucj.getNUsers());
         out.println("NÚMERO VEÍCULOS: " + ucj.getNVeiculos());
         out.println("NÚMERO ALUGUERES: " + ucj.getNAlugs());
-        //printUsers();
-        //printVeiculos();
-        //printAlugs();
+
         lerData();
         
         ucj.alugueresEfetuados(dataInicioApp);
@@ -229,18 +197,7 @@ public class UmCarroJaApp{
         
         try{
             ucj.iniciarSessao(email, password);
-            try{
-                Utilizador user = ucj.getUtilizador(email);
-                
-                if (ucj.getUtilizador(email) instanceof Proprietario){
-                    UmCarroJaApp.sessaoProprietario();
-                }
-                else{
-                    UmCarroJaApp.sessaoCliente();
-                }
-            }catch (UtilizadorNaoExisteException e){
-                out.println("O utilizador com o email: " + e.getMessage() + " não existe!");
-            }
+            nestedTry(email);
         }
         catch (UtilizadorNaoExisteException u){
             out.println("O utilizador com o email: " + u.getMessage() + " não existe!");
@@ -249,7 +206,20 @@ public class UmCarroJaApp{
             out.println("A password introduzida: " + p.getMessage() + " está incorreta!");
         }
     }
-    
+
+    private static void nestedTry(String email) {
+        try{
+            if (ucj.getUtilizador(email) instanceof Proprietario){
+                UmCarroJaApp.sessaoProprietario();
+            }
+            else{
+                UmCarroJaApp.sessaoCliente();
+            }
+        }catch (UtilizadorNaoExisteException e){
+            out.println("O utilizador com o email: " + e.getMessage() + " não existe!");
+        }
+    }
+
     /**
      * @brief Método responsável por proceder ao registo de um utilizador na aplicação.
      *
@@ -478,6 +448,7 @@ public class UmCarroJaApp{
         try{
             classif = ucj.alugueresClassificarCliente();
         }catch (NaoExistemAlugueresException e){
+            throw new NaoExistemAlugueresException("Não existem alugueres ainda!");
         }
 
         boolean correto = false;
@@ -645,7 +616,6 @@ public class UmCarroJaApp{
         
         try {
             ucj.altPrecoKm(matricula, pkm);
-            //UmCarroJaApp.guardarDados();
         }
         catch (VeiculoNaoExisteException e) {
             out.println("O Veiculo " + e.getMessage() +  " não existe!\n");
@@ -738,7 +708,8 @@ public class UmCarroJaApp{
                     do{
                         out.print("Digite novo preço para aluguer: ");
                         newPrice = Input.lerDouble("Preço Inválido!", "Digite novamente um novo preço: ");
-                        if ((flag = newPrice < a.getCustoViagem())){
+                        flag = newPrice < a.getCustoViagem();
+                        if (flag){
                             out.println("Novo preço menor do que o anterior digite novo preço novamente!");
                         }
                     } while(flag);
@@ -787,48 +758,13 @@ public class UmCarroJaApp{
     private static List<Aluguer> filterAlugueresBD (List<Aluguer> alugs, GregorianCalendar dataInicio, GregorianCalendar dataFim) {
         List<Aluguer> res = alugs.stream().filter(a -> a.getDataInicio().after(dataInicio) && a.getDataFim().before(dataFim) && a.getRealizado() == true).collect(Collectors.toList());
 
-        TreeSet<Aluguer> resOrd = new TreeSet<>(new Comparator<Aluguer>() {
-            public int compare (Aluguer a1, Aluguer a2) {
-                int i = a1.getDataInicio().compareTo(a2.getDataInicio());
-                if(i == 0) {return -1; }
-                return i;
-            }
-        });
-
+        TreeSet<Aluguer> resOrd = new TreeSet<>((Aluguer a1, Aluguer a2) -> a1.getDataInicio().compareTo(a2.getDataInicio));
 
         for(Aluguer a : res) {
             resOrd.add(a.clone());
         }
 
         return resOrd.stream().collect(Collectors.toList());
-    }
-
-    private static void meusAlugueresEntreDatasProp(){
-        List<Aluguer> alugs = ucj.getAlugueresProp(ucj.getUserNIF());
-
-        GregorianCalendar dataInicio;
-        GregorianCalendar dataFim;
-
-        do {
-            out.print("Digite a Data de Início do Aluguer (dd-mm-aaaa): ");
-            dataInicio = Input.lerData("Data de Início Inválida!", "Digite Novamente a Data de Início (dd-mm-aaaa): ");
-
-            out.print("Digite a Data de Fim do Aluguer (dd-mm-aaaa): ");
-            dataFim = Input.lerData("Data de fim inválida!", "Digite Novamente a Data de Fim (dd-mm-aaaa): ");
-        }while(dataFim.before(dataInicio));
-
-        List<Aluguer> res = filterAlugueresBD(alugs, dataInicio, dataFim);
-
-        UmCarroJaApp.clearScreen();
-        if(alugs.size() == 0) {
-            out.print("Não existem alugures entre essas datas.");
-        } else {
-            for(Aluguer a : res){
-                out.println("------------------------------------------------\n");
-                out.println(a.toString());
-                out.println("------------------------------------------------\n");
-            }
-        }
     }
     
     /******************************************************************************
@@ -1109,7 +1045,7 @@ public class UmCarroJaApp{
             out.println("O Veículo " + e.getMessage() +  " não tem disponibilidade para ser alugado. \n");
         }
 
-        Aluguer alug = new Aluguer(ucj.getEmailUser(), matricula, dataInicio, dataFim, 0.0, 0, 0, posDestino, 0, false, true, false, false, 0);
+        Aluguer alug = new Aluguer(ucj.getEmailUser(), v.getMatricula(), dataInicio, dataFim, 0.0, 0, 0, posDestino, 0, false, true, false, false, 0);
 
         ucj.registaAluguer(alug);
     }
@@ -1249,33 +1185,22 @@ public class UmCarroJaApp{
         UmCarroJaApp.clearScreen();
         try{
             inFile = new BufferedReader(new FileReader(fichtxt));
-            while(!inFile.readLine().equals("Logs")){
+            boolean flag = inFile.readLine().equals("Logs");
+            while(!flag) {
+                if (inFile.readLine().equals("Logs")) {
+                    flag = true;
+                }
             }
             while((linha = inFile.readLine()) != null){
                 linhas = linha.split(":", 2);
                 if (linhas[0].equals("NovoProp")){
-                    try{
-                        Proprietario prop = ParseDados.parseProprietario(linhas[1]);
-                        ucj.registarUtilizador(prop);
-                    }catch(UtilizadorJaExisteException e){
-                        out.println("O proprietário com o email: " + e.getMessage() + " já se encontra registado!\n");
-                    }
+                    registarProprietario(linhas[1]);
                 }
                 if (linhas[0].equals("NovoCliente")){
-                    try{
-                        Cliente cli = ParseDados.parseCliente(linhas[1]);
-                        ucj.registarUtilizador(cli);
-                    }catch(UtilizadorJaExisteException e){
-                        out.println("O cliente com o email: " + e.getMessage() + " já se encontra registado!\n");
-                    }
+                    registarCliente(linhas[1]);
                 }
                 if (linhas[0].equals("NovoCarro")){
-                    try {
-                        Veiculo v = ParseDados.parseVeiculo(linhas[1]);
-                        ucj.registarVeiculo(v);
-                    } catch (VeiculoJaExisteException e) {
-                        out.println("O veículo com a matrícula: " + e.getMessage() + " já foi inserido!");
-                    }
+                    registarVeiculo(linhas[1]);
                 }
                 if (linhas[0].equals("Aluguer")){
                     parseAluguer(linhas[1]);
@@ -1291,9 +1216,35 @@ public class UmCarroJaApp{
         }
     }
 
+    private static void registarVeiculo(String linha1) {
+        try {
+            Veiculo v = ParseDados.parseVeiculo(linha1);
+            ucj.registarVeiculo(v);
+        } catch (VeiculoJaExisteException e) {
+            out.println("O veículo com a matrícula: " + e.getMessage() + " já foi inserido!");
+        }
+    }
 
-    
-   private static void parseAluguer(String linha){
+    private static void registarCliente(String linha1) {
+        try{
+            Cliente cli = ParseDados.parseCliente(linha1);
+            ucj.registarUtilizador(cli);
+        }catch(UtilizadorJaExisteException e){
+            out.println("O cliente com o email: " + e.getMessage() + " já se encontra registado!\n");
+        }
+    }
+
+    private static void registarProprietario(String linha1) {
+        try{
+            Proprietario prop = ParseDados.parseProprietario(linha1);
+            ucj.registarUtilizador(prop);
+        }catch(UtilizadorJaExisteException e){
+            out.println("O proprietário com o email: " + e.getMessage() + " já se encontra registado!\n");
+        }
+    }
+
+
+    private static void parseAluguer(String linha){
         String mail;
         double x,y;
         GregorianCalendar dataInicio = new GregorianCalendar(2019,4,20);
@@ -1387,17 +1338,5 @@ public class UmCarroJaApp{
         }else{
             ucj.classificarClienteJa(dados[0] + "@gmail.com", classificacao);
         }
-    }
-
-    private static void printAlugs(){
-        out.print(ucj.toStringAlugs());
-    }
-    
-    private static void printUsers(){
-        out.print(ucj.toStringUser());
-    }
-    
-    private static void printVeiculos(){
-        out.print(ucj.toStringVeiculo());
     }
 }

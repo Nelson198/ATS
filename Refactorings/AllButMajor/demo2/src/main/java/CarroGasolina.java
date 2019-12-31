@@ -48,6 +48,7 @@ public class CarroGasolina extends Veiculo{
      * @param obj O objeto a comparar.
      * @return true se forem iguais, false caso contrário.
      */
+    @Override
     public boolean equals(Object obj) {
         if(obj==this) return true;
         if(obj==null || obj.getClass()!=this.getClass()) return false;
@@ -59,6 +60,7 @@ public class CarroGasolina extends Veiculo{
      * Devolve uma representação do objeto em formato textual.
      * @return String Representa o objeto em formato textual.
      */
+    @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
         str.append("***** Carro a Gasolina *****\n");
@@ -70,6 +72,7 @@ public class CarroGasolina extends Veiculo{
      * Retorna uma cópia da instância.
      * @return CarroGasolina Um novo carro a gasolina, que é cópia do this.
      */
+    @Override
     public CarroGasolina clone(){
         return new CarroGasolina(this);
     }  

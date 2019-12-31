@@ -248,9 +248,9 @@ public class Veiculo implements Serializable, Classificação{
      * @param posicaoCli Posição inicial.
      * @return int Tempo em minutos a pé até ao veículo.
      */
-    public int tempoAteVeiculoPé(Coordinate posicaoCli, Weather weath){
+    public int tempoAteVeiculoPé(Coordinate posicaoCli){
         double dist = posicaoCli.getDistancia(this.posicao);
-        Long tempo = Math.round((dist * 60) / 4 * weath.getPercentage(this.posicao.getLatitude(), this.posicao.getLongitude()));
+        Long tempo = Math.round((dist * 60) / 4 * Weather.getPercentage(this.posicao.getLatitude(), this.posicao.getLongitude()));
         return Integer.valueOf(tempo.intValue());
     }
 
@@ -258,9 +258,9 @@ public class Veiculo implements Serializable, Classificação{
      * @param destino Destino.
      * @return int Representa o tempo em minutos da viagem.
      */
-    public int tempoViagemCarro(Coordinate destino, Weather weath){
+    public int tempoViagemCarro(Coordinate destino){
         double dist = this.posicao.getDistancia(destino);
-        Long tempoMin = Math.round((dist * 60) / 70 * weath.getPercentage(this.posicao.getLatitude(), this.posicao.getLongitude()));
+        Long tempoMin = Math.round((dist * 60) / 70 * Weather.getPercentage(this.posicao.getLatitude(), this.posicao.getLongitude()));
         return Integer.valueOf(tempoMin.intValue());
     }
     
@@ -299,8 +299,8 @@ public class Veiculo implements Serializable, Classificação{
     public void abastecerVeiculo(double quantidade){
         BigDecimal qtd = BigDecimal.valueOf(quantidade);
         BigDecimal autonomiaInicial = BigDecimal.valueOf(this.getAutonomia());
-        BigDecimal consumo = BigDecimal.valueOf(this.getConsumo());
-        BigDecimal autonomiaAbastecimento = qtd.divide(consumo);
+        BigDecimal consumo2 = BigDecimal.valueOf(this.getConsumo());
+        BigDecimal autonomiaAbastecimento = qtd.divide(consumo2);
         BigDecimal autonomiaFinal = autonomiaAbastecimento.add(autonomiaInicial);
         
         int autonomiaTotal = autonomiaFinal.intValue();

@@ -8,7 +8,10 @@
 import java.util.HashMap;
 
 public class CoordinateManager{
-  
+
+  private CoordinateManager() {
+    throw new IllegalStateException("Utility Class");
+  }
   /**
    * Constante para a latitude mínima.
    */
@@ -90,12 +93,12 @@ public class CoordinateManager{
     }
     
     // converte metros para km
-    double kilometers = distance / new Double(1000);  
+    double kilometers = distance / 1000.0;
     
     // calcula a nova latitude
     double newLat = latitude + (kilometers / latitudeConstant());
     
-    return new Coordinate(new Double(newLat).doubleValue(), longitude);
+    return new Coordinate(newLat, longitude);
   
   }
   
@@ -111,12 +114,12 @@ public class CoordinateManager{
     }
     
     // converte metros para km
-    double kilometers = distance / new Double(1000);
+    double kilometers = distance / 1000.0;
     
     // calcula a nova latitude
     double newLat = latitude - (kilometers / latitudeConstant());
     
-    return new Coordinate(new Double(newLat).doubleValue(), longitude);
+    return new Coordinate(newLat, longitude);
   
   }
   
@@ -131,13 +134,10 @@ public class CoordinateManager{
       throw new IllegalArgumentException("All parameters are required and must be valid");
     }
     
-    // converte metros para km
-    double kilometers = distance / 1000;  
-    
     // calcula a nova longitude
     double newLng = longitude + (distance / longitudeConstant(latitude));
     
-    return new Coordinate(latitude, new Double(newLng).doubleValue());  
+    return new Coordinate(latitude, newLng);
   }
   
   /**
@@ -152,13 +152,10 @@ public class CoordinateManager{
       throw new IllegalArgumentException("All parameters are required and must be valid");
     }
     
-    // converte metros para km
-    double kilometers = distance / 1000;  
-    
     // calcula a nova longitude
     double newLng = longitude - (distance / longitudeConstant(latitude));
     
-    return new Coordinate(latitude, new Double(newLng).doubleValue());  
+    return new Coordinate(latitude, newLng);
   }
   
    /**
@@ -174,9 +171,6 @@ public class CoordinateManager{
     if(isValidLatitude(latitude) == false || isValidLongitude(longitude) == false || distance <= 0) {
       throw new IllegalArgumentException("All parameters are required and must be valid");
     }
-    
-    // converte metros para km
-    double kilometers = distance / 1000;  
     
     HashMap<String, Coordinate> boundingBox = new java.util.HashMap<String, Coordinate>();
     

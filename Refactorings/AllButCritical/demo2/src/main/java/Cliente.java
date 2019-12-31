@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class Cliente extends Utilizador implements Classificação{
     
     /* Posição em que se encontra o cliente. */
-    private Coordinate posicao;
+    private transient Coordinate posicao;
     /* Classificação do cliente */
     private int classificacao;
     /* Número de alugueres efetuados */
