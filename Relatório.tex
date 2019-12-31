@@ -5,6 +5,8 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
+\usepackage{hyperref}
+
 % Encoding
 %--------------------------------------
 \usepackage[T1]{fontenc}
@@ -171,6 +173,9 @@ Quanto à cobertura não foram testados nenhuns aspetos intrínsecos a esta impl
 
 \subsubsection{Duplicação de código}
 No que diz respeito à duplicação de código existem 23 blocos repetidos em duas das classes implementadas, representando apenas 3,7\% do código total.
+
+\subsection{Tarefa extra}
+Quanto à realização desta tarefa, após dialogar os docentes desta unidade curricular, optou-se por dar prioridade à segunda e última tarefa extra deste projeto. Esta supremacia surge pelo simples facto de a adição de novas regras à ferramenta SonarQube não ter sido muito explorada nas aulas e também não ter havido grande oportunidade para experimentar esta tarefa de forma mais cuidada.
 
 \section{Tarefa 2 - \textit{Refactoring}}
 Nesta tarefa serão utilizadas ferramentas como o \textit{autorefactor}, \textit{IDEs} do \textit{Java} que suportam \textit{refactoring}, ou o \textit{jStanley} para identificar e eliminar os \textit{bad smells} e \textit{red smells} existentes no \textit{software} fornecido. Um estudo detalhado sobre os \textit{smells} encontrados na(s) aplicação(ões) fornecidas, os \textit{refactorings} aplicados e o \textit{technical debt} obtidos deverão ser incluídos no relatório.
@@ -347,10 +352,6 @@ Estes problemas estão divididos pelos seguintes tipos: \textit{Bug}, \textit{Vu
     
     O \textit{IntelliJ} disponibiliza este \textit{refactoring}.\\
     
-    \textbf{Use super.clone() to create and seed the cloned instance to be returned.}
-    
-    Não sei o que fazer aqui\\
-    
     \textbf{The return type of this method should be an interface such as "List" rather than the implementation "ArrayList".}
     
     Declarações devem usar interfaces de coleções em vez de uma implementação específica.\\
@@ -362,10 +363,16 @@ Estes problemas estão divididos pelos seguintes tipos: \textit{Bug}, \textit{Vu
     \textbf{Remove the parentheses around the "e" parameter}
     
     Inputs lambda com um só elemento não devem ter parentesis.\\
-    
-    
-    
-    
+\end{itemize}
+
+Antes de serem aplicados os refactorings, o projeto apresentava uma \textit{technical debt} de 2 dias e 5 horas.
+Após a remoção dos diversos tipos de bugs e smells, pode-se constatar a diferença nesta \textit{technical debt}:
+\begin{itemize}
+    \item \textbf{Blocker} - 2 dias e 2 horas, ou seja, 3 horas de diferença;
+    \item \textbf{Critical} - 2 dias, ou seja, 5 horas de diferença;
+    \item \textbf{Major} - 2 dias e 2 horas, ou seja, 3 horas de diferença;
+    \item \textbf{Minor} - 1 dia e 5 horas, ou seja, 1 dia de diferença;
+    \item \textbf{Todos} - 4 horas e 20 minutos, ou seja, 2 dias e 40 minutos de diferença;
 \end{itemize}
 
 
@@ -397,7 +404,7 @@ A implementação do gerador pretendido segue, naturalmente, a estrutura apresen
     \item \textit{Classificar}: classificação atribuída a um carro ou a um cliente/proprietário.
 \end{itemize}
 
-Também é preciso salientar que existe uma diversidade considerável de atributos associados a estes novos tipos (como por exemplo, \textit{emails}, nomes, marcas, moradas, entre outros). Por forma a garantir uma grande variedade de atributos, a maior parte dos geradores implementados utiliza o combinador \textit{frequency}. Este gerador associa a um determinado tipo de dados uma probabilidade de escolha. Consequentemente, foi possível gerar nomes, apelidos, moradas e marcas de automóveis de forma mais realista e em grande escala.
+Também é preciso salientar que existe uma diversidade considerável de atributos associados a estes novos tipos (como por exemplo, \textit{emails}, nomes, marcas, moradas, entre outros). Por forma a garantir uma grande variedade de atributos, a maior parte dos geradores implementados utiliza o combinador \textit{frequency}. Este gerador associa a um determinado tipo de dados uma probabilidade de escolha. Consequentemente, foi possível gerar nomes, apelidos, moradas e marcas de automóveis de forma mais realista e em grande escala. De notar também que os elementos deste grupo tiveram em consideração a geração de \textit{NIF's} e de matrículas sem repetições, permitindo assim um simulação fidedigna e correta da aplicação.
 
 Por fim, de maneira a executar o gerador proposto, foi necessário parametrizar numa variável o número de registos a serem escritos para o ficheiro \textit{logs.bak} que irá armazenar toda esta informação. Desta forma, durante a execução da função \textbf{\textit{genLogsIO}} (responsável por gerar todos os registos dos tipos de dados mencionados anteriormente), é perguntado ao utilizador quantos registos pretende produzir.
 
@@ -412,12 +419,85 @@ Quanto à cobertura de testes, foi possível verificar que ...
 Quanto à cobertura de testes, foi possível verificar que ...
 
 \subsubsection{Geração automática de testes - \textit{QuickCheck}}
+Nesta sub-tarefa foi-nos proposto gerar automaticamente ficheiros de \textit{logs} para testar a aplicação \textit{UmCarroJá}. Como seria de esperar, foi adoptada a utilização do sistema \textit{QuickCheck} para o efeito, tal como foi feito nas aulas.
+
+A implementação do gerador pretendido segue, naturalmente, a estrutura apresentada pelo exemplo disponibilizado pelos docentes na página da disciplina. Como tal, foi necessário criar essencialmente 5 tipos de geradores, cada um com o seu tipo de dados:
+\begin{itemize}
+    \item \textit{NovoProp}: registo de um novo proprietário;
+    \item \textit{NovoCliente}: registo de um novo cliente;
+    \item \textit{NovoCarro}: registo de um novo carro;
+    \item \textit{Aluguer}: registo de um aluguer efetuado por um cliente;
+    \item \textit{Classificar}: classificação atribuída a um carro ou a um cliente/proprietário.
+\end{itemize}
+
+Também é preciso salientar que existe uma diversidade considerável de atributos associados a estes novos tipos (como por exemplo, \textit{emails}, nomes, marcas, moradas, entre outros). Por forma a garantir uma grande variedade de atributos, a maior parte dos geradores implementados utiliza o combinador \textit{frequency}. Este gerador associa a um determinado tipo de dados uma probabilidade de escolha. Consequentemente, foi possível gerar nomes, apelidos, moradas e marcas de automóveis de forma mais realista e em grande escala. De notar também que os elementos deste grupo tiveram em consideração a geração de \textit{NIF's} e de matrículas sem repetições, permitindo assim um simulação fidedigna e correta da aplicação.
+
+Por fim, de maneira a executar o gerador proposto, foi necessário parametrizar numa variável o número de registos a serem escritos para o ficheiro \textit{logs.bak} que irá armazenar toda esta informação. Desta forma, durante a execução da função \textbf{\textit{genLogsIO}} (responsável por gerar todos os registos dos tipos de dados mencionados anteriormente), é perguntado ao utilizador quantos registos pretende produzir.
 
 \section{Tarefa 4 - Análise de desempenho}
 \subsection{Versão 1 - \textit{demo1}}
+...
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline  
+    \multicolumn{4}{|c|}{\textbf{demo1}} \\
+    \hline
+    \textbf{\textit{Smells}?} & \textbf{Energia comsumida} & \textbf{Tempo de execução} & \textbf{Memória} \\ \hline
+    Sim & ? J & ? ms & ? MB \\ \hline
+    Não & ? J & ? ms & ? MB \\ \hline
+    \end{tabular}
+\end{center}
+
 \subsection{Versão 2 - \textit{demo2}}
+...
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline  
+    \multicolumn{4}{|c|}{\textbf{demo2}} \\
+    \hline
+    \textbf{\textit{Smells}?} & \textbf{Energia comsumida} & \textbf{Tempo de execução} & \textbf{Memória} \\ \hline
+    Sim & ? J & ? ms & ? MB \\ \hline
+    Não & ? J & ? ms & ? MB \\ \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Tarefa extra}
+Nesta tarefa adicional é requerido uma análise detalhada por cada \textit{smell}. Dito por outras palavras, é necessário fazer um estudo sobre como cada \textit{smell} individualmente influência (melhora ou piora) o desempenho do \textit{software}. 
+Como tal, foram executadas ambas as versões do programa em questão com cada tipo de \textit{smells} de forma isolada. Consequentemente, obtiveram-se os seguintes resultados:
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline  
+    \multicolumn{4}{|c|}{\textbf{demo1}} \\
+    \hline
+    \textbf{Tipo de \textit{smell}} & \textbf{Energia comsumida} & \textbf{Tempo de execução} & \textbf{Memória} \\ \hline
+    \textit{minor} & ? J & ? ms & ? MB \\ \hline
+    \textit{major} & ? J & ? ms & ? MB \\ \hline
+    \textit{critical} & ? J & ? ms & ? MB \\ \hline
+    \textit{blocker} & ? J & ? ms & ? MB \\ \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | }
+    \hline  
+    \multicolumn{4}{|c|}{\textbf{demo2}} \\
+    \hline
+    \textbf{Tipo de \textit{smell}} & \textbf{Energia comsumida} & \textbf{Tempo de execução} & \textbf{Memória} \\ \hline
+    \textit{minor} & ? J & ? ms & ? MB \\ \hline
+    \textit{major} & ? J & ? ms & ? MB \\ \hline
+    \textit{critical} & ? J & ? ms & ? MB \\ \hline
+    \textit{blocker} & ? J & ? ms & ? MB \\ \hline
+    \end{tabular}
+\end{center}
 
 \chapter{Conclusão}
+Após a demonstração da abordagem tomada para cada uma das tarefas propostas neste trabalho prático e, ainda, a exibição dos resultados obtidos em cada uma das mesmas, dá-se por concluído a execução deste projeto. 
+Durante o processo de realização do mesmo foi possível analisar o código fonte de ambas as versões implementadas, identificando os \textit{bad smells} e o seu \textit{technical debt}. Posteriormente, foram aplicados \textit{refactorings}
+de maneira a eliminar os \textit{bad smells} encontrados e, deste modo, reduzir o respetivo \textit{technical debt}. Numa terceira fase, foi testado com sucesso o \textit{software} em questão de forma a garantir que o mesmo exprimia o 
+comportamento esperado. E, por fim, foi realizada uma análise a nível do desempenho das duas versões implementadas (antes e depois da aplicação de \textit{refactorings}).
 
 \appendix
 \chapter{Observações}

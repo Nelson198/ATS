@@ -1,11 +1,11 @@
--- ignorar erros de failure patter
+{- Ignorar erros de failure patter -}
 {-# LANGUAGE NoMonadFailDesugaring #-}
 
 module Gerador_Logs where
 
 import Test.QuickCheck
 import Data.Char (isDigit)
-import Data.List (nub)
+import Data.List (nub, delete)
 
 type Nome          = String
 type NIF           = String
@@ -219,12 +219,14 @@ genMorada = frequency[(507220, return "Lisboa"),
                       (13283 , return "Valença"),
                       (11898 , return "Vieira do Minho")]
 
-genProprietario :: Gen Proprietario 
-genProprietario = do nome   <- genNome
-                     nif    <- genNIF
-                     email  <- genEmail nif
-                     morada <- genMorada
-                     return (NovoProp nome nif email morada)
+genProprietario :: [NIF] -> Int -> Gen [Proprietario]
+genProprietario _    0    = return []
+genProprietario nifs size = do nome   <- genNome
+                               let nif = head nifs
+                               email  <- genEmail nif
+                               morada <- genMorada
+                               proprietarios <- genProprietario (tail nifs) (size - 1)
+                               return $ (NovoProp nome nif email morada) : proprietarios
 
 {------------ Cliente -----------}
 
@@ -339,23 +341,25 @@ genApelido = frequency[(999, return "Silva"),
 genCoordenadas :: Gen Coordenadas
 genCoordenadas = vectorOf 2 $ choose(-100, 100)
 
--- auxiliares para os apelidos
+-- Funções auxiliares para os apelidos
 allDifferent :: Eq a => [a] -> Bool
 allDifferent = uncurry (==) . split id nub
 
 split :: (a -> b) -> (a -> c) -> a -> (b, c)
 split f g x = (f x, g x)
 
-genCliente :: Gen Cliente 
-genCliente = do pNome                          <- genNome
-                apelidos                       <- suchThat (vectorOf 3 $ genApelido) allDifferent
-                [apelido1, apelido2, apelido3] <- shuffle apelidos
-                let nome = pNome ++ " " ++ apelido1 ++ " " ++ apelido2 ++ " " ++ apelido3
-                nif                            <- genNIF
-                email                          <- genEmail nif
-                morada                         <- genMorada
-                coordenadas                    <- genCoordenadas
-                return (NovoCliente nome nif email morada coordenadas)
+genCliente :: [NIF] -> Int -> Gen [Cliente]
+genCliente _    0    = return []
+genCliente nifs size = do pNome                          <- genNome
+                          apelidos                       <- suchThat (vectorOf 3 $ genApelido) allDifferent
+                          [apelido1, apelido2, apelido3] <- shuffle apelidos
+                          let nome                        = pNome ++ " " ++ apelido1 ++ " " ++ apelido2 ++ " " ++ apelido3
+                          let nif                         = head nifs
+                          email                          <- genEmail nif
+                          morada                         <- genMorada
+                          coordenadas                    <- genCoordenadas
+                          clientes <- genCliente (tail nifs) (size - 1)
+                          return $ (NovoCliente nome nif email morada coordenadas) : clientes
 
 {------------ Carro -------------}
 
@@ -410,6 +414,11 @@ genMarca = frequency [(389991, return "Chevrolet"),
                       (2     , return "Rolls-Royce"),
                       (1     , return "McLaren")]
 
+genMatricula :: Gen Matricula
+genMatricula = do [l1, l2]         <- vectorOf 2 $ elements ['A'..'Z']
+                  [n1, n2, n3, n4] <- vectorOf 4 $ elements ['0'..'9']
+                  return [l1, l2, '-', n1, n2, '-', n3, n4]
+
 -- Velocidade Média
 genVelocidade :: Gen Velocidade
 genVelocidade = choose (20, 200)
@@ -425,17 +434,19 @@ genConsumoKm = choose (1, 3)
 genAutonomia :: Gen Autonomia
 genAutonomia =  elements [260..600]
 
-genCarro :: Gen Carro
-genCarro  = do tipo      <- genTipo
-               marca     <- genMarca
-               matricula <- genMatricula
-               nif       <- genNIF
-               vm        <- genVelocidade
-               pkm       <- genPrecoKm
-               cpkm      <- genConsumoKm
-               autonomia <- genAutonomia
-               cd        <- genCoordenadas
-               return (NovoCarro tipo marca matricula nif vm pkm cpkm autonomia cd)
+genCarro :: [NIF] -> [Matricula] -> Int -> Gen [Carro]
+genCarro _    _          0    = return []
+genCarro nifs matriculas size = do tipo      <- genTipo
+                                   marca     <- genMarca
+                                   let matricula = head matriculas
+                                   let nif       = head nifs
+                                   vm        <- genVelocidade
+                                   pkm       <- genPrecoKm
+                                   cpkm      <- genConsumoKm
+                                   autonomia <- genAutonomia
+                                   cd        <- genCoordenadas
+                                   carros    <- genCarro (tail nifs) (tail matriculas) (size - 1)
+                                   return $ (NovoCarro tipo marca matricula nif vm pkm cpkm autonomia cd) : carros
 
 {------------ Aluguer -----------}
 
@@ -450,12 +461,14 @@ showAluguer (Aluguer nif coordenadas tipo preferencia) = "Aluguer:" ++ nif ++ ",
 genPreferencia :: Gen Preferencia
 genPreferencia = elements [MaisBarato, MaisPerto]
 
-genAluguer :: Gen Aluguer
-genAluguer = do nif         <- genNIF
-                coordenadas <- genCoordenadas
-                tipo        <- genTipo
-                preferencia <- genPreferencia
-                return (Aluguer nif coordenadas tipo preferencia)
+genAluguer :: [NIF] -> Int -> Gen [Aluguer]
+genAluguer _    0    = return []
+genAluguer nifs size = do let nif      = head nifs
+                          coordenadas <- genCoordenadas
+                          tipo        <- genTipo
+                          preferencia <- genPreferencia
+                          alugueres   <- genAluguer (tail nifs) (size - 1)
+                          return $ (Aluguer nif coordenadas tipo preferencia) : alugueres
 
 {---------- Classificar ---------}
 
@@ -467,20 +480,33 @@ instance Show Classificar where
 showClassificar :: Classificar -> String
 showClassificar (Classificar info classificacao) = "Classificar:" ++ info ++ "," ++ (show classificacao)
 
-genMatricula:: Gen Matricula
-genMatricula = do [l1, l2]         <- vectorOf 2 $ elements ['A'..'Z']
-                  [n1, n2, n3, n4] <- vectorOf 4 $ elements ['0'..'9']
-                  return [l1, l2, '-', n1, n2, '-', n3, n4]
-
 genClassificacao :: Gen Classificacao
 genClassificacao = choose (0, 100)
 
-genClassificar :: Gen Classificar
-genClassificar = do info          <- oneof [genMatricula, genNIF]
-                    classificacao <- genClassificacao
-                    return (Classificar info classificacao)
+genClassificar :: [NIF] -> [Matricula] -> Int -> Gen [Classificar]
+genClassificar _    _          0    = return []
+genClassificar nifs matriculas size = do nif            <- elements nifs
+                                         matricula      <- elements matriculas
+                                         info           <- elements [nif, matricula]
+                                         classificacao  <- genClassificacao
+                                         if (isDigit (info !! 0))
+                                             then do let nifs' = delete nif nifs
+                                                     classificacoes <- genClassificar nifs' matriculas (size - 1)
+                                                     return $ (Classificar info classificacao) : classificacoes
+                                         else
+                                             do let matriculas' = delete matricula matriculas
+                                                classificacoes <- genClassificar nifs matriculas' (size - 1)
+                                                return $ (Classificar info classificacao) : classificacoes
 
 {---------- Gerador de Logs ----------}
+
+genNIFs :: Int -> Gen [NIF]
+genNIFs i = do nifs <- suchThat (vectorOf i $ genNIF) allDifferent
+               return nifs
+
+genMatriculas :: Int -> Gen [Matricula]
+genMatriculas i = do matriculas <- suchThat (vectorOf i $ genMatricula) allDifferent
+                     return matriculas
 
 fileName :: FilePath
 fileName = "logs.bak"
@@ -499,18 +525,33 @@ genLogsIO = do putStr "\nBem-vindo ao gerador de logs.\n> Indique o número de l
                        do let nLogs = (read str :: Int)
                           if (nLogs > 0 && mod nLogs 5 == 0)
                               then do let i = (div nLogs 5)
+                                      
+                                      {- Lista de nifs sem repetições -}
+                                      nifs <- generate $ genNIFs (i * 2)
+                                      let nifsProprietario = take i nifs
+                                      let nifsCliente = drop i nifs
+
+                                      {- Lista de matriculas sem repetições -}
+                                      matriculas <- generate $ genMatriculas i
+
                                       writeFile fileName "Ficheiro de logs:\n\n"
-                                      genLogs i genProprietario
-                                      genLogs i genCliente
-                                      genLogs i genCarro
-                                      genLogs i genAluguer
-                                      genLogs i genClassificar
+                                    
+                                      genLogs1 genProprietario nifsProprietario i
+                                      genLogs1 genCliente nifsCliente i
+                                      genLogs2 genCarro nifsProprietario matriculas i
+                                      genLogs1 genAluguer nifsCliente i
+                                      genLogs2 genClassificar nifs matriculas i
+
                                       putStrLn ("> Ficheiro de logs gravado com sucesso.\n> " ++ "\"" ++ fileName ++ "\"" ++ ": " ++ (show nLogs) ++ " logs adicionados.\n")
                           else
                               putStrLn "> Erro: Não foi introduzido um número válido.\n        Por favor indique um número positivo que seja múltiplo de 5.\n"
 
-genLogs :: (Show a) => Int -> Gen a -> IO ()
-genLogs 0 _   = return ()
-genLogs n gen = do s <- generate gen
-                   appendFile fileName (show s ++ "\n")
-                   genLogs (n-1) gen
+genLogs1 :: (Foldable t, Show a) => ([NIF] -> Int -> Gen (t a)) -> [NIF] -> Int -> IO ()
+genLogs1 _   _    0    = return ()
+genLogs1 gen nifs size = do list <- generate $ gen nifs size
+                            mapM_ (\x -> appendFile fileName (show x ++ "\n")) list
+
+genLogs2 :: (Foldable t, Show a) => ([NIF] -> [Matricula] -> Int -> Gen (t a)) -> [NIF] -> [Matricula] -> Int -> IO ()
+genLogs2 _   _    _          0    = return ()
+genLogs2 gen nifs matriculas size = do list <- generate $ gen nifs matriculas size
+                                       mapM_ (\x -> appendFile fileName (show x ++ "\n")) list
