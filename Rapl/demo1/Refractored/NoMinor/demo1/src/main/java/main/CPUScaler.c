@@ -37,7 +37,7 @@ void copy_to_string(char *ener_info, char uncore_buffer[60], int uncore_num, cha
 }
 
 
-JNIEXPORT jint JNICALL Java_Main_ProfileInit(JNIEnv *env, jclass jcls) {
+JNIEXPORT jint JNICALL Java_main_Main_ProfileInit(JNIEnv *env, jclass jcls) {
 	jintArray result;
 	int i;
 	char msr_filename[BUFSIZ];
@@ -47,7 +47,7 @@ JNIEXPORT jint JNICALL Java_Main_ProfileInit(JNIEnv *env, jclass jcls) {
 
 	jint wraparound_energy;
 
-	/*only two domains are supported for parameters check*/
+	/*only two domain.mains are supported for parameters check*/
 	parameters = (rapl_msr_parameter *)malloc(2 * sizeof(rapl_msr_parameter));
 	fd = (int *) malloc(num_pkg * sizeof(int));
 
@@ -68,12 +68,12 @@ JNIEXPORT jint JNICALL Java_Main_ProfileInit(JNIEnv *env, jclass jcls) {
 	return wraparound_energy;
 }
 
-JNIEXPORT jint JNICALL Java_Main_GetSocketNum(JNIEnv *env, jclass jcls) {
+JNIEXPORT jint JNICALL Java_main_Main_GetSocketNum(JNIEnv *env, jclass jcls) {
 	return (jint)getSocketNum();
 }
 
 
-JNIEXPORT jstring JNICALL Java_Main_EnergyStatCheck(JNIEnv *env,
+JNIEXPORT jstring JNICALL Java_main_Main_EnergyStatCheck(JNIEnv *env,
 		jclass jcls) {
 	jstring ener_string;
 	double result = 0.0;
@@ -236,7 +236,7 @@ JNIEXPORT jstring JNICALL Java_Main_EnergyStatCheck(JNIEnv *env,
 	return ener_string;
 
 }
-JNIEXPORT void JNICALL Java_Main_ProfileDealloc
+JNIEXPORT void JNICALL Java_main_Main_ProfileDealloc
    (JNIEnv * env, jclass jcls) {
 	int i;
 	free(fd);	

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/NoMinor.iml" filepath="$PROJECT_DIR$/NoMinor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo1/src/demo1.iml" filepath="$PROJECT_DIR$/demo1/src/demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo1/.evosuite/tmp_2019_12_07_15_32_19/tmp_2019_12_07_15_32_19.iml" filepath="$PROJECT_DIR$/demo1/.evosuite/tmp_2019_12_07_15_32_19/tmp_2019_12_07_15_32_19.iml" />
+    </modules>
+  </component>
+</project>

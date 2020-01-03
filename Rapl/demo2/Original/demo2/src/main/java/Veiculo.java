@@ -34,7 +34,7 @@ public class Veiculo implements Serializable, Classificação{
     /* Autonomia total do veículo */
     private int autonomia;
     /* Posição (Latitude / Longitude) do veículo */
-    private transient Coordinate posicao;
+    private Coordinate posicao;
     /* Veículo disponível para alugar */
     private boolean disponivel;
     /* Classificação do veículo */

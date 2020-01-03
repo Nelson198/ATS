@@ -441,11 +441,11 @@ Por fim, de maneira a executar o gerador proposto, foi necessário parametrizar 
 \begin{center}
     \begin{tabular}{ | l | l | l | l | }
     \hline  
-    \multicolumn{4}{|c|}{\textbf{demo1}} \\
+    \multicolumn{4}{|c|}{\textbf{LOGS -> Energia consumida demo1}} \\
     \hline
-    \textbf{\textit{Smells}?} & \textbf{Energia comsumida} & \textbf{Tempo de execução} & \textbf{Memória} \\ \hline
-    Sim & ? J & ? ms & ? MB \\ \hline
-    Não & ? J & ? ms & ? MB \\ \hline
+    \textbf{\textit{Smells}} & \textbf{ dram} & \textbf{cpu} & \textbf{package} \\ \hline
+    Sim & 0.1190190000002076  & 2.451233000000002  & 3.120850000000246 \\ \hline
+    Não & 0.134827000000314 & 2.555602999999792 & 3.3100589999994554 \\ \hline
     \end{tabular}
 \end{center}
 
@@ -470,13 +470,14 @@ Como tal, foram executadas ambas as versões do programa em questão com cada ti
 \begin{center}
     \begin{tabular}{ | l | l | l | l | }
     \hline  
-    \multicolumn{4}{|c|}{\textbf{demo1}} \\
+    \multicolumn{4}{|c|}{\textbf{ Energia consumida demo1}} \\
     \hline
-    \textbf{Tipo de \textit{smell}} & \textbf{Energia comsumida} & \textbf{Tempo de execução} & \textbf{Memória} \\ \hline
-    \textit{minor} & ? J & ? ms & ? MB \\ \hline
-    \textit{major} & ? J & ? ms & ? MB \\ \hline
-    \textit{critical} & ? J & ? ms & ? MB \\ \hline
-    \textit{blocker} & ? J & ? ms & ? MB \\ \hline
+    \textbf{ \textit{Smells}} & \textbf{dram} & \textbf{cpu} & \textbf{package} \\ \hline
+    \textit{noMinor} & 0.125 & 1.8643190000002505 & 2.6281740000013087 \\ \hline
+    \textit{noMajor} & 0.10607900000013615 & 1.8434440000000905 & 2.383972999999969 \\ \hline
+    \textit{noCritical} & 0.10449199999993652 & 1.999877999999626 & 2.481445999999778 \\ \hline
+    \textit{noBlocker} & 0.10296599999992395 & 1.799011000000064 & 2.240355999998428 \\ \hline
+     \textit{noSmells} & 0.10351600000012695 & 1.7691039999999703 & 2.2634280000002036 \\ \hline
     \end{tabular}
 \end{center}
 
