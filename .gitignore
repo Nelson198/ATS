@@ -6,3 +6,7 @@
 *.synctex.gz
 *.toc
 *.out
+
+# Java
+*.class
+target/classes/

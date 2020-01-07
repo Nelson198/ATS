@@ -78,9 +78,8 @@ public class ParseDados{
                 Veiculo cg = parseCarroGasolina(linha);
                 return cg.clone();
             default:
-                throw new java.lang.IllegalStateException("Unexpected value: " + dados[0]);
+                return new Veiculo();
         }
-        return new Veiculo();
     }
 
     private static CarroEletrico parseCarroEletrico(String linha){

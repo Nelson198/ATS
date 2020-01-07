@@ -36,6 +36,8 @@ public class UmCarroJa implements Serializable {
     /* Utilizador que efetuou o login */
     private Utilizador user;
 
+    static final String NAO_EXISTE_VEICULO_DISPONIVEL = "Não existem veículos disponíveis para alugar";
+
     
     /**********************************************************************************
      *                                  CONSTRUTORES                                  *
@@ -647,7 +649,7 @@ public class UmCarroJa implements Serializable {
             veiculosOrdenados.add(v.clone());
         }
         if(veiculosOrdenados.size() == 0){
-            throw new NaoExistemVeiculosDisponiveisException();
+            throw new NaoExistemVeiculosDisponiveisException(NAO_EXISTE_VEICULO_DISPONIVEL);
         }
         Coordinate posCli = getPosicaoCliente();
         veiculosOrdenados.sort(new Comparator<Veiculo>(){
@@ -680,7 +682,7 @@ public class UmCarroJa implements Serializable {
             veic.add(v.clone());
         }
         if(veic.size() == 0){
-            throw new NaoExistemVeiculosDisponiveisException();
+            throw new NaoExistemVeiculosDisponiveisException(NAO_EXISTE_VEICULO_DISPONIVEL);
         }
         veic.sort(new ComparadorPreco());
         return veic.stream().limit(quantos).collect(Collectors.toList());
@@ -712,7 +714,7 @@ public class UmCarroJa implements Serializable {
             }
         }
         if(veiculosBaratosNoP.size() == 0){
-            throw new NaoExistemVeiculosDisponiveisException();
+            throw new NaoExistemVeiculosDisponiveisException(NAO_EXISTE_VEICULO_DISPONIVEL);
         }
         return veiculosBaratosNoP.stream().limit(quantos).collect(Collectors.toList());
     }
@@ -766,7 +768,7 @@ public class UmCarroJa implements Serializable {
             }
         }
         if(veiculosAuto.size() == 0){
-            throw new NaoExistemVeiculosDisponiveisException();
+            throw new NaoExistemVeiculosDisponiveisException(NAO_EXISTE_VEICULO_DISPONIVEL);
         }
         veiculosAuto.sort(new ComparadorAutonomia());
         return veiculosAuto.stream().limit(quantos).collect(Collectors.toList());
@@ -798,8 +800,7 @@ public class UmCarroJa implements Serializable {
        if(this.alugueres != null){
            for(Map<String, List<Aluguer>> aux : this.alugueres.values()) {
                if(aux != null) {
-                   lista_aux = lista;
-                   lista = getListaAlugueres(mail, aux, lista_aux);
+                   lista = getListaAlugueres(mail, aux, lista);
                }
            }
        }
@@ -838,7 +839,7 @@ public class UmCarroJa implements Serializable {
             }
         }
         if(veiculosOrdenados.size() == 0){
-            throw new NaoExistemVeiculosDisponiveisException();
+            throw new NaoExistemVeiculosDisponiveisException(NAO_EXISTE_VEICULO_DISPONIVEL);
         }
         /*veiculosOrdenados.sort(new Comparator<Veiculo>(){
             public int compare(Veiculo a1, Veiculo a2) {
@@ -872,7 +873,7 @@ public class UmCarroJa implements Serializable {
             }
         }
         if(veiculosOrdenados.size() == 0){
-            throw new NaoExistemVeiculosDisponiveisException();
+            throw new NaoExistemVeiculosDisponiveisException(NAO_EXISTE_VEICULO_DISPONIVEL);
         }
         return veiculosOrdenados.get(0).clone();
     }
