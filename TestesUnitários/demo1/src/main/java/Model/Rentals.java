@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class Rentals implements Serializable {
+public class Rentals implements Serializable {
     private static final long serialVersionUID = 1526373866446179937L;
     private final List<Rental> rentalBase;
 
@@ -15,6 +15,10 @@ class Rentals implements Serializable {
     Rentals() {
         this.rentalBase = new ArrayList<>();
         id = -1;
+    }
+
+    public List<Rental> getRentalBase() {
+        return rentalBase;
     }
 
     void addRental(Rental r) {

@@ -136,8 +136,8 @@ public class Car implements Serializable {
         return this.isAvailable;
     }
 
-    Car(String numberPlate, Owner owner, CarType type,
-            double avgSpeed, double basePrice, double gasMileage, int range, Point pos, String brand) {
+    public Car(String numberPlate, Owner owner, CarType type,
+               double avgSpeed, double basePrice, double gasMileage, int range, Point pos, String brand) {
         this.numberPlate = numberPlate;
         this.owner = owner;
         this.type = type;

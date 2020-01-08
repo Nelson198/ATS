@@ -26,11 +26,15 @@ public class Cars implements Serializable {
                         .toMap(Car::getNumberPlate, Car::clone));
     }
 
+    public Map<String, Car> getCarBase() {
+        return carBase;
+    }
+
     /**
      * \brief Adiciona um carro à base de dados
      * @param a Carro a adicionar
      */
-    void addCar(Car a) throws CarExistsException {
+    public void addCar(Car a) throws CarExistsException {
         if(this.carBase
                 .putIfAbsent(a.getNumberPlate(), a)
                 != null)
