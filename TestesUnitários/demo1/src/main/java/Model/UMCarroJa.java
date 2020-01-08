@@ -29,6 +29,14 @@ public class UMCarroJa implements Serializable {
         return users;
     }
 
+    public Cars getCars() {
+        return cars;
+    }
+
+    public Rentals getRentals() {
+        return rentals;
+    }
+
     public List<Entry<String, Double>> getBestClients() {
         return this
                 .users
@@ -107,7 +115,7 @@ public class UMCarroJa implements Serializable {
     }
 
 
-    void rental(String username, Point dest, String preference, Car.CarType a)
+    public void rental(String username, Point dest, String preference, Car.CarType a)
             throws UnknownCompareTypeException, NoCarAvaliableException, InvalidUserException {
         Client c = (Client) users.getUser(username);
         Car car = cars.getCar(preference, dest, c.getPos(), a);
