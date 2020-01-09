@@ -1,0 +1,57 @@
+Ficheiro de logs:
+
+NovoProp:Leonor,154551497,154551497@hotmail.com,Fundão
+NovoProp:Miguel,748320269,748320269@gmail.com,Viana de Castelo
+NovoProp:Duarte,589473540,589473540@live.com,Aveiro
+NovoProp:Sofia,715956937,715956937@gmail.com,Vila Real
+NovoProp:João,152061236,152061236@hotmail.com,Lisboa
+NovoProp:Vicente,118476183,118476183@outlook.com,Sesimbra
+NovoProp:Maria,234455552,234455552@yahoo.com,Gondomar
+NovoProp:Duarte,261753879,261753879@gmail.com,Fundão
+NovoProp:Lourenço,774655701,774655701@live.com,Odivelas
+NovoProp:Lucas,740653913,740653913@yahoo.com,Santo Tirso
+NovoProp:Lara,599103761,599103761@hotmail.com,Coimbra
+NovoCliente:Margarida Correia Sousa Fernandes,192689769,192689769@live.com,Penafiel,-0.16230011,-21.716896
+NovoCliente:Lourenço Santos Silva Simões,130810523,130810523@hotmail.com,Paredes,-73.730934,57.01758
+NovoCliente:Rodrigo Barbosa Lopes Moreira,586199717,586199717@yahoo.com,Cascais,-46.207176,-24.120033
+NovoCliente:Leonor Pereira Cruz Ramos,791870526,791870526@yahoo.com,Loures,5.360626,87.40588
+NovoCliente:Lucas Fernandes Alves Rodrigues,797621826,797621826@live.com,Barreiro,-68.6875,-69.43129
+NovoCliente:João Azevedo Silva Lopes,291499259,291499259@gmail.com,Vila Nova de Gaia,-81.01847,71.49892
+NovoCliente:Tomás Garcia Carvalho Andrade,784689449,784689449@yahoo.com,Coimbra,-14.083336,7.685829
+NovoCliente:Ana Carvalho Silva Ribeiro,507558197,507558197@hotmail.com,Figueira da Foz,19.23317,-25.350998
+NovoCliente:Clara Pinto Ferreira Gomes,511197105,511197105@hotmail.com,Benavente,96.4487,27.615288
+NovoCliente:Lucas Almeida Cruz Santos,553841674,553841674@live.com,Sintra,-50.999092,39.826553
+NovoCliente:João Marques Costa Pires,720653112,720653112@outlook.com,Ponta Delgada,92.383286,72.8862
+NovoCarro:Gasolina,Chevrolet,RD-71-89,154551497,29,0.11024037,2.1422918,466,-70.56965,-69.74627
+NovoCarro:Gasolina,Honda,RK-80-65,748320269,35,0.19026268,1.1870435,530,-2.4257202,8.695389
+NovoCarro:Gasolina,Toyota,NR-54-26,589473540,167,0.21900357,2.786933,267,56.253082,-25.776123
+NovoCarro:Gasolina,Toyota,SX-20-08,715956937,86,0.12265286,1.3505486,390,-30.201683,31.733826
+NovoCarro:Gasolina,Ford,HC-46-14,152061236,68,0.18852131,1.764965,509,25.414536,8.470238
+NovoCarro:Gasolina,Volkswagen,KW-99-43,118476183,77,0.33278853,1.6090792,448,31.890564,-87.72609
+NovoCarro:Gasolina,Nissan,NF-99-63,234455552,147,0.14267612,1.4948921,318,15.26918,4.2045975
+NovoCarro:Gasolina,Chevrolet,NR-49-66,261753879,137,0.2678802,1.1569132,272,48.89322,-84.11251
+NovoCarro:Gasolina,Toyota,OO-04-89,774655701,155,0.17661273,2.0755453,292,-23.8919,-70.732574
+NovoCarro:Gasolina,Hyundai,XB-60-14,740653913,32,0.22440967,1.3303146,465,52.870865,87.122284
+NovoCarro:Gasolina,Fiat,NA-96-96,599103761,26,0.1784496,1.7260348,518,-29.794632,72.42964
+Aluguer:192689769,-34.20694,-82.796844,Gasolina,MaisPerto
+Aluguer:130810523,-27.153542,-67.4558,Gasolina,MaisPerto
+Aluguer:586199717,-2.3375626,54.323257,Gasolina,MaisPerto
+Aluguer:791870526,8.100739,19.806496,Gasolina,MaisPerto
+Aluguer:797621826,23.0458,41.538834,Gasolina,MaisPerto
+Aluguer:291499259,90.790436,35.756744,Gasolina,MaisBarato
+Aluguer:784689449,22.115692,56.26169,Gasolina,MaisBarato
+Aluguer:507558197,71.21579,-90.51648,Gasolina,MaisPerto
+Aluguer:511197105,-76.82245,47.97557,Gasolina,MaisPerto
+Aluguer:553841674,-67.130875,-83.92942,Gasolina,MaisPerto
+Aluguer:720653112,69.60019,1.4443741,Gasolina,MaisPerto
+Classificar:740653913,92
+Classificar:791870526,79
+Classificar:OO-04-89,48
+Classificar:HC-46-14,61
+Classificar:234455552,90
+Classificar:SX-20-08,41
+Classificar:797621826,33
+Classificar:784689449,99
+Classificar:507558197,3
+Classificar:KW-99-43,50
+Classificar:RD-71-89,55

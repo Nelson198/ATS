@@ -1,0 +1,1 @@
+Energy consumption of dram: 2.4993890000000647 Energy consumption of cpu: 29.64740000000029 Energy consumption of package: 40.53625499999998

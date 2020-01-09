@@ -28,7 +28,8 @@ import java.util.Comparator;
 import java.io.IOException;
 import java.util.InputMismatchException;
 
-import java.lang.String;import java.lang.reflect.Field;
+import java.lang.String;
+import java.lang.reflect.Field;
 
 public class UmCarroJaApp{
     
@@ -231,7 +232,10 @@ public class UmCarroJaApp{
         //initApp();
         initMenus();
         ucj = new UmCarroJa();
+        double[]  before = getEnergyStats();
         lerDadosTXT("logsPOO_carregamentoInicial.bak");
+        double[] after = getEnergyStats();  
+        System.out.println("Energy consumption of dram: " + (after[0] - before[0])+ " Energy consumption of cpu: " + (after[1] - before[1])+ " Energy consumption of package: " + (after[2] - before[2]));
         out.println("NÚMERO UTILIZADORES: " + ucj.getNUsers());
         out.println("NÚMERO VEÍCULOS: " + ucj.getNVeiculos());
         out.println("NÚMERO ALUGUERES: " + ucj.getNAlugs());

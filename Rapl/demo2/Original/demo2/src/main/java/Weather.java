@@ -14,7 +14,6 @@ import com.google.gson.*;
 import com.google.gson.reflect.*;
 
 public class Weather {
-    
 
     /**
      * COnstrutor para objetos da classe Weather

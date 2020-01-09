@@ -1,6 +1,7 @@
 Em falta :
-	Análise do demo1 com refractered
-	Análise do demo2 ambas as versões, não consigo compilar pelo terminal apenas no intellij
+	Análise do demo2 versões refractered
+	Analisar funções do demo2 ambas versoes
+	Tempo de execução nos 2 demos????
 	Relatório
 
 Usar o Rapl:

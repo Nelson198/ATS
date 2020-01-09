@@ -1,8 +1,13 @@
-Input de logs com 5
-Energy consumption of dram: 0.02679400000010901 Energy consumption of cpu: 0.2764280000001236 Energy consumption of package: 0.43005300000004354
+5 - logs 
+Energy consumption of dram: 0.024292000000002645 Energy consumption of cpu: 0.1289059999999722 Energy consumption of package: 0.258239999999887
 
-Input de logs com 50
-Energy consumption of dram: 0.02716099999997823 Energy consumption of cpu: 0.3530880000000707 Energy consumption of package: 0.5308839999997872
+55 -logs
+Energy consumption of dram: 0.18859800000001314 Energy consumption of cpu: 0.3990479999999934 Energy consumption of package: 1.139159999999947
 
-Input de Logs com 5555
-Energy consumption of dram: 0.1190190000002076 Energy consumption of cpu: 2.451233000000002 Energy consumption of package: 3.120850000000246
+5555 -logs
+Energy consumption of dram: 0.3440559999999664 Energy consumption of cpu: 3.8085930000000303 Energy consumption of package: 5.577698000000055
+
+
+Original -logs
+Energy consumption of dram: 0.14880399999998417 Energy consumption of cpu: 1.6157230000000027 Energy consumption of package: 2.430358999999953
+Functions Energy consumption of dram: 0.18212900000003174 Energy consumption of cpu: 1.2950440000000185 Energy consumption of package: 2.224853999999823
