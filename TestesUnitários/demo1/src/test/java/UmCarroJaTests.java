@@ -178,7 +178,4 @@ public class UmCarroJaTests {
         assertEquals(1, cl.size());
         assertEquals(2, ol.size());
     }
-
-
-
 }
