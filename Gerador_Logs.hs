@@ -542,7 +542,7 @@ genLogsIO = do putStr "\nBem-vindo ao gerador de logs.\n> Indique o número de l
                                       genLogs1 genAluguer nifsCliente i
                                       genLogs2 genClassificar nifs matriculas i
 
-                                      putStrLn ("> Ficheiro de logs gravado com sucesso.\n> " ++ "\"" ++ fileName ++ "\"" ++ ": " ++ (show nLogs) ++ " logs adicionados.\n")
+                                      putStrLn ("> Ficheiro de logs gravado com sucesso.\n> \"" ++ fileName ++ "\": " ++ (show nLogs) ++ " logs adicionados.\n")
                           else
                               putStrLn "> Erro: Não foi introduzido um número válido.\n        Por favor indique um número positivo que seja múltiplo de 5.\n"
 
