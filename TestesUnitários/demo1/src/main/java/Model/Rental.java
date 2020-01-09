@@ -19,7 +19,7 @@ public class Rental implements Serializable {
     private final double expectedTime;
     private double realTime;
 
-    Rental(Car car, Client client, Point dest) {
+    public Rental(Car car, Client client, Point dest) {
         this.client = client;
         this.car = car;
         this.start = car.getPosition();
@@ -61,7 +61,7 @@ public class Rental implements Serializable {
         return this.car.getOwnerID();
     }
 
-    void rent() {
+    public void rent() {
         double weather = new Weather().getSeasonDelay();
         double traffic = new Traffic().getTraficDelay(weather);
         double delay = (weather % 0.5) + (traffic % 0.5);

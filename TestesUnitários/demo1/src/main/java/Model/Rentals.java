@@ -12,7 +12,7 @@ public class Rentals implements Serializable {
 
     static private int id;
 
-    Rentals() {
+    public Rentals() {
         this.rentalBase = new ArrayList<>();
         id = -1;
     }
@@ -21,7 +21,7 @@ public class Rentals implements Serializable {
         return rentalBase;
     }
 
-    void addRental(Rental r) {
+    public void addRental(Rental r) {
         id++;
         this.rentalBase.add(r);
     }
@@ -33,7 +33,7 @@ public class Rentals implements Serializable {
      * @param end Data de fim
      * @return Total faturado
      */
-    double getTotalBilledCar(Car car, LocalDateTime init, LocalDateTime end) {
+    public double getTotalBilledCar(Car car, LocalDateTime init, LocalDateTime end) {
         String carID = car.getNumberPlate();
         return this.rentalBase
                 .stream()
@@ -44,7 +44,7 @@ public class Rentals implements Serializable {
                 .reduce(0.0, Double::sum);
     }
 
-    double getTotalBilledCar(Car car) {
+    public double getTotalBilledCar(Car car) {
         String carID = car.getNumberPlate();
         return this.rentalBase
                 .stream()
@@ -74,14 +74,14 @@ public class Rentals implements Serializable {
      * @param clientID Id do cliente
      * @return Lista dos alugueres
      */
-    List<Rental> getRentalListClient(String clientID) {
+    public List<Rental> getRentalListClient(String clientID) {
         return this.rentalBase
                 .stream()
                 .filter(e -> e.getClientID().equals(clientID))
                 .collect(Collectors.toList());
     }
 
-    List<Rental> getRentalListClient(Client c) {
+    public List<Rental> getRentalListClient(Client c) {
         String clientID = c.getEmail();
         return this.rentalBase
                 .stream()
@@ -95,7 +95,7 @@ public class Rentals implements Serializable {
      * @param end Data de fim
      * @return Lista de alugueres
      */
-    List<Rental> getRentalListOwner(Owner owner, LocalDateTime init, LocalDateTime end) {
+    public List<Rental> getRentalListOwner(Owner owner, LocalDateTime init, LocalDateTime end) {
         String carID = owner.getEmail();
         return this.rentalBase
                 .stream()
@@ -105,7 +105,7 @@ public class Rentals implements Serializable {
                 .collect(Collectors.toList());
     }
 
-    List<Rental> getRentalListOwner(Owner owner) {
+    public List<Rental> getRentalListOwner(Owner owner) {
         String carID = owner.getEmail();
         return this.rentalBase
                 .stream()

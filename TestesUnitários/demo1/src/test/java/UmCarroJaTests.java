@@ -132,6 +132,53 @@ public class UmCarroJaTests {
             e.printStackTrace();
         }
 
-        assertFalse(model.getRentals().getRentalBase().isEmpty());
+        assertEquals(1, model.getRentals().getRentalBase().size());
     }
+
+
+    @Test
+    public void testTotalBilledCar() throws Exception {
+
+        model.addUser(client1);
+        model.addUser(owner1);
+        model.addCar(owner1,
+                "AA-00-00", Car.CarType.gas, 120.0, 20000.0,
+                100000, 500, new Point(0.0, 0.0), "Seat");
+
+        double total = model.getTotalBilledCar(car1);
+        assertEquals(0, total);
+
+        model.rental("client1@gmail.com", new Point(20.0,20.0), "MaisBarato", Car.CarType.gas);
+
+        total = model.getTotalBilledCar(car1);
+        assertTrue(total > 0);
+    }
+
+    @Test
+    public void testGetRentalList() throws Exception {
+        model.addUser(client1);
+        model.addUser(client2);
+        model.addUser(owner1);
+        model.addCar(owner1,
+                "AA-00-00", Car.CarType.gas, 120.0, 20000.0,
+                100000, 500, new Point(0.0, 0.0), "Seat");
+
+
+        List<Rental> cl = model.getRentalListClient(client1);
+        List<Rental> ol = model.getRentalListOwner(owner1);
+
+        assertEquals(0, cl.size());
+        assertEquals(0, ol.size());
+
+        model.rental("client1@gmail.com", new Point(20.0,20.0), "MaisBarato", Car.CarType.gas);
+        model.rental("client2@gmail.com", new Point(20.0,20.0), "MaisBarato", Car.CarType.gas);
+
+        cl = model.getRentalListClient(client1);
+        ol = model.getRentalListOwner(owner1);
+        assertEquals(1, cl.size());
+        assertEquals(2, ol.size());
+    }
+
+
+
 }

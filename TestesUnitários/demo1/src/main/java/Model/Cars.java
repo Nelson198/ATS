@@ -14,7 +14,7 @@ public class Cars implements Serializable {
     private static final long serialVersionUID = 2716582249374370739L;
     private final Map<String, Car> carBase;
 
-    Cars() {
+    public Cars() {
         this.carBase = new HashMap<>();
     }
 
@@ -46,7 +46,7 @@ public class Cars implements Serializable {
      * @param numberPlate Matricula do carro a procurar
      * @return Clone do carro, Null se não existir
      */
-    Car searchCar(String numberPlate) throws InvalidCarException {
+    public Car searchCar(String numberPlate) throws InvalidCarException {
         Car car = this.carBase.get(numberPlate);
         if(car == null)
             throw new InvalidCarException();
@@ -77,7 +77,7 @@ public class Cars implements Serializable {
                         .toCollection(ArrayList::new));
     }
 
-    Car getCar(String compare, Point dest, Point origin, Car.CarType a) throws UnknownCompareTypeException, NoCarAvaliableException {
+    public Car getCar(String compare, Point dest, Point origin, Car.CarType a) throws UnknownCompareTypeException, NoCarAvaliableException {
         try {
             if (compare.equals("MaisPerto")) {
                 return this.carBase
@@ -113,7 +113,7 @@ public class Cars implements Serializable {
         throw new UnknownCompareTypeException();
     }
 
-    Car getCar(Point dest, Point origin, double range, Car.CarType a) throws NoCarAvaliableException {
+    public Car getCar(Point dest, Point origin, double range, Car.CarType a) throws NoCarAvaliableException {
         try {
             return this.carBase
                     .values()
@@ -141,7 +141,7 @@ public class Cars implements Serializable {
         return this.carBase.equals(cars.carBase);
     }
 
-    Car getCar(Point dest, double range, Car.CarType a) throws NoCarAvaliableException {
+    public Car getCar(Point dest, double range, Car.CarType a) throws NoCarAvaliableException {
         try {
             return this.carBase
                     .values()
