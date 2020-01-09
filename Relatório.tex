@@ -380,6 +380,147 @@ Após a remoção dos diversos tipos de bugs e smells, pode-se constatar a difer
 
 \subsection{Versão 2 - \textit{demo2}}
 
+\underline{\textbf{Code Smells}}
+\begin{itemize}
+    \item \textit{\textbf{Blocker}}\\
+    \textbf{Remove this "clone" implementation; use a copy constructor or copy factory instead.}
+    
+    As regras de sobreposição de \textit{clone} são demasiado complicadas de se compreenderem. Devem usar-se, em substituição, construtores por cópia. 
+    
+    Uma solução para este problema é apagar os métodos \textit{clone} e substituir a sua utilização por construtores de cópia. \\
+    
+    \item \textit{\textbf{Critical}}\\
+    \textbf{Refactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed}, ou equivalente.
+    
+    Neste caso, a maior parte da complexidade cognitiva resulta da excessiva existência de cláusulas \textit{"catch"} e/ou do aninhamento ou uso excessivo de ciclos ou "if".
+    
+    Uma solução para este problema utilizando o refactoring do \textit{IntelliJ}, é extrair estas partes do código para novos métodos, caso não exista outra solução.
+    Ou então, para casos de usos excessivos de "if", substituí-los por "switch". Podem ainda simplificar-se os métodos. \\
+    
+    
+    \textbf{Define a constant instead of duplicating this literal "Latitude Inválida" 6 times}, ou equivalente.
+
+    Duplicar \textit{strings} literais dificultam o processo de refactoring, pois é necessário ter o cuidado de atualizar todas as ocorrências da \textit{string} em causa.
+    Por outro lado, constantes podem ser utilizadas em vários sítios, mas só precisam de ser atualizadas num único sítio.
+
+    Com o \textit{IntelliJ}, é possível utilizar o refactoring "\textit{Introduce Constant...}", que cria uma constante com a \textit{string} selecionada, e automaticamente substitui todos os usos deste literal pela constante criada.\\
+
+    \textbf{Add a default case to this switch.}
+
+    Adicionar um caso \textit{default} é programação defensiva e diminui a probabilidade do programa falhar.
+
+    O \textit{IntelliJ} permite fazer isto automaticamente, basta selecionar a cláusula \textit{switch} e carregar na opção "\textit{Insert 'default' branch}".\\
+    
+    \textbf{Use static access with "java.util.Calendar" for "DAY_OF_MONTH"}, ou equivalente.
+
+    Por razões de clareza, membros \textit{static} de uma class base nunca devem ser acedidos usando um nome do tipo derivado, por ser confuso e criar a ilusão de que existem dois membros \textit{static} diferentes.
+    
+    Com o \textit{IntelliJ}, é possível selecionar o membro e carregar na opção "\textit{Add static import for "java.util.Calendar.DAY_OF_MONTH"}".\\
+
+    \textbf{Make "destino" transient or serializable}, ou equivalente.
+
+    Campos em classes \textit{Serializable} devem ser \textit{serializable} ou \textit{transient}, mesmo que a classe nunca seja explicitamente serializada ou de-serializada.
+    Isto previne falhas e ataques.
+    
+    A solução foi declarar as variáveis \textit{transient}. \\
+
+
+    \item \textit{\textbf{Major}}\\
+    \textbf{3 duplicated blocks of code must be removed}, ou equivalente. 
+    
+    Este \textit{code smell} é difícil de resolver, porque, por vezes, é complicado identificar os blocos de código duplicados.
+    E se os mesmos forem identificados, pode ser difícil solucionar o problema.
+    
+    Uma possível solução poderá ser a criação de um método genérico que possibilite replicar o código. \\
+    
+    \textbf{Either remove or fill this block of code.}
+    
+    A maior parte das vezes que um bloco de código se encontra vazio é porque, de facto, existe código em falta.
+    
+    Nestes casos, programador deve remover ou preencher o bloco de código manualmente.\\
+    
+    
+    \textbf{Constructor has 9 parameters, which is greater than 7 authorized}, ou equivalente.
+    
+    Idealmente, um método não deve ter tantos parâmetros.
+    Neste caso, decidimos não fazer \textit{refactoring} pois implica a alteração de muito código. \\
+    
+    \textbf{Extract this nested try block into a separate method.}
+    
+    Para resolver isto, o programador deve extrair o bloco "\textit{try/catch}" para um método. O \textit{IntelliJ} permite fazê-lo de forma simples. \\
+
+    
+    \textbf{Remove this unused private "initApp" method.}
+    
+    Métodos privados que não são utilizados devem ser removidos. São código desnecessário.
+    
+    No \textit{IntelliJ}, é possível usar a opção "\textit{Safe Delete}" para apagarmos o método. Esta opção verifica que não existem chamadas deste método e que é seguro apága-lo. \\
+    
+    \textbf{Rename "consumo" which hides the field declared at line 33}, ou equivalente.
+    
+    Uma variável declarada num \textit{scope} mais exterior não deve ser sobreposta ou escondida por outra, impactando a legibilidade e, consequentemente, manutenibilidade do código. Pode também potenciar a criação de futuors \textit{bugs}.
+    
+    Para resolver este problema, basta mudar o nome da variável.\\
+    
+    
+    \textbf{Add the "@Override" annotation above this method signature.}
+
+    Usar anotações aumenta a legibilidade do código ao tornar óbvio que um método é sobreposto.
+
+    A solução é adicionar a anotação por cima do método. \\
+
+
+    \textbf{Remove this "Double" constructor.}
+
+    Construtores para \textit{String, Double} e outros objetos usados para "embrulhar" primitivas nunca devem ser usados.
+    Usá-los é menos claro e utiliza mais memória.
+
+    O \textit{IntelliJ} permite remover facilmente estes "embrulhos" com a opção "\textit{Remove boxing}". \\
+
+
+    \textbf{Remove this useless assignment to local variable "kilometers"}, ou equivalente.
+
+    Quando um valor é calculado e depois não é utilizado, pode haver um erro no código, ou então um desperdício de recursos.
+
+    Nestes casos, deve apagar-se a atribuição, ou então alterar o código subsequente por forma a utilizar essa atribuição. \\
+
+
+    \textbf{Replace this use of System.out or System.err by a logger}
+
+    Se um programa escreve diretamente para o \textit{standard output}, informações sensíveis podem ser expostas.
+
+    Apesar disto, foi decidido que não se iriam tratar estes \textit{smells} porque a maioria das escritas para o \textit{standard output} implica a interface criada. \\
+
+
+    \textbf{Add a private constructor to hide the implicit public one.}
+
+    Classes de utilidade não devem ser instanciadas. O Java adiciona um construtor público implícito por cada classe que não defina um explicitamente.
+
+    A solução é adicionar um construtor privado à classe, que pode até ser vazio. \\
+
+
+    \textbf{This block of commented-out lines of code should be removed.}
+
+    Código não utilizado deve ser apagado e não comentado.
+
+    O código comentado deve ser apagado. \\
+
+
+    \textbf{Merge this if statement with the enclosing one.}
+
+    Fundir "ifs" aumenta a legibilidade do código.
+
+    Nestes casos, deve fundir-se o \textit{if} aninhado com o anterior. Este \textit{refactoring} deve ser feito manualmente. \\
+
+
+    \textbf{Make this anonymous inner class a lambda.}
+
+    Classes anónimas podem ser complicadas e incertas.
+
+    O \textit{IntelliJ} dá a opção "\textit{Replace with lambda}" para estes casos. \\
+    
+    
+
 \section{Tarefa 3 - Teste da aplicação}
 Nesta tarefa, tal como o nome da mesma transparece, serão utilizadas técnicas de teste de software para efectuar testes unitários em \textit{JUnit} e, ainda, o
 teste de regressão da aplicação \textit{UmCarroJá}. Para além disso, serão utilizadas sistemas para a geração automática de casos de teste para gerar testes unitários e ainda inputs para simular a execução real da aplicação. De notar que nesta etapa também se procede à análise de testes unitários através da ferramenta \textit{JaCoCo}.
