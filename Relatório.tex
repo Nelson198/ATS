@@ -380,6 +380,8 @@ Após a remoção dos diversos tipos de bugs e smells, pode-se constatar a difer
 
 \subsection{Versão 2 - \textit{demo2}}
 
+Para o demo2, decidiu-se explorarem-se apenas os \textit{code smells}. De realçar que a remoção de alguns destes implicou também a remoção de alguns \textit{bugs}.
+
 \underline{\textbf{Code Smells}}
 \begin{itemize}
     \item \textit{\textbf{Blocker}}\\
@@ -518,6 +520,128 @@ Após a remoção dos diversos tipos de bugs e smells, pode-se constatar a difer
     Classes anónimas podem ser complicadas e incertas.
 
     O \textit{IntelliJ} dá a opção "\textit{Replace with lambda}" para estes casos. \\
+
+
+    \item \textit{\textbf{Minor}}\\
+    \textbf{Move this file to a named package.}
+    
+    De acordo com a especificação da linguagem Java, \textit{packages} sem nome são fornecidos apenas como conveniência para projetos pequenos. Idealmente, estes não existem.
+    
+    No \textit{IntelliJ} basta criar um novo \textit{package} e mover o ficheiro para lá.\\
+    
+
+    \textbf{Use isEmpty() to check whether the collection is empty or not.}
+    
+    Para testar se uma coleção está vazia é recomendado utilizar o método \texttt{isEmpty()}. Não só é mais intuitivo como há casos em que a sua perfomance é melhor.
+    
+    O programador tem de fazer esta modificação manualmente.\\
+    
+
+    \textbf{Use super.clone() to create and seed the cloned instance to be returned.}
+    
+    Sobrepôr o método \textit{clone()} sem implementar \textit{Clonable} pode indicar um erro.
+    
+    O \textit{IntelliJ} disponibiliza este \textit{refactoring}, no entanto, este pode implicar outras alterações no código que o programador deve ter em atenção.
+    De realçar que este \textit{refactoring} pode ser desnecessário, uma vez que outros \textit{smells} podem implicar a eliminação do método em questão. \\
+    
+
+    \textbf{Rename the interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.}
+    
+    Convenções de código é algo que permite uma colaboração mais eficiente entre equipas e programadores. Esta regra diz que os nomes das constantes devem seguir aquela expressão regular.
+    
+    No \textit{IntelliJ}, basta fazer "\textit{Rename}" à variável. \\
+    
+
+    \textbf{Remove this unused import 'java.util.ArrayList'.}
+    
+    Importar bibliotecas que não são usadas reduz a legibilidade do código, uma vez que a sua presença pode causar confusão.
+    
+    Pode utilizar-se a opção \textit{Optimize imports} para todo o projeto, de modo a resolver todas as ocorrências deste \textit{smell} de uma só vez. \\
+    
+
+    \textbf{Remove the literal "true" boolean value}, ou equivalente.
+    
+    Literais booleanos redundantes devem ser removidos de expressões de modo a melhorar a legibilidade do código.
+    
+    O \textit{IntelliJ} identifica estes casos e permite a simplicação dos mesmos, com a opção \textit{Simplify}. \\
+
+
+    \textbf{Rename this field "MIN_LATITUDE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'}, ou equivalente.
+
+    A opção "\textit{Rename}", do \textit{IntelliJ}, permite alterar todas as ocorrências do campo no projeto. É apenas necessário que se escreva um nome que corresponda à expressão regular. \\
+
+
+    \textbf{Use "Double.parseDouble" for this string-to-double conversion.}
+
+    Em vez de se criar uma primitiva "embrulhada" de uma \textit{String} para extrair um valor primitivo, deve usar-se o método "parse". O código fica mais claro e mais eficiente.
+
+    Também neste casos, o \textit{IntelliJ} permite fazer este \textit{refactoring} de forma simples. \\
+
+
+    \textbf{Replace this if-then-else statement by a single return statement.}
+
+    Deve simplificar-se o retorno de literais booleanos em "if-then-else".
+
+    Mais uma vez, o \textit{IntelliJ} permite simplicar estas expressões de forma simples. \\
+
+
+    \textbf{Remove this use of "Double"; it is deprecated.}
+
+    Uma vez descontinuadas, classes, interfaces e os seus membros devem ser evitados.
+
+    No caso de ocorrências de "Double", não só a classe foi descontinuada, como também é desnecessário o seu uso. Daí, normalmente, a solução será remover o "embrulho".
+    Essa é opção é oferecida pelo \textit{IntelliJ}. \\
+
+    
+    \textbf{Remove this unused "kilometers" local variable}, ou equivalente.
+
+    Manutenibilidade é incrementada se os programadores não tiverem de descobrir para o que é que uma variável é usada. Por isso, variáveis declaradas e não usadas, devem ser removidas.
+
+    Tal como noutras situações semelhantes, o \textit{IntelliJ} reconhece variáveis não usadas e dá a opção de remoção das mesmas. \\
+
+
+    \textbf{Replace the type specification in this constructor call with the diamond operator ("<>").}
+
+    O compilador consegue inferir o tipo, no construtor, através da declaração.
+
+    Assim, podem apagar-se os tipos nos construtores, deixando apenas o operador "<>". \\
+
+
+    \textbf{Reduce the total number of break and continue statements in this loop to use at most one.}
+
+    Este \textit{refactoring} é feito no interesse boa programação estruturada.
+
+    O programador tem de reduzir o número destas expressões manualmente. O uso de "if" e booleanos pode ajudar.
+
+
+    \textbf{Declare "nif" on a separate line.}
+
+    Declarar múltiplas variáveis na mesma linha é difícil de ler.
+
+    O \textit{IntelliJ} permite, através da opção "\textit{Split into separate declarations}", separar as declarações de todas as variáveis na mesma linha, para linhas diferentes.
+
+
+    \textbf{Immediately return this expression instead of assigning it to the temporary variable "car"}, ou equivalente.
+
+    É uma má prática declarar uma variável para, logo a seguir, a retornar.
+
+    A opção "\textit{Inline variable}", oferecida quando a variável é clicada, permite substituir a declaração da variável pelo seu retorno imediato.
+\end{itemize}
+
+Antes de serem aplicados os refactorings, o projeto apresentava uma \textit{technical debt} de 6 dias.
+Após a remoção dos diversos tipos de smells, pode-se constatar a diferença nesta \textit{technical debt}:
+\begin{itemize}
+    \item \textbf{Blocker} - 5 dias, ou seja, 1 dia de diferença;
+    \item \textbf{Critical} - 4 dias, ou seja, 2 dias de diferença;
+    \item \textbf{Major} - 4 dias, ou seja, 2 dias de diferença;
+    \item \textbf{Minor} - 2 dias, ou seja, 4 dias de diferença;
+    \item \textbf{Todos} - 0 dias, ou seja, 6 dias de diferença;
+\end{itemize}
+
+Pode chamar à atenção o facto de, a soma da redução do \textit{technical debt} para cada categoria, ser superior ao inicial (6 dias).
+No entanto, isto é facilmente explicável pelo facto de alguns \textit{smells} se sobreporem, ou seja, a remoção de um de uma categoria, pode querer dizer que outro, de outra categoria, também seja resolvido.
+
+As diferenças entre categorias podem ser explicadas pelas quantidades distintas de \textit{smells} de cada uma.
     
     
 
