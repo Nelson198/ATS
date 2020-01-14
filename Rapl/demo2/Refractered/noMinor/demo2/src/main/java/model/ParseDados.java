@@ -31,9 +31,13 @@ public class ParseDados{
         nif = dados[1];
         email = dados[2];
         morada = dados[3];
-
+        System.out.println(nome);
+        System.out.println(nif);
+        System.out.println(email);
+        System.out.println(morada);
+        System.out.println("0.3");
         Proprietario prop = new Proprietario(nome, nif, email, nif, morada, date);
-
+        System.out.println("0.4");
         return prop.clone();
     }
 

@@ -208,7 +208,6 @@ public class UmCarroJaApp{
     private static void lerData(){
         GregorianCalendar dataAtual ;
         out.print("Digite a Data do Dia de Hoje (dd-mm-aaaa): ");
-        out.print(dataInicioApp);
         do {
             dataAtual  = Input.lerData("Data de Hoje Inválida! Digite Novamente a Data (dd-mm-aaaa): ", "Digite a Data do Dia de Hoje (dd-mm-aaaa): ");
         }while (( dataAtual.before(dataInicioApp)));
@@ -1325,7 +1324,6 @@ public class UmCarroJaApp{
         UmCarroJaApp.clearScreen();
         try{
             inFile = new BufferedReader(new FileReader(fichtxt));
-            out.println("Li o ficheiro ");
             while(!inFile.readLine().equals("Logs")){
             }
             while((linha = inFile.readLine()) != null){
