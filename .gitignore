@@ -10,3 +10,6 @@
 # Java
 *.class
 target/classes/
+
+# Other files
+.DS_Store

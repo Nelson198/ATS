@@ -414,11 +414,11 @@ Para o demo2, decidiu-se explorarem-se apenas os \textit{code smells}. De realç
 
     O \textit{IntelliJ} permite fazer isto automaticamente, basta selecionar a cláusula \textit{switch} e carregar na opção "\textit{Insert 'default' branch}".\\
     
-    \textbf{Use static access with "java.util.Calendar" for "DAY_OF_MONTH"}, ou equivalente.
+    \textbf{Use static access with "java.util.Calendar" for "DAY\_OF\_MONTH"}, ou equivalente.
 
     Por razões de clareza, membros \textit{static} de uma class base nunca devem ser acedidos usando um nome do tipo derivado, por ser confuso e criar a ilusão de que existem dois membros \textit{static} diferentes.
     
-    Com o \textit{IntelliJ}, é possível selecionar o membro e carregar na opção "\textit{Add static import for "java.util.Calendar.DAY_OF_MONTH"}".\\
+    Com o \textit{IntelliJ}, é possível selecionar o membro e carregar na opção "\textit{Add static import for "java.util.Calendar.DAY\_OF\_MONTH"}".\\
 
     \textbf{Make "destino" transient or serializable}, ou equivalente.
 
@@ -546,7 +546,7 @@ Para o demo2, decidiu-se explorarem-se apenas os \textit{code smells}. De realç
     De realçar que este \textit{refactoring} pode ser desnecessário, uma vez que outros \textit{smells} podem implicar a eliminação do método em questão. \\
     
 
-    \textbf{Rename the interface name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.}
+    \textbf{Rename the interface name to match the regular expression '\^[A-Z][a-zA-Z0-9]*\$'.}
     
     Convenções de código é algo que permite uma colaboração mais eficiente entre equipas e programadores. Esta regra diz que os nomes das constantes devem seguir aquela expressão regular.
     
@@ -567,7 +567,7 @@ Para o demo2, decidiu-se explorarem-se apenas os \textit{code smells}. De realç
     O \textit{IntelliJ} identifica estes casos e permite a simplicação dos mesmos, com a opção \textit{Simplify}. \\
 
 
-    \textbf{Rename this field "MIN_LATITUDE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'}, ou equivalente.
+    \textbf{Rename this field "MIN\_LATITUDE" to match the regular expression '\^[a-z][a-zA-Z0-9]*\$'}, ou equivalente.
 
     A opção "\textit{Rename}", do \textit{IntelliJ}, permite alterar todas as ocorrências do campo no projeto. É apenas necessário que se escreva um nome que corresponda à expressão regular. \\
 
@@ -660,7 +660,7 @@ Quanto à cobertura de testes, foi possível verificar que ...
 
 Quanto à cobertura de testes, foi possível verificar que ...
 
-\subsubsection{Geração automática de testes - \textit{QuickCheck}}
+\subsubsection{Geração automática de testes - \textit{QuickCheck}} \label{sssec:QuickCheckDemo1}
 Nesta sub-tarefa foi-nos proposto gerar automaticamente ficheiros de \textit{logs} para testar a aplicação \textit{UmCarroJá}. Como seria de esperar, foi adoptada a utilização do sistema \textit{QuickCheck} para o efeito, tal como foi feito nas aulas.
 
 A implementação do gerador pretendido segue, naturalmente, a estrutura apresentada pelo exemplo disponibilizado pelos docentes na página da disciplina. Como tal, foi necessário criar essencialmente 5 tipos de geradores, cada um com o seu tipo de dados:
@@ -687,29 +687,17 @@ Quanto à cobertura de testes, foi possível verificar que ...
 Quanto à cobertura de testes, foi possível verificar que ...
 
 \subsubsection{Geração automática de testes - \textit{QuickCheck}}
-Nesta sub-tarefa foi-nos proposto gerar automaticamente ficheiros de \textit{logs} para testar a aplicação \textit{UmCarroJá}. Como seria de esperar, foi adoptada a utilização do sistema \textit{QuickCheck} para o efeito, tal como foi feito nas aulas.
+Relativamente à geração automática de testes em \textit{QuickCheck}, a abordagem tomada nesta implementação foi exatamente igual à que foi explorada anteriormente na primeira versão (ver informação no capítulo \ref{sssec:QuickCheckDemo1}).
 
-A implementação do gerador pretendido segue, naturalmente, a estrutura apresentada pelo exemplo disponibilizado pelos docentes na página da disciplina. Como tal, foi necessário criar essencialmente 5 tipos de geradores, cada um com o seu tipo de dados:
-\begin{itemize}
-    \item \textit{NovoProp}: registo de um novo proprietário;
-    \item \textit{NovoCliente}: registo de um novo cliente;
-    \item \textit{NovoCarro}: registo de um novo carro;
-    \item \textit{Aluguer}: registo de um aluguer efetuado por um cliente;
-    \item \textit{Classificar}: classificação atribuída a um carro ou a um cliente/proprietário.
-\end{itemize}
-
-Também é preciso salientar que existe uma diversidade considerável de atributos associados a estes novos tipos (como por exemplo, \textit{emails}, nomes, marcas, moradas, entre outros). Por forma a garantir uma grande variedade de atributos, a maior parte dos geradores implementados utiliza o combinador \textit{frequency}. Este gerador associa a um determinado tipo de dados uma probabilidade de escolha. Consequentemente, foi possível gerar nomes, apelidos, moradas e marcas de automóveis de forma mais realista e em grande escala. De notar também que os elementos deste grupo tiveram em consideração a geração de \textit{NIF's} e de matrículas sem repetições, permitindo assim uma simulação fidedigna e correta da aplicação.
-
-Por fim, de maneira a executar o gerador proposto, foi necessário parametrizar numa variável o número de registos a serem escritos para o ficheiro \textit{logs.bak} que irá armazenar toda esta informação. Desta forma, durante a execução da função \textbf{\textit{genLogsIO}} (responsável por gerar todos os registos dos tipos de dados mencionados anteriormente), é perguntado ao utilizador quantos registos pretende produzir.
 
 \section{Tarefa 4 - Análise de desempenho}
 \subsection{Versão 1 - \textit{demo1}}
-Após as diversas alterações e eliminações de smells era necessáiro verificar que estas tiveram impacto sobre a funcionalidade do programa. Para tal foi utilizada a ferramenta RAPL, disponiblizada pelos docentes, para analisar o consumo energético do programa. Como primeira etapa foram registados os valores energéticos com logs de diversos tamanhos (5,55,5555). De seguida encontram-se as tabelas com os resultados obtidos
+Após as diversas alterações e eliminações de \textit{smells} era necessário verificar que estas tiveram impacto sobre a funcionalidade do programa. Para tal foi utilizada a ferramenta \textit{RAPL}, disponibilizada pelos docentes, para analisar o consumo energético do programa. Como primeira etapa foram registados os valores energéticos com \textit{logs} de diversos tamanhos (5, 55, 5555). De seguida encontram-se as tabelas com os resultados obtidos:
 
 \begin{table}[h] 
     \caption{Análise do consumo energético - \textit{demo1}}
     \begin{center}
-        \begin{tabular}{>{\centering}p{0.1\textwidth}>{\centering}p{0.15\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}}
+        \begin{tabular}{>{\centering}p{0.1\textwidth}>{\centering}p{0.13\textwidth}>{\centering}p{0.21\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}}
         \toprule \textbf{\textit{Smells}?} & \textbf{Tamanho do \textit{input}} & \textbf{\textit{dram}} (em \textit{MB}) & \textbf{\textit{cpu}} (em \textit{ms}) & \textbf{\textit{package}} (em \textit{J}) \\
         \midrule Sim &  5 &  0.024292000000002645 &  0.1289059999999722 & 0.258239999999887 \\
         \midrule Não &  5 &  0.04699700000003304  & 0.10449199999993652 & 0.3303230000001349 \\
@@ -730,9 +718,9 @@ Após as diversas alterações e eliminações de smells era necessáiro verific
 \begin{table}[h] 
     \caption{Análise do consumo energético - \textit{demo2}}
     \begin{center}
-        \begin{tabular}{>{\centering}p{0.1\textwidth}>{\centering}p{0.15\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}}
+        \begin{tabular}{>{\centering}p{0.1\textwidth}>{\centering}p{0.13\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}}
         \toprule \textbf{\textit{Smells}?} & \textbf{Tamanho do \textit{input}} & \textbf{\textit{dram}} (em \textit{MB}) & \textbf{\textit{cpu}} (em \textit{ms}) & \textbf{\textit{package}} (em \textit{J}) \\
-        \midrule Sim & orignal & 2.5678709999999683 & 30.438354000000004  &  41.03033400000004\\
+        \midrule Sim & original & 2.5678709999999683 & 30.438354000000004  &  41.03033400000004\\
         \midrule Não &  &  &  &  \\
         \bottomrule
         \end{tabular} 
@@ -746,7 +734,7 @@ Como tal, foram executadas ambas as versões do programa em questão com cada ti
 \begin{table}[h] 
     \caption{Análise do consumo energético \textit{smell} a \textit{smell} - \textit{demo1}}
     \begin{center}
-        \begin{tabular}{>{\centering}p{0.1\textwidth}>{\centering}p{0.15\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}}
+        \begin{tabular}{>{\centering}p{0.1\textwidth}>{\centering}p{0.13\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}}
         \toprule \textbf{\textit{Smells}} & \textbf{Tamanho do \textit{input}} & \textbf{\textit{dram}} (em \textit{MB}) & \textbf{\textit{cpu}} (em \textit{ms}) & \textbf{\textit{package}} (em \textit{J}) \\
         \midrule \textit{noMinor} &  & 0.125 & 1.8643190000002505 & 2.6281740000013087 \\
         \midrule \textit{noMajor} &  & 0.10607900000013615 & 1.8434440000000905 & 2.383972999999969  \\
@@ -761,10 +749,10 @@ Como tal, foram executadas ambas as versões do programa em questão com cada ti
 \begin{table}[h] 
     \caption{Análise do consumo energético \textit{smell} a \textit{smell} - \textit{demo2}}
     \begin{center}
-        \begin{tabular}{>{\centering}p{0.1\textwidth}>{\centering}p{0.15\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}}
+        \begin{tabular}{>{\centering}p{0.1\textwidth}>{\centering}p{0.13\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}}
         \toprule \textbf{\textit{Smells}} & \textbf{Tamanho do \textit{input}} & \textbf{\textit{dram}} (em \textit{MB}) & \textbf{\textit{cpu}} (em \textit{ms}) & \textbf{\textit{package}} (em \textit{J}) \\
         \midrule \textit{noMinor} &  &  &  &  \\
-        \midrule \textit{noMajor} & orignal & 2.204895000000306 & 24.839966000000004 & 34.237121999998635   \\
+        \midrule \textit{noMajor} & original & 2.204895000000306 & 24.839966000000004 & 34.237121999998635   \\
         \midrule \textit{noCritical} &  original & 2.4993890000000647 & 29.64740000000029 & 40.53625499999998 \\
         \midrule \textit{noBlocker} &  &  &  &   \\
         \midrule \textit{noSmells} &  &  &  &  \\
