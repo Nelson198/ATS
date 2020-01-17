@@ -280,7 +280,10 @@ Estes problemas estão divididos pelos seguintes tipos: \textit{Bug}, \textit{Vu
     \item \textit{\textbf{Major}}\\
     \textbf{2 duplicated blocks of code must be removed.} 
     
-    Tambem acho que este não é possivel tirar\\
+    Este \textit{code smell} é difícil de resolver, porque, por vezes, é complicado identificar os blocos de código duplicados.
+    E se os mesmos forem identificados, pode ser difícil solucionar o problema.
+    
+    Uma possível solução poderá ser a criação de um método genérico que possibilite replicar o código. \\
     
     \textbf{Either remove or fill this block of code.}
     
@@ -654,7 +657,10 @@ teste de regressão da aplicação \textit{UmCarroJá}. Para além disso, serão
 
 \subsubsection{Testes unitários - \textit{JUnit}}
 
-Quanto à cobertura de testes, foi possível verificar que ...
+Como iremos ver de seguida, a maior parte dos testes unitários são gerados automaticamente pelo o \textit{EvoSuite}, mas além disso, decidimos fazer uma pequena análise pessoal ao código do projeto.
+Concentramos a nossa análise nas classes \texttt{Cars}, \texttt{Rentals} e um \texttt{UmCarroJa}, que achamos que são as mais relevantes a nível de evolução do sistema.
+
+Estes testes foram colocados no \textit{package} \texttt{test} e estão devidamente anotados seguindo a anotação dos testes manuais do \textit{JUnit}.
 
 \subsubsection{Geração automática de testes unitários - \textit{EvoSuite}}
 
@@ -680,7 +686,7 @@ Por fim, de maneira a executar o gerador proposto, foi necessário parametrizar 
 
 \subsubsection{Testes unitários - \textit{JUnit}}
 
-Quanto à cobertura de testes, foi possível verificar que ...
+
 
 \subsubsection{Geração automática de testes unitários - \textit{EvoSuite}}
 
