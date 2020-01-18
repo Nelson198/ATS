@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
 import static org.evosuite.runtime.EvoAssertions.*;
 import static org.junit.Assert.*;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = false, useJEE = true) 
 public class Main_ESTest extends Main_ESTest_scaffolding {
 
   @Test(timeout = 4000)
