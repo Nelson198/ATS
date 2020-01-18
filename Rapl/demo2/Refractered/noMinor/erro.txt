@@ -1,1 +1,2 @@
-Compila e corre mas não sofre alterações de comportamento, mesmo com um simples print
+Erro ao ler o ficheiro???????????????'
+	Não consegue ler o Proprietario 

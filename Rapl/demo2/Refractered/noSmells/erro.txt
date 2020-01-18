@@ -1,0 +1,5 @@
+Exception in thread "main" java.lang.ClassCastException: class model.Utilizador cannot be cast to class model.Cliente (model.Utilizador and model.Cliente are in unnamed module of loader 'app')
+	at app.UmCarroJaApp.parseAluguer(UmCarroJaApp.java:1384)
+	at app.UmCarroJaApp.lerDadosTXT(UmCarroJaApp.java:1320)
+	at app.UmCarroJaApp.main(UmCarroJaApp.java:231)
+

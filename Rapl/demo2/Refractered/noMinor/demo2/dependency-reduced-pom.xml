@@ -18,7 +18,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>UmCarroJaApp</mainClass>
+                  <mainClass>app/UmCarroJaApp</mainClass>
                 </transformer>
               </transformers>
             </configuration>

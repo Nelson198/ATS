@@ -2,7 +2,6 @@ utils/ComparadorAutonomia.class
 model/Aluguer.class
 model/Weather$1.class
 utils/Input.class
-app/UmCarroJaApp$1.class
 utils/CoordinateManager.class
 model/Proprietario.class
 model/Cliente.class
@@ -32,6 +31,5 @@ model/Utilizador.class
 exceptions/VeiculoJaExisteException.class
 exceptions/NaoExistemClientesException.class
 exceptions/UtilizadorNaoExisteException.class
-model/UmCarroJa$1.class
 app/UmCarroJaApp.class
 model/CarroEletrico.class

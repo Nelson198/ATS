@@ -1328,22 +1328,38 @@ public class UmCarroJaApp{
         BufferedReader inFile = null;
         String linha = null;
         String [] linhas = null;
-       
         UmCarroJaApp.clearScreen();
         try{
+
             inFile = new BufferedReader(new FileReader(fichtxt));
+            out.println("1");
+        
             while(!inFile.readLine().equals("Logs")){
             }
+            out.println("2");
+
             while((linha = inFile.readLine()) != null){
+            out.println("3");
+
                 linhas = linha.split(":", 2);
+            out.println("4");
+
                 if (linhas[0].equals("NovoProp")){
                     try{
+            out.println("4.1");
+            out.println(linhas[1]);
+
                         Proprietario prop = ParseDados.parseProprietario(linhas[1]);
+            out.println("4.2");
+
                         ucj.registarUtilizador(prop);
+            out.println("4.3");
+
                     }catch(UtilizadorJaExisteException e){
                         out.println("O proprietário com o email: " + e.getMessage() + " já se encontra registado!\n");
                     }
                 }
+                out.println("5");
                 if (linhas[0].equals("NovoCliente")){
                     try{
                         Cliente cli = ParseDados.parseCliente(linhas[1]);
@@ -1351,30 +1367,31 @@ public class UmCarroJaApp{
                     }catch(UtilizadorJaExisteException e){
                         out.println("O cliente com o email: " + e.getMessage() + " já se encontra registado!\n");
                     }
-                }
+                }out.println("6");
                 if (linhas[0].equals("NovoCarro")){
                     try {
                         Veiculo v = ParseDados.parseVeiculo(linhas[1]);
-                        ucj.registarVeiculo(v);
+                        ucj.registarVeiculo(v);                       
+
                     } catch (VeiculoJaExisteException e) {
                         out.println("O veículo com a matrícula: " + e.getMessage() + " já foi inserido!");
                     } catch (CloneNotSupportedException e) {
                         e.printStackTrace();
                     }
-                }
+                }out.println("7");
                 if (linhas[0].equals("Model.Aluguer")){
                     parseAluguer(linhas[1]);
-                }
+                }out.println("8");
                 if (linhas[0].equals("Classificar")){
                     parseClassificar(linhas[1]);
-                }
+                }out.println("9");
             }
-            UmCarroJaApp.guardarDados();
+            UmCarroJaApp.guardarDados();out.println("10");
         }
         catch (IOException | CloneNotSupportedException exc){
             out.println("Erro ao ler ficheiro de texto!");
-        }
     }
+}
 
 
     
