@@ -663,8 +663,40 @@ Concentramos a nossa análise nas classes \texttt{Cars}, \texttt{Rentals} e um \
 Estes testes foram colocados no \textit{package} \texttt{test} e estão devidamente anotados seguindo a anotação dos testes manuais do \textit{JUnit}.
 
 \subsubsection{Geração automática de testes unitários - \textit{EvoSuite}}
+Usou-se o \textit{plugin} do textit{IntelliJ} para utilizar o \textit{EvoSuite} no projeto, gerando testes unitários de forma automática para todo o projeto.
 
-Quanto à cobertura de testes, foi possível verificar que ...
+
+\subsubsection{Análise de cobertura de código}
+Foi possível, com recurso à opção \textit{Run with coverage} do \textit{IntelliJ}, fazer a análise de cobertura de código.
+De seguida, apresentam-se os resultados obtidos.
+
+\begin{table}[h] 
+    \caption{Análise do consumo energético - \textit{demo1}}
+    \begin{center}
+        \begin{tabular}{ || c | c | c | c || }
+        \hline
+        \textbf{\textit{Package}/Classe} & \textbf{Classes} & \textbf{Métodos} & \textbf{Linhas} \\
+        \hline
+        \hline
+        Controller & 100\% (2/2) & 100\% (5/5) & 92\% (207/225) \\
+        \hline
+        Exceptions & 69\% (9/13) & 100\% (0/0) & 100\% (9/9) \\
+        \hline
+        Model & 100\% (13/13) & 100\% (134/160) & 77\% (515/661) \\
+        \hline
+        Utils & 100\% (2/2) & 39\% (11/28) & 50\% (20/40) \\
+        \hline
+        View & 100\% (13/13) & 100\% (75/75) & 100\% (421/441) \\
+        \hline
+        Main.java & 100\% (1/1) & 100\% (1/1) & 83\% (10/12) \\
+        \hline
+        \end{tabular} 
+    \end{center}
+\end{table}
+
+A partir desta tabela, podemos perceber que quase todo o código é executado. No entanto, percebe-se que certas partes do mesmo não o são, pelo que a sua remoção deve ser pensada.
+É fácil perceber que algumas das exceções poderiam ser descartadas. Importa realçar que esta análise foi apenas feita ao código original, ou seja, sem qualquer tipo de \textit{refactoring}. 
+A análise de outras versões, pós-\textit{refactoring}, poderá apresentar ligeiras melhorias.
 
 \subsubsection{Geração automática de testes - \textit{QuickCheck}} \label{sssec:QuickCheckDemo1}
 Nesta sub-tarefa foi-nos proposto gerar automaticamente ficheiros de \textit{logs} para testar a aplicação \textit{UmCarroJá}. Como seria de esperar, foi adoptada a utilização do sistema \textit{QuickCheck} para o efeito, tal como foi feito nas aulas.
