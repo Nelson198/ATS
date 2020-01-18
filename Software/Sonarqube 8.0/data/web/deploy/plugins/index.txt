@@ -1,8 +1,9 @@
 python,true,sonar-python-plugin-1.16.0.4432.jar|af6e8182e308005988f5e2672ea2c9d1
 cssfamily,false,sonar-css-plugin-1.1.1.1010.jar|489f1b0ff745f9a744c23a97445caf98
-go,false,sonar-go-plugin-1.6.0.719.jar|31899c2ada93bcca6e02085f1f47d6de
-jacoco,false,sonar-jacoco-plugin-1.0.2.475.jar|513697d7dc792f02b10b1f4bcb9b48ab
+javacustom,true,java-custom-rules-1.0-SNAPSHOT.jar|eef796215811fb00c71dde97383e3831
 kotlin,true,sonar-kotlin-plugin-1.5.0.315.jar|2d9994a460180757f3fbad54f03e818e
+jacoco,false,sonar-jacoco-plugin-1.0.2.475.jar|513697d7dc792f02b10b1f4bcb9b48ab
+go,false,sonar-go-plugin-1.6.0.719.jar|31899c2ada93bcca6e02085f1f47d6de
 scmsvn,false,sonar-scm-svn-plugin-1.9.0.1295.jar|37ae8929672c56a67919c60df53b4283
 javascript,true,sonar-javascript-plugin-5.2.1.7778.jar|866bb1adbf016ea515620f1aaa15ec53
 ruby,true,sonar-ruby-plugin-1.5.0.315.jar|74dfad9fb80c653ed5c959c3b2ed5a4a

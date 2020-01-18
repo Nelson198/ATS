@@ -94,3 +94,337 @@ INT trapped.  Shutting down.
 2019.11.25 23:34:54 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
 2019.11.25 23:34:54 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
 <-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+
+WARNING - Unable to load the Wrapper's native library because none of the
+          following files:
+            libwrapper-macosx-x86-64.dylib
+            libwrapper-macosx-universal-64.dylib
+            libwrapper.dylib
+          could be located on the following java.library.path:
+            /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/bin/macosx-universal-64/./lib
+          Please see the documentation for the wrapper.java.library.path
+          configuration property.
+          System signals will not be handled correctly.
+
+2020.01.18 19:26:23 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 19:26:24 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 19:26:24 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 19:26:24 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 19:26:24 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 19:26:24 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 19:26:33 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 19:26:33 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process17950308572346541048properties
+2020.01.18 19:26:44 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.01.18 19:26:44 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.ce.app.CeServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process5645248253152764082properties
+2020.01.18 19:26:48 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.01.18 19:26:48 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+INT trapped.  Shutting down.
+2020.01.18 19:30:16 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2020.01.18 19:30:16 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 130
+2020.01.18 19:30:16 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.01.18 19:30:17 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [ce]: 130
+2020.01.18 19:30:17 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2020.01.18 19:30:17 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [web]: 130
+2020.01.18 19:30:17 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.01.18 19:30:17 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 19:30:31 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 19:30:32 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 19:30:32 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 19:30:32 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 19:30:32 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 19:30:32 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 19:30:41 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 19:30:41 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process7447468421988621664properties
+INT trapped.  Shutting down.
+2020.01.18 19:30:43 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 130
+2020.01.18 19:30:43 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 19:30:45 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 19:30:45 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 19:30:45 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 19:30:45 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 19:30:46 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 19:30:46 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+INT trapped.  Shutting down.
+2020.01.18 19:30:48 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 130
+2020.01.18 19:30:48 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.01.18 19:30:48 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 19:31:39 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 19:31:39 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 19:31:39 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 19:31:39 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 19:31:39 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 19:31:39 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 19:31:48 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 19:31:48 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process8085581454083956702properties
+2020.01.18 19:31:54 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.01.18 19:31:54 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.01.18 19:31:54 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.01.18 19:31:54 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 19:32:25 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 19:32:25 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 19:32:25 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 19:32:25 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 19:32:25 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 19:32:25 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 19:32:34 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 19:32:34 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process10271451201225099805properties
+2020.01.18 19:32:39 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.01.18 19:32:39 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.01.18 19:32:39 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.01.18 19:32:39 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 19:34:03 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 19:34:03 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 19:34:04 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 19:34:04 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 19:34:04 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 19:34:04 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 19:34:13 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 19:34:13 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process8018967016201044511properties
+2020.01.18 19:34:18 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.01.18 19:34:18 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.01.18 19:34:18 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.01.18 19:34:18 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 19:34:35 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 19:34:35 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 19:34:35 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 19:34:35 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 19:34:35 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 19:34:35 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 19:34:44 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 19:34:44 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process9695874693921577518properties
+2020.01.18 19:34:54 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.01.18 19:34:54 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.ce.app.CeServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process2836403459281500022properties
+2020.01.18 19:34:57 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.01.18 19:34:57 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+INT trapped.  Shutting down.
+2020.01.18 20:37:49 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 130
+2020.01.18 20:37:49 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 21:05:40 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 21:05:40 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 21:05:40 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 21:05:40 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 21:05:40 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 21:05:40 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 21:05:49 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 21:05:49 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process8754197069398209227properties
+2020.01.18 21:05:55 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.01.18 21:05:55 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.01.18 21:05:55 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.01.18 21:05:55 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 21:06:19 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 21:06:19 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 21:06:19 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 21:06:19 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 21:06:19 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 21:06:19 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 21:06:28 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 21:06:28 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process16710021683287580930properties
+2020.01.18 21:06:37 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.01.18 21:06:37 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.ce.app.CeServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process416235029788620226properties
+2020.01.18 21:06:40 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.01.18 21:06:40 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+INT trapped.  Shutting down.
+2020.01.18 21:17:34 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 130
+2020.01.18 21:17:34 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 21:17:40 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 21:17:40 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 21:17:40 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 21:17:40 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 21:17:40 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 21:17:40 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 21:17:48 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 21:17:48 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process2644088147759352642properties
+2020.01.18 21:17:53 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.01.18 21:17:54 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.01.18 21:17:54 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.01.18 21:17:54 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 22:18:33 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 22:18:33 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 22:18:33 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 22:18:33 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 22:18:33 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 22:18:33 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 22:18:43 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 22:18:43 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process16199171759130807839properties
+2020.01.18 22:18:49 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.01.18 22:18:49 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.01.18 22:18:49 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.01.18 22:18:49 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 22:19:04 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 22:19:04 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 22:19:04 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 22:19:04 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 22:19:04 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 22:19:04 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 22:19:13 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 22:19:13 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process11772680668015726978properties
+2020.01.18 22:19:23 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.01.18 22:19:23 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.ce.app.CeServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process16208655949756741229properties
+2020.01.18 22:19:27 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.01.18 22:19:27 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+INT trapped.  Shutting down.
+2020.01.18 22:25:57 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 130
+2020.01.18 22:25:57 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 22:34:01 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 22:34:01 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 22:34:01 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 22:34:01 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 22:34:01 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 22:34:01 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 22:34:10 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 22:34:10 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process9269265863031717657properties
+2020.01.18 22:34:16 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.01.18 22:34:17 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.01.18 22:34:17 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.01.18 22:34:17 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 22:34:39 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 22:34:39 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 22:34:39 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 22:34:39 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 22:34:39 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 22:34:39 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 22:34:48 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 22:34:48 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process13873929270804102182properties
+2020.01.18 22:34:59 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2020.01.18 22:34:59 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.ce.app.CeServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process1074290806298117995properties
+2020.01.18 22:35:02 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2020.01.18 22:35:02 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+INT trapped.  Shutting down.
+2020.01.18 22:40:02 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 130
+2020.01.18 22:40:02 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 22:40:05 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 22:40:05 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 22:40:05 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 22:40:05 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 22:40:05 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 22:40:05 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 22:40:14 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 22:40:14 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process17785783519443587406properties
+2020.01.18 22:40:20 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.01.18 22:40:20 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.01.18 22:40:20 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.01.18 22:40:20 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2020.01.18 23:11:20 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp
+2020.01.18 23:11:20 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on /127.0.0.1:9001
+2020.01.18 23:11:20 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch]: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch/bin/elasticsearch
+2020.01.18 23:11:20 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2020.01.18 23:11:20 INFO  app[][o.e.p.PluginsService] no modules loaded
+2020.01.18 23:11:20 INFO  app[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020.01.18 23:11:29 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2020.01.18 23:11:29 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0]: /Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/common/*:/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/lib/jdbc/h2/h2-1.3.176.jar org.sonar.server.app.WebServer /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/sq-process11193162696202079319properties
+2020.01.18 23:11:35 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2020.01.18 23:11:35 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2020.01.18 23:11:35 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2020.01.18 23:11:35 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped

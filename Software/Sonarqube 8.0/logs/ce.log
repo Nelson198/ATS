@@ -47,3 +47,96 @@
 2019.11.25 23:34:54 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
 2019.11.25 23:34:54 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
 2019.11.25 23:34:54 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.01.18 19:26:44 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.01.18 19:26:44 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.01.18 19:26:45 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.01.18 19:26:45 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.01.18 19:26:45 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.01.18 19:26:45 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.01.18 19:26:46 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.01.18 19:26:46 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.01.18 19:26:46 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.01.18 19:26:46 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0
+2020.01.18 19:26:46 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.01.18 19:26:47 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.01.18 19:26:47 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.01.18 19:30:16 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.01.18 19:30:16 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.01.18 19:30:16 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.01.18 19:30:17 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.01.18 19:34:54 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.01.18 19:34:54 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.01.18 19:34:54 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.01.18 19:34:54 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.01.18 19:34:54 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.01.18 19:34:54 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.01.18 19:34:55 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.01.18 19:34:55 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.01.18 19:34:55 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.01.18 19:34:56 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0
+2020.01.18 19:34:56 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.01.18 19:34:56 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.01.18 19:34:57 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.01.18 20:37:49 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.01.18 20:37:49 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.01.18 20:37:49 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.01.18 20:37:50 INFO  ce[][o.s.p.ProcessEntryPoint] Hard stopping process
+2020.01.18 20:37:50 WARN  ce[][o.s.p.ProcessEntryPoint$StopperThread] Can not stop in 21630000ms
+2020.01.18 20:37:50 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.01.18 21:06:38 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.01.18 21:06:38 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.01.18 21:06:38 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.01.18 21:06:38 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.01.18 21:06:38 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.01.18 21:06:38 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.01.18 21:06:39 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.01.18 21:06:39 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.01.18 21:06:39 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.01.18 21:06:39 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0
+2020.01.18 21:06:39 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.01.18 21:06:40 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.01.18 21:06:40 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.01.18 21:17:34 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.01.18 21:17:34 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.01.18 21:17:34 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.01.18 21:17:34 INFO  ce[][o.s.p.ProcessEntryPoint] Hard stopping process
+2020.01.18 21:17:34 WARN  ce[][o.s.p.ProcessEntryPoint$StopperThread] Can not stop in 21630000ms
+2020.01.18 21:17:35 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.01.18 22:19:24 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.01.18 22:19:24 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.01.18 22:19:24 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.01.18 22:19:24 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.01.18 22:19:24 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.01.18 22:19:24 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.01.18 22:19:25 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.01.18 22:19:25 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.01.18 22:19:25 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.01.18 22:19:26 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0
+2020.01.18 22:19:26 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.01.18 22:19:27 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.01.18 22:19:27 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.01.18 22:25:57 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.01.18 22:25:57 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.01.18 22:25:57 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.01.18 22:25:57 INFO  ce[][o.s.p.ProcessEntryPoint] Hard stopping process
+2020.01.18 22:25:57 WARN  ce[][o.s.p.ProcessEntryPoint$StopperThread] Can not stop in 21630000ms
+2020.01.18 22:25:58 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
+2020.01.18 22:34:59 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2020.01.18 22:34:59 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2020.01.18 22:34:59 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2020.01.18 22:34:59 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020.01.18 22:34:59 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020.01.18 22:34:59 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020.01.18 22:35:00 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2020.01.18 22:35:00 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2020.01.18 22:35:00 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2020.01.18 22:35:01 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0
+2020.01.18 22:35:01 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2020.01.18 22:35:02 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2020.01.18 22:35:02 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2020.01.18 22:40:02 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2020.01.18 22:40:02 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2020.01.18 22:40:02 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2020.01.18 22:40:03 INFO  ce[][o.s.p.ProcessEntryPoint] Hard stopping process
+2020.01.18 22:40:03 WARN  ce[][o.s.p.ProcessEntryPoint$StopperThread] Can not stop in 21630000ms
+2020.01.18 22:40:03 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped

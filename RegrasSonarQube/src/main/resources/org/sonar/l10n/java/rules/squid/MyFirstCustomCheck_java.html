@@ -1,0 +1,13 @@
+<p>Return type and parameter of a method should not be the same</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+int public foo3(int value) { // Noncompliant
+    return 0;
+    }
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+int public foo() {
+        return 0;
+    }
+</pre>

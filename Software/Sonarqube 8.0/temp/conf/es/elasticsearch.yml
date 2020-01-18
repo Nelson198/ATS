@@ -7,11 +7,11 @@ cluster.routing.allocation.awareness.attributes: rack_id
 transport.host: 127.0.0.1
 node.attr.rack_id: sonarqube
 transport.tcp.port: '9001'
-path.logs: /mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0/logs
+path.logs: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/logs
 discovery.zen.minimum_master_nodes: '1'
 http.enabled: 'false'
 node.master: 'true'
-path.data: /mnt/c/Users/Asus/Desktop/Nelson/Universidade/Mestrado (MEI)/1º ano/Cadeiras/1º Semestre/Análise e Teste de Software/Trabalhos Práticos/ATS/Software/Sonarqube 8.0/data/es6
+path.data: /Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/data/es6
 network.host: 127.0.0.1
 node.name: sonarqube
 network.tcp.reuse_address: 'true'

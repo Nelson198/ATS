@@ -219,3 +219,437 @@ java.nio.file.NoSuchFileException: /proc/sys/vm/max_map_count
 2019.11.25 23:34:54 INFO  es[][o.e.n.Node] stopped
 2019.11.25 23:34:54 INFO  es[][o.e.n.Node] closing ...
 2019.11.25 23:34:54 INFO  es[][o.e.n.Node] closed
+2020.01.18 19:26:26 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.6gb], net total_space [465.6gb], types [apfs]
+2020.01.18 19:26:26 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 19:26:26 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 19:26:26 INFO  es[][o.e.n.Node] version[6.8.0], pid[22096], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 19:26:26 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 19:26:26 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 19:26:26 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 19:26:26 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 19:26:26 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 19:26:26 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 19:26:26 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 19:26:26 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 19:26:26 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 19:26:26 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 19:26:28 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 19:26:28 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 19:26:28 INFO  es[][o.e.n.Node] initialized
+2020.01.18 19:26:28 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 19:26:28 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 19:26:32 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{dW9h1KuJQI60t9WDJRBbWQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 19:26:32 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{dW9h1KuJQI60t9WDJRBbWQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{dW9h1KuJQI60t9WDJRBbWQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 19:26:32 INFO  es[][o.e.n.Node] started
+2020.01.18 19:26:32 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 19:26:33 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0], [components][2], [components][1], [components][0]] ...]).
+2020.01.18 19:30:16 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 19:30:16 INFO  es[][o.e.n.Node] stopped
+2020.01.18 19:30:16 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 19:30:16 INFO  es[][o.e.n.Node] closed
+2020.01.18 19:30:34 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.6gb], net total_space [465.6gb], types [apfs]
+2020.01.18 19:30:34 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 19:30:34 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 19:30:34 INFO  es[][o.e.n.Node] version[6.8.0], pid[22243], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 19:30:34 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 19:30:34 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 19:30:34 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 19:30:34 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 19:30:34 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 19:30:34 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 19:30:34 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 19:30:34 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 19:30:34 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 19:30:34 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 19:30:35 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 19:30:36 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 19:30:36 INFO  es[][o.e.n.Node] initialized
+2020.01.18 19:30:36 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 19:30:36 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 19:30:39 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{5RVdOpsyS3-D5jlSgaWZAQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 19:30:39 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{5RVdOpsyS3-D5jlSgaWZAQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{5RVdOpsyS3-D5jlSgaWZAQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 19:30:39 INFO  es[][o.e.n.Node] started
+2020.01.18 19:30:40 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 19:30:41 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.01.18 19:30:43 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 19:30:43 INFO  es[][o.e.n.Node] stopped
+2020.01.18 19:30:43 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 19:30:43 INFO  es[][o.e.n.Node] closed
+2020.01.18 19:30:47 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.6gb], net total_space [465.6gb], types [apfs]
+2020.01.18 19:30:47 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 19:30:47 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 19:30:47 INFO  es[][o.e.n.Node] version[6.8.0], pid[22326], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 19:30:47 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 19:30:48 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 19:30:48 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 19:30:48 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 19:30:48 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 19:30:48 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 19:30:48 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 19:30:48 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 19:30:48 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 19:30:48 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 19:31:41 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.6gb], net total_space [465.6gb], types [apfs]
+2020.01.18 19:31:41 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 19:31:41 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 19:31:41 INFO  es[][o.e.n.Node] version[6.8.0], pid[22413], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 19:31:41 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 19:31:42 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 19:31:42 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 19:31:42 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 19:31:42 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 19:31:42 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 19:31:42 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 19:31:42 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 19:31:42 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 19:31:42 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 19:31:43 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 19:31:43 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 19:31:43 INFO  es[][o.e.n.Node] initialized
+2020.01.18 19:31:43 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 19:31:44 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 19:31:47 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{crpt-2NlQNCgGmbQCTnj_g}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 19:31:47 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{crpt-2NlQNCgGmbQCTnj_g}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{crpt-2NlQNCgGmbQCTnj_g}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 19:31:47 INFO  es[][o.e.n.Node] started
+2020.01.18 19:31:47 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 19:31:48 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][0]] ...]).
+2020.01.18 19:31:54 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 19:31:54 INFO  es[][o.e.n.Node] stopped
+2020.01.18 19:31:54 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 19:31:54 INFO  es[][o.e.n.Node] closed
+2020.01.18 19:32:27 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.6gb], net total_space [465.6gb], types [apfs]
+2020.01.18 19:32:27 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 19:32:27 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 19:32:27 INFO  es[][o.e.n.Node] version[6.8.0], pid[22505], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 19:32:27 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 19:32:27 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 19:32:27 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 19:32:27 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 19:32:27 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 19:32:27 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 19:32:27 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 19:32:27 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 19:32:27 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 19:32:27 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 19:32:29 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 19:32:29 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 19:32:29 INFO  es[][o.e.n.Node] initialized
+2020.01.18 19:32:29 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 19:32:29 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 19:32:33 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{OKoqltuxSLeK37Y0nQmaRg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 19:32:33 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{OKoqltuxSLeK37Y0nQmaRg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{OKoqltuxSLeK37Y0nQmaRg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 19:32:33 INFO  es[][o.e.n.Node] started
+2020.01.18 19:32:33 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 19:32:34 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][0]] ...]).
+2020.01.18 19:32:39 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 19:32:39 INFO  es[][o.e.n.Node] stopped
+2020.01.18 19:32:39 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 19:32:39 INFO  es[][o.e.n.Node] closed
+2020.01.18 19:34:06 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.6gb], net total_space [465.6gb], types [apfs]
+2020.01.18 19:34:06 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 19:34:06 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 19:34:06 INFO  es[][o.e.n.Node] version[6.8.0], pid[22606], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 19:34:06 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 19:34:06 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 19:34:06 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 19:34:06 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 19:34:06 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 19:34:06 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 19:34:06 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 19:34:06 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 19:34:06 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 19:34:06 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 19:34:07 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 19:34:08 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 19:34:08 INFO  es[][o.e.n.Node] initialized
+2020.01.18 19:34:08 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 19:34:08 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 19:34:11 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{N-bIX-LYQ0aVSJOEG8xjhA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 19:34:11 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{N-bIX-LYQ0aVSJOEG8xjhA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{N-bIX-LYQ0aVSJOEG8xjhA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 19:34:11 INFO  es[][o.e.n.Node] started
+2020.01.18 19:34:12 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 19:34:13 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][0], [metadatas][0], [components][1], [components][4]] ...]).
+2020.01.18 19:34:18 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 19:34:18 INFO  es[][o.e.n.Node] stopped
+2020.01.18 19:34:18 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 19:34:18 INFO  es[][o.e.n.Node] closed
+2020.01.18 19:34:37 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.6gb], net total_space [465.6gb], types [apfs]
+2020.01.18 19:34:37 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 19:34:37 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 19:34:37 INFO  es[][o.e.n.Node] version[6.8.0], pid[22696], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 19:34:37 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 19:34:37 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 19:34:37 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 19:34:37 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 19:34:37 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 19:34:37 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 19:34:37 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 19:34:37 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 19:34:37 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 19:34:37 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 19:34:38 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 19:34:39 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 19:34:39 INFO  es[][o.e.n.Node] initialized
+2020.01.18 19:34:39 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 19:34:39 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 19:34:42 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{3VQYlAzBS4uWZWMacNVbFg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 19:34:42 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{3VQYlAzBS4uWZWMacNVbFg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{3VQYlAzBS4uWZWMacNVbFg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 19:34:42 INFO  es[][o.e.n.Node] started
+2020.01.18 19:34:42 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 19:34:44 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][3], [metadatas][0], [components][2], [components][0]] ...]).
+2020.01.18 20:37:49 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 20:37:49 INFO  es[][o.e.n.Node] stopped
+2020.01.18 20:37:49 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 20:37:49 INFO  es[][o.e.n.Node] closed
+2020.01.18 21:05:42 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.6gb], net total_space [465.6gb], types [apfs]
+2020.01.18 21:05:42 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 21:05:42 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 21:05:42 INFO  es[][o.e.n.Node] version[6.8.0], pid[24017], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 21:05:42 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 21:05:42 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 21:05:42 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 21:05:42 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 21:05:42 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 21:05:42 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 21:05:42 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 21:05:42 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 21:05:42 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 21:05:42 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 21:05:43 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 21:05:44 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 21:05:44 INFO  es[][o.e.n.Node] initialized
+2020.01.18 21:05:44 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 21:05:44 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 21:05:47 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{9mRfjqe6Tb-lBcjVLsgvRA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 21:05:47 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{9mRfjqe6Tb-lBcjVLsgvRA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{9mRfjqe6Tb-lBcjVLsgvRA}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 21:05:47 INFO  es[][o.e.n.Node] started
+2020.01.18 21:05:48 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 21:05:49 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][1]] ...]).
+2020.01.18 21:05:55 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 21:05:55 INFO  es[][o.e.n.Node] stopped
+2020.01.18 21:05:55 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 21:05:55 INFO  es[][o.e.n.Node] closed
+2020.01.18 21:06:21 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.5gb], net total_space [465.6gb], types [apfs]
+2020.01.18 21:06:21 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 21:06:21 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 21:06:21 INFO  es[][o.e.n.Node] version[6.8.0], pid[24102], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 21:06:21 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 21:06:21 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 21:06:21 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 21:06:21 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 21:06:21 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 21:06:21 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 21:06:21 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 21:06:21 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 21:06:21 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 21:06:21 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 21:06:22 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 21:06:23 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 21:06:23 INFO  es[][o.e.n.Node] initialized
+2020.01.18 21:06:23 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 21:06:23 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 21:06:26 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{GkNn1wGdRAKXbBBWg2EYGg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 21:06:26 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{GkNn1wGdRAKXbBBWg2EYGg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{GkNn1wGdRAKXbBBWg2EYGg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 21:06:26 INFO  es[][o.e.n.Node] started
+2020.01.18 21:06:26 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 21:06:28 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.01.18 21:17:34 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 21:17:34 INFO  es[][o.e.n.Node] stopped
+2020.01.18 21:17:34 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 21:17:34 INFO  es[][o.e.n.Node] closed
+2020.01.18 21:17:42 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.6gb], net total_space [465.6gb], types [apfs]
+2020.01.18 21:17:42 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 21:17:42 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 21:17:42 INFO  es[][o.e.n.Node] version[6.8.0], pid[24328], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 21:17:42 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 21:17:42 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 21:17:42 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 21:17:42 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 21:17:42 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 21:17:42 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 21:17:42 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 21:17:42 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 21:17:42 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 21:17:42 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 21:17:43 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 21:17:44 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 21:17:44 INFO  es[][o.e.n.Node] initialized
+2020.01.18 21:17:44 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 21:17:44 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 21:17:47 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{3bU92RPiTtu56WdtisROOg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 21:17:47 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{3bU92RPiTtu56WdtisROOg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{3bU92RPiTtu56WdtisROOg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 21:17:47 INFO  es[][o.e.n.Node] started
+2020.01.18 21:17:47 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 21:17:48 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.01.18 21:17:53 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 21:17:53 INFO  es[][o.e.n.Node] stopped
+2020.01.18 21:17:53 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 21:17:53 INFO  es[][o.e.n.Node] closed
+2020.01.18 22:18:35 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.5gb], net total_space [465.6gb], types [apfs]
+2020.01.18 22:18:35 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 22:18:35 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 22:18:35 INFO  es[][o.e.n.Node] version[6.8.0], pid[24611], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 22:18:35 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 22:18:36 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 22:18:36 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 22:18:36 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 22:18:36 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 22:18:36 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 22:18:36 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 22:18:36 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 22:18:36 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 22:18:36 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 22:18:37 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 22:18:38 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 22:18:38 INFO  es[][o.e.n.Node] initialized
+2020.01.18 22:18:38 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 22:18:38 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 22:18:41 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{7Z2cH-ZkRTiEyDxHvd6jzg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 22:18:41 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{7Z2cH-ZkRTiEyDxHvd6jzg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{7Z2cH-ZkRTiEyDxHvd6jzg}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 22:18:41 INFO  es[][o.e.n.Node] started
+2020.01.18 22:18:41 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 22:18:43 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.01.18 22:18:49 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 22:18:49 INFO  es[][o.e.n.Node] stopped
+2020.01.18 22:18:49 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 22:18:49 INFO  es[][o.e.n.Node] closed
+2020.01.18 22:19:06 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.5gb], net total_space [465.6gb], types [apfs]
+2020.01.18 22:19:06 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 22:19:06 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 22:19:06 INFO  es[][o.e.n.Node] version[6.8.0], pid[24730], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 22:19:06 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 22:19:06 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 22:19:06 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 22:19:06 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 22:19:06 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 22:19:06 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 22:19:06 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 22:19:06 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 22:19:06 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 22:19:06 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 22:19:07 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 22:19:08 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 22:19:08 INFO  es[][o.e.n.Node] initialized
+2020.01.18 22:19:08 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 22:19:08 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 22:19:11 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{zF1aYblpTyqT6Jlbw7D1TQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 22:19:11 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{zF1aYblpTyqT6Jlbw7D1TQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{zF1aYblpTyqT6Jlbw7D1TQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 22:19:12 INFO  es[][o.e.n.Node] started
+2020.01.18 22:19:12 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 22:19:13 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][0]] ...]).
+2020.01.18 22:25:57 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 22:25:57 INFO  es[][o.e.n.Node] stopped
+2020.01.18 22:25:57 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 22:25:57 INFO  es[][o.e.n.Node] closed
+2020.01.18 22:34:03 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.5gb], net total_space [465.6gb], types [apfs]
+2020.01.18 22:34:03 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 22:34:03 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 22:34:03 INFO  es[][o.e.n.Node] version[6.8.0], pid[25094], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 22:34:03 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 22:34:03 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 22:34:03 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 22:34:03 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 22:34:03 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 22:34:03 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 22:34:03 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 22:34:03 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 22:34:03 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 22:34:03 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 22:34:05 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 22:34:05 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 22:34:05 INFO  es[][o.e.n.Node] initialized
+2020.01.18 22:34:05 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 22:34:05 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 22:34:09 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{mkrdfsWrR6aUzWZzl0ql3A}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 22:34:09 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{mkrdfsWrR6aUzWZzl0ql3A}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{mkrdfsWrR6aUzWZzl0ql3A}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 22:34:09 INFO  es[][o.e.n.Node] started
+2020.01.18 22:34:09 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 22:34:10 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.01.18 22:34:16 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 22:34:17 INFO  es[][o.e.n.Node] stopped
+2020.01.18 22:34:17 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 22:34:17 INFO  es[][o.e.n.Node] closed
+2020.01.18 22:34:41 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.5gb], net total_space [465.6gb], types [apfs]
+2020.01.18 22:34:41 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 22:34:41 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 22:34:41 INFO  es[][o.e.n.Node] version[6.8.0], pid[25190], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 22:34:41 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 22:34:41 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 22:34:41 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 22:34:41 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 22:34:41 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 22:34:41 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 22:34:41 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 22:34:41 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 22:34:41 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 22:34:41 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 22:34:42 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 22:34:43 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 22:34:43 INFO  es[][o.e.n.Node] initialized
+2020.01.18 22:34:43 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 22:34:44 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 22:34:47 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{T0LzxwpVSC-YTiU_GS2AYQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 22:34:47 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{T0LzxwpVSC-YTiU_GS2AYQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{T0LzxwpVSC-YTiU_GS2AYQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 22:34:47 INFO  es[][o.e.n.Node] started
+2020.01.18 22:34:47 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 22:34:48 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.01.18 22:40:02 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 22:40:02 INFO  es[][o.e.n.Node] stopped
+2020.01.18 22:40:02 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 22:40:02 INFO  es[][o.e.n.Node] closed
+2020.01.18 22:40:07 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.5gb], net total_space [465.6gb], types [apfs]
+2020.01.18 22:40:07 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 22:40:07 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 22:40:07 INFO  es[][o.e.n.Node] version[6.8.0], pid[25310], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 22:40:07 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 22:40:08 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 22:40:08 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 22:40:08 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 22:40:08 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 22:40:08 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 22:40:08 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 22:40:08 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 22:40:08 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 22:40:08 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 22:40:09 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 22:40:09 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 22:40:10 INFO  es[][o.e.n.Node] initialized
+2020.01.18 22:40:10 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 22:40:10 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 22:40:13 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{czufH1EKTcyeGLT8uwLklw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 22:40:13 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{czufH1EKTcyeGLT8uwLklw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{czufH1EKTcyeGLT8uwLklw}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 22:40:13 INFO  es[][o.e.n.Node] started
+2020.01.18 22:40:13 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 22:40:14 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[components][0], [metadatas][0], [components][2], [components][4]] ...]).
+2020.01.18 22:40:20 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 22:40:20 INFO  es[][o.e.n.Node] stopped
+2020.01.18 22:40:20 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 22:40:20 INFO  es[][o.e.n.Node] closed
+2020.01.18 23:11:22 INFO  es[][o.e.e.NodeEnvironment] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [377.1gb], net total_space [465.6gb], types [apfs]
+2020.01.18 23:11:22 INFO  es[][o.e.e.NodeEnvironment] heap size [494.9mb], compressed ordinary object pointers [true]
+2020.01.18 23:11:22 INFO  es[][o.e.n.Node] node name [sonarqube], node ID [xq81KsTpQMW8yAFOku5g5g]
+2020.01.18 23:11:22 INFO  es[][o.e.n.Node] version[6.8.0], pid[28274], build[default/tar/65b6179/2019-05-15T20:06:13.172855Z], OS[Mac OS X/10.15.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/11.0.5/11.0.5+10-LTS]
+2020.01.18 23:11:22 INFO  es[][o.e.n.Node] JVM arguments [-XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp, -XX:ErrorFile=../logs/es_hs_err_pid%p.log, -Xmx512m, -Xms512m, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/elasticsearch, -Des.path.conf=/Users/nelsonteixeira/Desktop/ATS/Software/Sonarqube 8.0/temp/conf/es, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+2020.01.18 23:11:22 INFO  es[][o.e.p.PluginsService] loaded module [analysis-common]
+2020.01.18 23:11:22 INFO  es[][o.e.p.PluginsService] loaded module [lang-painless]
+2020.01.18 23:11:22 INFO  es[][o.e.p.PluginsService] loaded module [mapper-extras]
+2020.01.18 23:11:22 INFO  es[][o.e.p.PluginsService] loaded module [parent-join]
+2020.01.18 23:11:22 INFO  es[][o.e.p.PluginsService] loaded module [percolator]
+2020.01.18 23:11:22 INFO  es[][o.e.p.PluginsService] loaded module [reindex]
+2020.01.18 23:11:22 INFO  es[][o.e.p.PluginsService] loaded module [repository-url]
+2020.01.18 23:11:22 INFO  es[][o.e.p.PluginsService] loaded module [transport-netty4]
+2020.01.18 23:11:22 INFO  es[][o.e.p.PluginsService] no plugins loaded
+2020.01.18 23:11:23 WARN  es[][o.e.d.c.s.Settings] [http.enabled] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+2020.01.18 23:11:24 INFO  es[][o.e.d.DiscoveryModule] using discovery type [zen] and host providers [settings]
+2020.01.18 23:11:24 INFO  es[][o.e.n.Node] initialized
+2020.01.18 23:11:24 INFO  es[][o.e.n.Node] starting ...
+2020.01.18 23:11:24 INFO  es[][o.e.t.TransportService] publish_address {127.0.0.1:9001}, bound_addresses {127.0.0.1:9001}
+2020.01.18 23:11:27 INFO  es[][o.e.c.s.MasterService] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{hSwBcwfiSQS2qWfQPOJLiQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}
+2020.01.18 23:11:27 INFO  es[][o.e.c.s.ClusterApplierService] new_master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{hSwBcwfiSQS2qWfQPOJLiQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube}, reason: apply cluster state (from master [master {sonarqube}{xq81KsTpQMW8yAFOku5g5g}{hSwBcwfiSQS2qWfQPOJLiQ}{127.0.0.1}{127.0.0.1:9001}{rack_id=sonarqube} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+2020.01.18 23:11:27 INFO  es[][o.e.n.Node] started
+2020.01.18 23:11:28 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
+2020.01.18 23:11:29 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]] ...]).
+2020.01.18 23:11:35 INFO  es[][o.e.n.Node] stopping ...
+2020.01.18 23:11:35 INFO  es[][o.e.n.Node] stopped
+2020.01.18 23:11:35 INFO  es[][o.e.n.Node] closing ...
+2020.01.18 23:11:35 INFO  es[][o.e.n.Node] closed
