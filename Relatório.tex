@@ -763,15 +763,15 @@ Como tal, foram executadas ambas as versões do programa em questão com cada ti
 \begin{table}[h] 
     \caption{Análise do consumo energético \textit{smell} a \textit{smell} - \textit{demo1}}
     \begin{center}
-        \begin{tabular}{>{\centering}p{0.1\textwidth}>{\centering}p{0.13\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}}
-        \toprule \textbf{\textit{Smells}} & \textbf{Tamanho do \textit{input}} & \textbf{\textit{dram}} (em \textit{MB}) & \textbf{\textit{cpu}} (em \textit{ms}) & \textbf{\textit{package}} (em \textit{J})\\
+        \begin{tabular}{>{\centering}p{0.14\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}>{\centering}p{0.1\textwidth}}
+        \toprule \textbf{\textit{Smells}} & \textbf{\textit{dram}} (em \textit{MB}) & \textbf{\textit{cpu}} (em \textit{ms}) & \textbf{\textit{package}} (em \textit{J}) & \textbf{Tempo} (em \textit{s}) \tabularnewline
         
-        \midrule \textit{noMinor} &  & 0.125 & 1.8643190000002505 & 2.6281740000013087 \\
-        \midrule \textit{noMajor} &  & 0.10607900000013615 & 1.8434440000000905 & 2.383972999999969  \\
-        \midrule \textit{noCritical} &  & 0.10449199999993652 & 1.999877999999626 & 2.481445999999778  \\
-        \midrule \textit{noBlocker} &  & 0.10296599999992395 & 1.799011000000064 & 2.240355999998428   \\
-        \midrule \textit{noRedSmells} &  & 0.12378000000035172 & 2.0324699999996483 & 2.7041619999999966 & 51  \\
-        \midrule \textit{noSmells} &  & 0.10351600000012695 & 1.7691039999999703 & 2.2634280000002036  \\
+        \midrule \textit{noMinor} & 0.125 & 1.8643190000002505 & 2.6281740000013087 & --- \tabularnewline
+        \midrule \textit{noMajor} & 0.10607900000013615 & 1.8434440000000905 & 2.383972999999969 & --- \tabularnewline
+        \midrule \textit{noCritical} & 0.10449199999993652 & 1.999877999999626 & 2.481445999999778 & --- \tabularnewline
+        \midrule \textit{noBlocker} & 0.10296599999992395 & 1.799011000000064 & 2.240355999998428 & ---  \tabularnewline
+        \midrule \textit{noRedSmells} & 0.12378000000035172 & 2.0324699999996483 & 2.7041619999999966 & 51  \tabularnewline
+        \midrule \textit{noSmells} & 0.10351600000012695 & 1.7691039999999703 & 2.2634280000002036 & ---  \tabularnewline
         \bottomrule
         \end{tabular} 
     \end{center}
@@ -780,13 +780,14 @@ Como tal, foram executadas ambas as versões do programa em questão com cada ti
 \begin{table}[h] 
     \caption{Análise do consumo energético \textit{smell} a \textit{smell} - \textit{demo2}}
     \begin{center}
-        \begin{tabular}{>{\centering}p{0.1\textwidth}>{\centering}p{0.13\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}}
-        \toprule \textbf{\textit{Smells}} & \textbf{Tamanho do \textit{input}} & \textbf{\textit{dram}} (em \textit{MB}) & \textbf{\textit{cpu}} (em \textit{ms}) & \textbf{\textit{package}} (em \textit{J}) \\
-        \midrule \textit{noMinor} &  &  &  &  \\
-        \midrule \textit{noMajor} & original & 2.204895000000306 & 24.839966000000004 & 34.237121999998635   \\
-        \midrule \textit{noCritical} &  original & 2.4993890000000647 & 29.64740000000029 & 40.53625499999998 \\
-        \midrule \textit{noBlocker} &  &  &  &   \\
-        \midrule \textit{noSmells} &  &  &  &  \\
+        \begin{tabular}{>{\centering}p{0.14\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}>{\centering}p{0.1\textwidth}}
+            \toprule \textbf{\textit{Smells}} & \textbf{\textit{dram}} (em \textit{MB}) & \textbf{\textit{cpu}} (em \textit{ms}) & \textbf{\textit{package}} (em \textit{J}) & \textbf{Tempo} (em \textit{s}) \tabularnewline
+        \midrule \textit{noMinor} &  &  &  & --- \tabularnewline
+        \midrule \textit{noMajor} & 2.204895000000306 & 24.839966000000004 & 34.237121999998635 & --- \tabularnewline
+        \midrule \textit{noCritical} & 2.4993890000000647 & 29.64740000000029 & 40.53625499999998 & --- \tabularnewline
+        \midrule \textit{noBlocker} &  &  &  & --- \tabularnewline
+        \midrule \textit{noRedSmells} &  &  &  & --- \tabularnewline
+        \midrule \textit{noSmells} &  &  &  & --- \tabularnewline
         \bottomrule
         \end{tabular} 
     \end{center}
