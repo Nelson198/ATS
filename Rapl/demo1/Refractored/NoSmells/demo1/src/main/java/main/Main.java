@@ -100,6 +100,7 @@ public class Main {
             double[] after = getEnergyStats();  
             System.out.println("Energy consumption of dram: " + (after[0] - before[0])+ " Energy consumption of cpu: " + (after[1] - before[1])+ " Energy consumption of package: " + (after[2] - before[2]));
                try {
+                long start = System.currentTimeMillis();
             double[] beforei = getEnergyStats();
             model.logIn("168283301@outlook.com","168283301@outlook.com");
             model.logIn("168283301@outlook.com","168283301@outlook.com");
@@ -115,8 +116,9 @@ public class Main {
             model.rate("231390477",99);
             model.rate("151156220",56);
             double[] afteri = getEnergyStats(); 
+            long finish = System.currentTimeMillis();
             System.out.println("Functions Energy consumption of dram: " + (afteri[0] - beforei[0])+ " Energy consumption of cpu: " + (afteri[1] - beforei[1])+ " Energy consumption of package: " + (afteri[2] - beforei[2]));
-            
+            System.out.println("Time elapsed: " + (finish - start));
 
         } catch (InvalidCarException | InvalidUserException | WrongPasswordExecption w) {};
         }
