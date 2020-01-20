@@ -95,19 +95,51 @@ public class Main {
                try {
             long start = System.currentTimeMillis();
             double[] beforei = getEnergyStats();
-            model.logIn("168283301@outlook.com","168283301@outlook.com");
-            model.logIn("168283301@outlook.com","168283301@outlook.com");
-            model.logIn("168283301@outlook.com","168283301@outlook.com");
-            model.logIn("168283301@outlook.com","168283301@outlook.com");
-            model.logIn("168283301@outlook.com","168283301@outlook.com");
-            model.logIn("168283301@outlook.com","168283301@outlook.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            System.out.println("Time elapsed: ");
+            model.getBestClientsTravel();
+            System.out.println("Time elapsed: travel");
+            model.getBestClientsTimes();
+            System.out.println("Time elapsed: times");
+            model.getBestClients();
+            System.out.println("Time elapsed: clients");
+            model.rate("293096248",78);
+            System.out.println("Time elapsed: r1");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
             model.getBestClientsTravel();
             model.getBestClientsTimes();
             model.getBestClients();
-            model.rate("231390477",78);
-            model.rate("778124711",01);
-            model.rate("231390477",99);
-            model.rate("151156220",56);
+            model.rate("293096248",78);
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.getBestClientsTravel();
+            model.getBestClientsTimes();
+            model.getBestClients();
+            model.rate("293096248",78);
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.logIn("293096248@gmail.com","293096248@gmail.com");
+            model.getBestClientsTravel();
+            model.getBestClientsTimes();
+            model.getBestClients();
+            model.rate("293096248",78);
             double[] afteri = getEnergyStats(); 
             long finish = System.currentTimeMillis();
             System.out.println("Functions Energy consumption of dram: " + (afteri[0] - beforei[0])+ " Energy consumption of cpu: " + (afteri[1] - beforei[1])+ " Energy consumption of package: " + (afteri[2] - beforei[2]));
@@ -116,7 +148,7 @@ public class Main {
 
         } catch (InvalidCarException | InvalidUserException | WrongPasswordExecption w) {};
         }
-        try { Thread.sleep(10000);} catch (Exception e) {}
+        try { Thread.sleep(1000000);} catch (Exception e) {}
         new Controller(model).run();
         try {
             model.save(".tmp");

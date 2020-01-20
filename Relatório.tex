@@ -744,6 +744,9 @@ Após as diversas alterações e eliminações de \textit{smells} é necessário
         \midrule \\
         \midrule Sim &  5555 &  0.3440559999999664 &  3.8085930000000303 & 5.577698000000055 \\
         \midrule Não &  5555 &  0.32525699999996505  &  3.6011349999999993 & 5.260498000000098 \\
+         \midrule \\
+        \midrule Sim &  55555 &  3.675475999999435 &  59.24536100000114 & 89.38207999999577 \\
+        \midrule Não &  55555 &  3.8429559999999583  &  60.6569210000016  & 91.23339899999701 \\
         \bottomrule
         \end{tabular} 
     \end{center}
@@ -769,7 +772,7 @@ Nesta tarefa adicional é requerido uma análise detalhada por cada \textit{smel
 Como tal, foram executadas ambas as versões do programa em questão com cada tipo de \textit{smells} de forma isolada. Consequentemente, sobre um conjunto de funções do programa, obtiveram-se os seguintes resultados:
 
 \begin{table}[h] 
-    \caption{Análise do consumo energético \textit{smell} a \textit{smell} - \textit{demo1}}
+    \caption{Análise do consumo energético \textit{smell} a \textit{smell} - \textit{demo1 -> logs original} }
     \begin{center}
         \begin{tabular}{>{\centering}p{0.14\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}>{\centering}p{0.1\textwidth}}
         \toprule \textbf{\textit{Smells}} & \textbf{\textit{dram}} (em \textit{MB}) & \textbf{\textit{cpu}} (em \textit{ms}) & \textbf{\textit{package}} (em \textit{J}) & \textbf{Tempo} (em \textit{ms}) \tabularnewline
@@ -780,6 +783,23 @@ Como tal, foram executadas ambas as versões do programa em questão com cada ti
         \midrule \textit{noBlocker} & 0.10296599999992395 & 1.799011000000064 & 2.240355999998428 & 53  \tabularnewline
         \midrule \textit{noRedSmells} & 0.12378000000035172 & 2.0324699999996483 & 2.7041619999999966 & 51  \tabularnewline
         \midrule \textit{noSmells} & 0.10351600000012695 & 1.7691039999999703 & 2.2634280000002036 & 62  \tabularnewline
+        \bottomrule
+        \end{tabular} 
+    \end{center}
+\end{table}
+
+\begin{table}[h] 
+    \caption{Análise do consumo energético \textit{smell} a \textit{smell} - \textit{demo1 -> logs tamanho 55555}}
+    \begin{center}
+        \begin{tabular}{>{\centering}p{0.14\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}>{\centering}p{0.1\textwidth}}
+        \toprule \textbf{\textit{Smells}} & \textbf{\textit{dram}} (em \textit{MB}) & \textbf{\textit{cpu}} (em \textit{ms}) & \textbf{\textit{package}} (em \textit{J}) & \textbf{Tempo} (em \textit{ms}) \tabularnewline
+        
+        \midrule \textit{noMinor} & 12.97338899999977 & 168.750792999999255 & 304.18981899999926 & 17032 \tabularnewline
+        \midrule \textit{noMajor} & 12.753662000000077 & 164.5404660000022 & 295.9130860000005 & 16745 \tabularnewline
+        \midrule \textit{noCritical} & 13.174987999999757 & 168.60394299999825 & 302.7049559999941 & 17144 \tabularnewline
+        \midrule \textit{noBlocker} & 15.805237000000034 & 183.67248599999948 & 324.94183299999713 & 17329  \tabularnewline
+        \midrule \textit{noRedSmells} & 12.960143999999673 & 168.22857600000134 & 298.2542109999995 & 16595  \tabularnewline
+        \midrule \textit{noSmells} & 12.254883000000063 & 160.48974599999933 & 288.387023999996 & 16128  \tabularnewline
         \bottomrule
         \end{tabular} 
     \end{center}
