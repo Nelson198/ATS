@@ -7,6 +7,11 @@ Energy consumption of dram: 0.18859800000001314 Energy consumption of cpu: 0.399
 5555 -logs
 Energy consumption of dram: 0.3440559999999664 Energy consumption of cpu: 3.8085930000000303 Energy consumption of package: 5.577698000000055
 
+55555 -logs
+Energy consumption of dram: 3.675475999999435 Energy consumption of cpu: 59.24536100000114 Energy consumption of package: 89.38207999999577
+Functions Energy consumption of dram: 13.885924999999588 Energy consumption of cpu: 174.26623499999914 Energy consumption of package: 312.04009999999835
+Time elapsed: 17381
+
 
 Original -logs
 Energy consumption of dram: 0.14880399999998417 Energy consumption of cpu: 1.6157230000000027 Energy consumption of package: 2.430358999999953
