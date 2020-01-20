@@ -20,9 +20,10 @@
 \usepackage[portuguese]{babel}
 %--------------------------------------
 
-% Hyphenation rules
+% Hyphenation rules and references
 %--------------------------------------
 \usepackage{hyphenat}
+\usepackage{hyperref}
 %--------------------------------------
 
 % Capa do relatório
@@ -384,6 +385,23 @@ Após a remoção dos diversos tipos de bugs e smells, pode-se constatar a difer
 \end{itemize}
 
 \subsubsection{\textit{Smells} de energia}
+Para além dos \textit{code smells}, desenvolveu-se mais uma versão para este demo1. 
+Para isso utilizou-se o \textit{plugin} do \texttt{jStanley}, no \texttt{Eclipse}, de forma a tentar alcançar uma versão mais eficiente, do ponto de vista energético.
+A análise permitiu identificar algumas possibilidades de poupanças de energia, seis no total. Veremos agora, em maior detalhe, as mudanças efetuadas.
+
+\vspace{5mm}
+\begin{itemize}
+
+\item \textbf{Change ArrayList<Rental> by AttributeList} \\
+Esta poupança de energia foi identificada no ficheiro \texttt{Controller.java}, mas foi decidido que a mesma não seria tomada em conta, uma vez que isto implicaria diversas mudanças, incluindo \textit{streams}, métodos de outras classes e afins.
+Como não foi possível identificar a verdadeira extensão do impacto que teria esta mudança, tomou-se a decisão de manter a forma original.
+
+\vspace{5mm}
+
+\item \textbf{Change ArrayList<String> by AttributeList} \\
+Esta poupança de energia apareceu cinco vezes no ficheiro \texttt{Model.java}. Por ser uma implementação mais fácil e com menos impacto em outras partes do projeto, procedeu-se às cinco alterações.
+Embora simples e aparentemente poucas (num projeto extenso), estas alterações pareceram ter um impacto positivo no consumo de energia da aplicação, como veremos a seguir, no capítulo \ref{sec:rapl}.
+\end{itemize}
 
 \subsection{Versão 2 - \textit{demo2}}
 
@@ -733,8 +751,9 @@ Quanto à geração automática de testes unitários, foi possível gerar corret
 Relativamente à geração automática de testes em \textit{QuickCheck}, a abordagem tomada nesta implementação foi exatamente igual à que foi explorada anteriormente na primeira versão (ver informação no capítulo \ref{sssec:QuickCheckDemo1}).
 
 \section{Tarefa 4 - Análise de desempenho}
+\label{sec:rapl}
 \subsection{Versão 1 - \textit{demo1}}
-Após as diversas alterações e eliminações de \textit{smells} é necessário verificar que estas tiveram impacto sobre a funcionalidade do programa. Para tal foi utilizada a ferramenta \textit{RAPL}, disponibilizada pelos docentes, para analisar o consumo energético do programa. Como primeira etapa foram registados os valores energéticos com \textit{logs} de diversos tamanhos (5, 55, 5555, 55555). De seguida encontram-se as tabelas com os resultados obtidos:
+Após as diversas alterações e eliminações de \textit{smells} é necessário verificar se estas tiveram impacto sobre o desempenho do programa. Para tal foi utilizada a ferramenta \textit{RAPL}, disponibilizada pelos docentes, para analisar o consumo energético do programa. Como primeira etapa foram registados os valores energéticos com \textit{logs} de diversos tamanhos (5, 55, 5555, 55555). De seguida encontram-se as tabelas com os resultados obtidos:
 
 \begin{table}[h] 
     \caption{Análise do consumo energético - \textit{demo1}}
@@ -830,6 +849,25 @@ Após a demonstração da abordagem tomada para cada uma das tarefas propostas n
 Durante o processo de realização do mesmo foi possível analisar o código fonte de ambas as versões implementadas, identificando os \textit{bad smells} e o seu \textit{technical debt}. Posteriormente, foram aplicados \textit{refactorings}
 de maneira a eliminar os \textit{bad smells} encontrados e, deste modo, reduzir o respetivo \textit{technical debt}. Numa terceira fase, foi testado com sucesso o \textit{software} em questão de forma a garantir que o mesmo exprimia o 
 comportamento esperado. E, por fim, foi realizada uma análise a nível do desempenho das duas versões implementadas (antes e depois da aplicação de \textit{refactorings}).
+
+Depois de terminadas as tarefas, refletimos sobre os resultados obtidos e das conclusões que podemos tirar, tanto desses resultados como do trabalho realizado.
+
+A primeira tarefa foi importante para assimilarmos alguns dos conteúdos lecionados ao longo da UC, mas também, e principalmente, para termos uma ideia inicial do projeto que analisávamos e do extenso trabalho que teríamos pela frente.
+Pudemos ainda perceber a importância destas análises para uma manutenção mais fácil do código.
+
+A segunda tarefa, talvez a mais extensa de todas, obrigou à criação de diversas versões do mesmo código. Foi importante para os elementos deste grupo perceberem, e futuramente corrigirem, as (suas) más práticas de programação.
+Permitiu ainda desenvolver um conhecimento mais profundo do projeto, essencial para a realização da próxima tarefa.
+
+A terceira tarefa resume-se à geração de teste unitários, automáticos ou não. Os testes são importantes no desenvolvimento de \textit{software}, porque permitem identificar potenciais problemas e resolvê-los.
+
+Para a quarta tarefa, realizaram-se análises o desempenho do(s) projeto(s) analisado(s). Para além das versões originais, também se fez uma análise das versões desenvolvidas ao longo deste extenso trabalho.
+É desta tarefa que podemos retirar mais conclusões. Pode perceber-se, com recurso às tabelas apresentadas, que o tratamento e eliminação de alguns dos diferentes tipos de \textit{smells} não têm um grande impacto no desempenho da aplicação.
+No entanto, parece haver uma tendência para um melhor desempenho, quando fazemos a análise \textit{smell} a \textit{smell}. 
+Ainda assim, pode argumentar-se que o tratamento de \textit{code smells} realizado, tinha como objetivo melhorar a legibilidade e manutenibilidade do código, pelo que uma melhoria no desempenho é sempre um extra.
+
+Em nota final, podemos concluir que os erros e más práticas são mais comuns do que poderíamos pensar antes de iniciarmos este projeto. É então importante dedicar algum tempo para a análise, \textit{refactoring} e teste do código.
+Não apenas quando o mesmo está terminado, mas também em outras fases do desenvolvimento.
+
 
 \appendix
 \chapter{Observações}
