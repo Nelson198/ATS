@@ -1,2 +1,4 @@
 Energy consumption of dram: 0.8858030000001236 Energy consumption of cpu: 19.016661999999997 Energy consumption of package: 25.512939000000188
 Functions Energy consumption of dram: 0.10607900000013615 Energy consumption of cpu: 1.8434440000000905 Energy consumption of package: 2.383972999999969
+Time elapsed: 67
+
