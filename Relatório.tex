@@ -649,16 +649,22 @@ As diferenças entre categorias podem ser explicadas pelas quantidades distintas
 
 \section{Tarefa 3 - Teste da aplicação}
 Nesta tarefa, tal como o nome da mesma transparece, serão utilizadas técnicas de teste de \textit{software} para efectuar testes unitários em \textit{JUnit} e, ainda, o
-teste de regressão da aplicação \textit{UmCarroJá}. Para além disso, serão utilizadas sistemas para a geração automática de casos de teste para gerar testes unitários e ainda inputs para simular a execução real da aplicação. De notar que nesta etapa também se procede à análise de testes unitários através da ferramenta \textit{JaCoCo}.
+teste de regressão da aplicação \textit{UmCarroJá}. Para além disso, serão utilizadas sistemas para a geração automática de casos de teste para gerar testes unitários e ainda inputs para simular a execução real da aplicação. De notar que nesta etapa também se procede à análise de testes unitários através do \textit{code coverage runner} disponibilizado pelo \textit{IntelliJ}.
 
 \subsection{Versão 1 - \textit{demo1}}
 
 \subsubsection{Testes unitários - \textit{JUnit}}
 
 Como iremos ver de seguida, a maior parte dos testes unitários são gerados automaticamente pelo o \textit{EvoSuite}, mas além disso, decidimos fazer uma pequena análise pessoal ao código do projeto.
-Concentramos a nossa análise nas classes \texttt{Cars}, \texttt{Rentals} e um \texttt{UmCarroJa}, que achamos que são as mais relevantes a nível de evolução do sistema.
+Concentramos a nossa análise no \textit{package} \texttt{Model}, mais especificamente nas classes \texttt{Cars}, \texttt{Rentals} e um \texttt{UmCarroJa}, que achamos que são as mais relevantes a nível de evolução do sistema.
 
 Estes testes foram colocados no \textit{package} \texttt{test} e estão devidamente anotados seguindo a anotação dos testes manuais do \textit{JUnit}.
+
+Quanto à cobertura, a análise efetuada pelo \textit{IntelliJ} (com destaque apenas no \textit{package} \texttt{Model}) mostra que obtivemos um total de cobertura de: 96\% em classes, 46\% em métodos e 36\% em linhas de código.
+
+Como seria de esperar, os testes não apresentam grande cobertura na totalidade da aplicação, pois é complicado cobrir todos os casos devido à elevada extensão da implementação deste projeto. 
+
+Uma verdadeira análise de cobertura encontra-se no ponto seguinte, onde é descrita a geração automática de testes unitários com o \textit{EvoSuite}.
 
 \subsubsection{Geração automática de testes unitários - \textit{EvoSuite}}
 Usou-se o \textit{plugin} do \textit{IntelliJ} para utilizar o \textit{EvoSuite} no projeto, gerando testes unitários de forma automática para todo o projeto.
