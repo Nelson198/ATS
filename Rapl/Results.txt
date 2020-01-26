@@ -1,0 +1,22 @@
+Input 55555
+	AllSmells logs -> dram: 4,14223628000001, cpu: 67,9725096, package: 99,4849608799997
+
+	NoSmells logs -> dram: 4,28174800000001, cpu: 71,39076412, package: 104,18206552 ||| functions -> dram:14,49961668, cpu: 205,08033472, package: 355,16195064, time: 17441,96
+
+	NoredSmells logs -> dram: 4,37842035999996, cpu: 73,7024951200002, package: 107,0845362 ||| functions -> dram: 15,19409168, cpu: 213,9433984, package: 369,34534428, time: 17924,64
+
+	NoMinors logs -> dram: 4,53918939999998, cpu: 74,09229008, package: 107,72812008 ||| functions -> dram: 15,56374756, cpu: 215,36804928, package: 367,53493424, time: 17707,64
+
+	NoMajor logs -> dram: 9,54831044000003, cpu: 164,72299568, package: 237,43300788 ||| functions -> dram: 14,40567876, cpu: 209,67994132, package: 362,36744884, time: 17172,68
+
+	NoCritical logs -> dram: 4,53520016, cpu: 75,11705816, package: 109,54278808 ||| functions -> dram: 15,7627222, cpu: 220,7968776, package: 377,96918212, time: 17883,44
+
+	NoBlockers logs -> dram: 4,67592523999998, cpu: 75,9625315999999, package: 109,62758544 ||| functions -> dram: 16,49993656, cpu: 219,789878, package: 372,12416748, time: 17710,04
+
+
+	
+
+
+
+
+

@@ -753,7 +753,7 @@ Relativamente à geração automática de testes em \textit{QuickCheck}, a abord
 \section{Tarefa 4 - Análise de desempenho}
 \label{sec:rapl}
 \subsection{Versão 1 - \textit{demo1}}
-Após as diversas alterações e eliminações de \textit{smells} é necessário verificar se estas tiveram impacto sobre o desempenho do programa. Para tal foi utilizada a ferramenta \textit{RAPL}, disponibilizada pelos docentes, para analisar o consumo energético do programa. Como primeira etapa foram registados os valores energéticos com \textit{logs} de diversos tamanhos (5, 55, 5555, 55555). De seguida encontram-se as tabelas com os resultados obtidos:
+Após as diversas alterações e eliminações de \textit{smells} é necessário verificar se estas tiveram impacto sobre o desempenho do programa. Para tal foi utilizada a ferramenta \textit{RAPL}, disponibilizada pelos docentes, para analisar o consumo energético do programa. Como primeira etapa foram registados os valores energéticos com \textit{logs} de diversos tamanhos (5, 55, 5555, 55555).Como apenas o log de tamanho 55555 obteve resultados significativos, para este foram utilizadas 25 medições e calculado as suas médias, com a frramenta LibreOffice Calc, para obter resultados mais crediveis(todas as medições e as suas médias podem ser consultadas no ficheiro "average.ods" dentro da pasta Rapl). De seguida encontram-se as tabelas com os resultados obtidos:
 
 \begin{table}[h] 
     \caption{Análise do consumo energético - \textit{demo1}}
@@ -769,8 +769,8 @@ Após as diversas alterações e eliminações de \textit{smells} é necessário
         \midrule Sim &  5555 &  0.3440559999999664 &  3.8085930000000303 & 5.577698000000055 \\
         \midrule Não &  5555 &  0.32525699999996505  &  3.6011349999999993 & 5.260498000000098 \\
          \midrule \\
-        \midrule Sim &  55555 &  3.675475999999435 &  59.24536100000114 & 89.38207999999577 \\
-        \midrule Não &  55555 &  3.8429559999999583  &  60.6569210000016  & 91.23339899999701 \\
+        \midrule Sim &  55555 & 4,14223628000001 &   67,9725096 & 99,4849608799997 \\
+        \midrule Não &  55555 & 4,28174800000001  &  71,39076412  & 104,18206552 \\
         \bottomrule
         \end{tabular} 
     \end{center}
@@ -817,12 +817,12 @@ Como tal, foram executadas ambas as versões do programa em questão com cada ti
         \begin{tabular}{>{\centering}p{0.14\textwidth}>{\centering}p{0.2\textwidth}>{\centering}p{0.22\textwidth}>{\centering\arraybackslash}p{0.2\textwidth}>{\centering}p{0.1\textwidth}}
         \toprule \textbf{\textit{Smells}} & \textbf{\textit{dram}} (em \textit{MB}) & \textbf{\textit{cpu}} (em \textit{ms}) & \textbf{\textit{package}} (em \textit{J}) & \textbf{Tempo} (em \textit{ms}) \tabularnewline
         
-        \midrule \textit{noMinor} & 12.97338899999977 & 168.750792999999255 & 304.18981899999926 & 17032 \tabularnewline
-        \midrule \textit{noMajor} & 12.753662000000077 & 164.5404660000022 & 295.9130860000005 & 16745 \tabularnewline
-        \midrule \textit{noCritical} & 13.174987999999757 & 168.60394299999825 & 302.7049559999941 & 17144 \tabularnewline
-        \midrule \textit{noBlocker} & 15.805237000000034 & 183.67248599999948 & 324.94183299999713 & 17329  \tabularnewline
-        \midrule \textit{noRedSmells} & 12.960143999999673 & 168.22857600000134 & 298.2542109999995 & 16595  \tabularnewline
-        \midrule \textit{noSmells} & 12.254883000000063 & 160.48974599999933 & 288.387023999996 & 16128  \tabularnewline
+        \midrule \textit{noMinor} & 15,56374756 & 215,36804928 & 367,53493424 & 17707,64 \tabularnewline
+        \midrule \textit{noMajor} & 14,40567876 & 209,67994132 & 362,36744884 & 17172,68 \tabularnewline
+        \midrule \textit{noCritical} & 15,7627222 & 220,7968776 & 377,96918212 & 17883,44\tabularnewline
+        \midrule \textit{noBlocker} & 16,49993656 & 219,789878 & 372,12416748 & 17710,04 \tabularnewline
+        \midrule \textit{noRedSmells} & 15,19409168 & 213,9433984 & 369,34534428 & 17924,64  \tabularnewline
+        \midrule \textit{noSmells} & 14,49961668 & 205,08033472 & 355,16195064 &  17441,96  \tabularnewline
         \bottomrule
         \end{tabular} 
     \end{center}
