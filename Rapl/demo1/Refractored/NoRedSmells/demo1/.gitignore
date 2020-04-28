@@ -1,7 +1,0 @@
-/target/
-.tmp
-*.bak
-.settings
-.evosuite
-.idea
-*.iml
