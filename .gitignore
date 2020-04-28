@@ -9,7 +9,8 @@
 
 # Java
 *.class
-target/classes/
+target/
 
 # Other files
+.idea
 .DS_Store

@@ -1,7 +1,0 @@
-org/sonar/samples/java/MyJavaFileCheckRegistrar.class
-org/sonar/samples/java/MyJavaRulesDefinition$RuleMetatada.class
-org/sonar/samples/java/MyJavaRulesDefinition$Remediation.class
-org/sonar/samples/java/checks/MyFirstCustomCheckRule.class
-org/sonar/samples/java/MyJavaRulesDefinition.class
-org/sonar/samples/java/MyJavaRulesPlugin.class
-org/sonar/samples/java/RulesList.class
