@@ -12,5 +12,6 @@
 target/
 
 # Other files
-.idea
+.idea/
+.evosuite/
 .DS_Store
